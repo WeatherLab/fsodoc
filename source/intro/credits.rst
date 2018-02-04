@@ -2,17 +2,10 @@
 Credits
 #######
 
-CodeIgniter was originally developed by `EllisLab  <https://ellislab.com/>`_. 
+This FSO was originally developed by `MMM/NCAR  <https://www.mmm.ucar.edu/>`_. 
 The framework was written for performance in the real world, 
-with many of the original class libraries, helpers, and
-sub-systems borrowed from the code-base of `ExpressionEngine
-<https://ellislab.com/expressionengine>`_. 
-It was, for years, developed and maintained by EllisLab, the ExpressionEngine
-Development Team and a group of community members called the Reactor Team.
-
-In 2014, CodeIgniter was acquired by the `British Columbia Institute of Technology
-<http://www.bcit.ca/>`_ and was then officially announced as a community-maintained
-project.
-
-Bleeding edge development is spearheaded by the handpicked contributors
-of the CodeIgniter Council.
+with many of the original scripts, codes, and
+sub-systems borrowed from the code-base of `WRF Data Assimilation System
+<http://www2.mmm.ucar.edu/wrf/users/wrfda/>`_. 
+It was, for years, developed and maintained by 北京朗润知天科技有限公司 
+and a group of enthusiastic scientists and researchers.

@@ -2,7 +2,7 @@
 基准测试类
 ############
 
-CodeIgniter 提供了两个独立的工具来帮助你对代码进行基准测试，并测试不同的选项：Timer 和 Iterator。Timer 允许你轻松计算脚本执行中两点之间的时间。迭代器允许你设置多个变量并运行这些测试，记录性能和内存统计信息，以帮助你确定哪个版本是最佳的。
+FSO 提供了两个独立的工具来帮助你对代码进行基准测试，并测试不同的选项：Timer 和 Iterator。Timer 允许你轻松计算脚本执行中两点之间的时间。迭代器允许你设置多个变量并运行这些测试，记录性能和内存统计信息，以帮助你确定哪个版本是最佳的。
 
 Timer类始终处于活动状态，从框架被调用的那一刻开始，直到发送输出到用户之前，才能使整个系统执行的时间非常准确。
 
@@ -74,7 +74,7 @@ Iterator是一个简单的工具，旨在让你尝试解决方案中的多个变
 
 任务在 Closures 内定义。任务创建的任何输出将被自动丢弃。它们通过 `add()` 方法添加到 Iterator 类中。第一个参数是您想要引用这个测试的名称;第二个参数是 Closure，它自己本身::
 
-	$iterator = new \CodeIgniter\Benchmark\Iterator();
+	$iterator = new \FSO\Benchmark\Iterator();
 
 	// Add a new task
 	$iterator->add('single_concat', function()

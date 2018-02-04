@@ -36,7 +36,7 @@
 
 	<?php namespace Config;
 	
-	class App extends \CodeIgniter\Config\BaseConfig {
+	class App extends \FSO\Config\BaseConfig {
 	
 		public $siteName = 'My Great Site';
 		public $siteEmail = 'webmaster@example.com';
@@ -45,7 +45,7 @@
 
 
 
-这个类应当继承 ``\CodeIgniter\Config\BaseConfig`` 从而保证框架可以得到具体环境下的配置信息。
+这个类应当继承 ``\FSO\Config\BaseConfig`` 从而保证框架可以得到具体环境下的配置信息。
 
 针对不同的环境
 ===============================
@@ -163,7 +163,7 @@
 配置类举例如下::
 
     namespace App\Config;
-    class MySalesConfig extends \CodeIgniter\Config\BaseConfig {
+    class MySalesConfig extends \FSO\Config\BaseConfig {
         public $target = 100;
         public $campaign = "Winter Wonderland";
         protected $registrars = [

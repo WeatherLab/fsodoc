@@ -2,7 +2,7 @@
 API 响应特性
 ##################
 
-现代化的 PHP开发都需要构建 API ，不管它只是为了给 javascript 单页应用提供数据还是作为独立的产品。CodeIgniter 提供了一个API响应特性，可用于任何控制器，使公共响应类型简单，无需记住它的 HTTP 状态代码应返回的响应类型。
+现代化的 PHP开发都需要构建 API ，不管它只是为了给 javascript 单页应用提供数据还是作为独立的产品。FSO 提供了一个API响应特性，可用于任何控制器，使公共响应类型简单，无需记住它的 HTTP 状态代码应返回的响应类型。
 
 .. contents:: 目录
     :local:
@@ -17,9 +17,9 @@ API 响应特性
 
     <?php namespace App\Controllers;
 
-    class Users extends \CodeIgniter\Controller
+    class Users extends \FSO\Controller
     {
-        use CodeIgniter\API\ResponseTrait;
+        use FSO\API\ResponseTrait;
 
         public function createUser()
         {
@@ -74,14 +74,14 @@ API 响应特性
 
 这是在 :doc:`Content Negotiation </libraries/content_negotiation>` 中使用的数组，以确定返回的响应类型。如果在客户端请求的内容和您支持的内容之间没有匹配，则返回第一个该数组中的格式。
 
-接下来，需要定义用于格式化数据数组的类。这必须是一个完全合格的类名，类名必须实现 **CodeIgniter\API\FormatterInterface**。格式化支持 JSON 和 XML ::
+接下来，需要定义用于格式化数据数组的类。这必须是一个完全合格的类名，类名必须实现 **FSO\API\FormatterInterface**。格式化支持 JSON 和 XML ::
 
     public $formatters = [
-        'application/json' => \CodeIgniter\API\JSONFormatter::class,
-        'application/xml'  => \CodeIgniter\API\XMLFormatter::class
+        'application/json' => \FSO\API\JSONFormatter::class,
+        'application/xml'  => \FSO\API\XMLFormatter::class
     ];
 
-因此，如果您的请求在 **Accept** 头中请求 JSON 格式的数据，那么您传递的数据数组就可以通过其中任何一个 ``respond*`` 或 ``fail*`` 方法将由 **CodeIgniter\API\JSONFormatter** 格式化。由此产生的 JSON 数据将被发送回客户端。
+因此，如果您的请求在 **Accept** 头中请求 JSON 格式的数据，那么您传递的数据数组就可以通过其中任何一个 ``respond*`` 或 ``fail*`` 方法将由 **FSO\API\JSONFormatter** 格式化。由此产生的 JSON 数据将被发送回客户端。
 
 ===============
 引用类

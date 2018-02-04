@@ -13,7 +13,7 @@ CodeIngiter 为你在应用中使用 URI 类提供了一个面向对象的解决
 
 就像创建一个普通类实例一样去创建一个 URI 实例::
 
-	$uri = new \CodeIgniter\HTTP\URI();
+	$uri = new \FSO\HTTP\URI();
 
 或者，你可以使用 ``service()`` 方法来返回一个 URI 实例::
 
@@ -21,13 +21,13 @@ CodeIngiter 为你在应用中使用 URI 类提供了一个面向对象的解决
 
 当创建新实例的时候，你可以将完整或部分 URL 传递给构造函数，其将会被解析为相应的分段::
 
-	$uri = new \CodeIgniter\HTTP\URI('http://www.example.com/some/path');
+	$uri = new \FSO\HTTP\URI('http://www.example.com/some/path');
 	$uri = service('uri', 'http://www.example.com/some/path');
 
 当前 URI
 ---------------
 
-很多时候，你真正想要的是一个表示着当前请求 URL 的对象。可以有两种不同的方式来获取。第一，直接从当前请求对象中提取。假设你所在的控制器已继承自 ``CodeIgniter\Controller``，可以这样做::
+很多时候，你真正想要的是一个表示着当前请求 URL 的对象。可以有两种不同的方式来获取。第一，直接从当前请求对象中提取。假设你所在的控制器已继承自 ``FSO\Controller``，可以这样做::
 
 	$uri = $this->request->uri;
 
@@ -66,7 +66,7 @@ Scheme
 最常见的传输协议是 'http' 或 'https'，同时也支持如 'file', 'mailto' 等其他协议。
 ::
 
-    $uri = new \CodeIgniter\HTTP\URI('http://www.example.com/some/path');
+    $uri = new \FSO\HTTP\URI('http://www.example.com/some/path');
 
     echo $uri->getScheme(); // 'http'
     $uri->setScheme('https');
@@ -77,7 +77,7 @@ Authority
 许多 URI 内装载着被统称为 'authority' 的数个元素，包括用户信息，主机地址和端口号。你可以通过 ``getAuthority()`` 方法来获取一个包含了所有相关元素的字符串，也可以对独立的元素进行操作。
 ::
 
-	$uri = new \CodeIgniter\HTTP\URI('ftp://user:password@example.com:21/some/path');
+	$uri = new \FSO\HTTP\URI('ftp://user:password@example.com:21/some/path');
 
 	echo $uri->getAuthority();  // user@example.com:21
 	
@@ -112,7 +112,7 @@ Host
 
 URI 的主机部分通常是 URL 的域名。可以通过 ``getHost()`` 和 ``setHost()`` 方法很容易地设置和获取::
 
-	$uri = new \CodeIgniter\HTTP\URI('http://www.example.com/some/path');
+	$uri = new \FSO\HTTP\URI('http://www.example.com/some/path');
 
 	echo $uri->getHost();   // www.example.com
 	echo $uri->setHost('anotherexample.com')->getHost();    // anotherexample.com
@@ -123,7 +123,7 @@ Port
 端口值是一个在 0 到 65535 之间的整数。每个协议都会有一个与之关联的默认端口值。
 ::
 
-	$uri = new \CodeIgniter\HTTP\URI('ftp://user:password@example.com:21/some/path');
+	$uri = new \FSO\HTTP\URI('ftp://user:password@example.com:21/some/path');
 
 	echo $uri->getPort();   // 21
 	echo $uri->setPort(2201)->getPort(); // 2201
@@ -135,7 +135,7 @@ Path
 
 路径是站点自身的所有分段。如你所料，可以使用 ``getPath()`` 和 ``setPath()`` 方法来操作它::
 
-	$uri = new \CodeIgniter\HTTP\URI('http://www.example.com/some/path');
+	$uri = new \FSO\HTTP\URI('http://www.example.com/some/path');
 
 	echo $uri->getPath();   // 'some/path'
 	echo $uri->setPath('another/path')->getPath();  // 'another/path'
@@ -148,7 +148,7 @@ Query
 查询变量可以通过类使用简单的字符串来调整。Query 的值通常只能设定为一个字符串。
 ::
 
-	$uri = new \CodeIgniter\HTTP\URI('http://www.example.com?foo=bar');
+	$uri = new \FSO\HTTP\URI('http://www.example.com?foo=bar');
 
 	echo $uri->getQuery();  // 'foo=bar'
 	$uri->setQuery('foo=bar&bar=baz');
@@ -167,7 +167,7 @@ Query
 
 你可以对 ``getQuery()`` 方法传递一个选项数组来过滤查询返回值，使用关键字  *only* 或 *except*::
 
-    $uri = new \CodeIgniter\HTTP\URI('http://www.example.com?foo=bar&bar=baz&baz=foz');
+    $uri = new \FSO\HTTP\URI('http://www.example.com?foo=bar&bar=baz&baz=foz');
 
     // Returns 'foo=bar'
     echo $uri->getQuery(['only' => ['foo']);
@@ -177,7 +177,7 @@ Query
 
 这样只是对调用方法后的返回值进行更改。如果你需要对 URI 对象的查询值进行永久地更改，可以使用 ``stripQuery()`` 和 ``keepQuery()`` 方法来更改真实对象的查询变量::
 
-    $uri = new \CodeIgniter\HTTP\URI('http://www.example.com?foo=bar&bar=baz&baz=foz');
+    $uri = new \FSO\HTTP\URI('http://www.example.com?foo=bar&bar=baz&baz=foz');
 
     // Leaves just the 'baz' variable
     $uri->stripQuery('foo', 'bar');
@@ -191,7 +191,7 @@ Fragment
 片段是 URL 的结尾部分，前面是英镑符号 (#)。在 HTML 中，它们是指向页面锚点的链接。媒体 URI 可以用其他各种方法来使用它们。
 ::
 
-	$uri = new \CodeIgniter\HTTP\URI('http://www.example.com/some/path#first-heading');
+	$uri = new \FSO\HTTP\URI('http://www.example.com/some/path#first-heading');
 
 	echo $uri->getFragment();   // 'first-heading'
 	echo $uri->setFragment('second-heading')->getFragment();    // 'second-heading'

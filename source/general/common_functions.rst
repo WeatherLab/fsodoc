@@ -2,7 +2,7 @@
 Global Functions and Constants
 ##############################
 
-CodeIgniter uses provides a few functions and variables that are globally defined, and are available to you at any point.
+FSO uses provides a few functions and variables that are globally defined, and are available to you at any point.
 These do not require loading any additional libraries or helpers.
 
 .. contents:: Page Contents
@@ -91,7 +91,7 @@ Service Accessors
 
 	:param string $name: The name of the benchmark point.
 	:returns: The Timer instance
-	:rtype: CodeIgniter\Debug\Timer
+	:rtype: FSO\Debug\Timer
 
 	A convenience method that provides quick access to the Timer class. You can pass in the name
 	of a benchmark point as the only parameter. This will start timing from this point, or stop

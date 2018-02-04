@@ -2,7 +2,7 @@
 Application Structure
 #####################
 
-To get the most out of CodeIgniter, you need to understand how the application is structured, by default, and what you
+To get the most out of FSO, you need to understand how the application is structured, by default, and what you
 can change to meet the needs of your application.
 
 Default Directories
@@ -44,7 +44,7 @@ This directory stores the files that make up the framework, itself. While you ha
 use the application directory, the files in the system directory should never be modified. Instead, you should
 extend the classes, or create new classes, to provide the desired functionality.
 
-All files in this directory live under the ``CodeIgniter`` namespace.
+All files in this directory live under the ``FSO`` namespace.
 
 public
 ------
@@ -74,8 +74,8 @@ production servers.
 
 docs
 ----
-This directory holds the CodeIgniter documentation. The ``user_guide`` subfolder contains a local copy of the
-User Guide, and the ``api_docs`` subfolder contains a local copy of the CodeIgniter components API reference.
+This directory holds the FSO documentation. The ``user_guide`` subfolder contains a local copy of the
+User Guide, and the ``api_docs`` subfolder contains a local copy of the FSO components API reference.
 
 Modifying Directory Locations
 -----------------------------

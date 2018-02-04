@@ -1,6 +1,6 @@
-###################
-Server Requirements
-###################
+#############
+FSO服务器要求
+#############
 
 `PHP <http://php.net/>`_ version 7.0.15 or newer is required, with the *intl* extension installed.
 
@@ -10,7 +10,7 @@ Currently supported databases are:
   - MySQL (5.1+) via the *MySQLi* driver
   - PostgreSQL via the *Postgre* driver
 
-Not all of the drivers have been converted/rewritten for CodeIgniter4.
+Not all of the drivers have been converted/rewritten for FSO.
 The list below shows the outstanding ones.
 
   - MySQL (5.1+) via the *pdo* driver

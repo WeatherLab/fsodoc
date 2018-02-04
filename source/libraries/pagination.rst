@@ -2,14 +2,14 @@
 Pagination
 ##########
 
-CodeIgniter provides a very simple, but flexible pagination library that is simple to theme, works with the model,
+FSO provides a very simple, but flexible pagination library that is simple to theme, works with the model,
 and capable of supporting multiple paginators on a single page.
 
 *******************
 Loading the Library
 *******************
 
-Like all services in CodeIgniter, it can be loaded via ``Config\Services``, though you usually will not need
+Like all services in FSO, it can be loaded via ``Config\Services``, though you usually will not need
 to load it manually::
 
     $pager = \Config\Services::pager();
@@ -115,8 +115,8 @@ When the links are rendered out to the page, they use a view file to describe th
 that is used by editing **application/Config/Pager.php**::
 
     public $templates = [
-        'default_full'   => 'CodeIgniter\Pager\Views\default_full',
-        'default_simple' => 'CodeIgniter\Pager\Views\default_simple'
+        'default_full'   => 'FSO\Pager\Views\default_full',
+        'default_simple' => 'FSO\Pager\Views\default_simple'
     ];
 
 This setting stores the alias and :doc:`namespaced view paths </general/views>` for the view that
@@ -141,8 +141,8 @@ file. A common situation would be needing different styles for the frontend and 
 ::
 
     public $templates = [
-        'default_full'   => 'CodeIgniter\Pager\Views\default_full',
-        'default_simple' => 'CodeIgniter\Pager\Views\default_simple',
+        'default_full'   => 'FSO\Pager\Views\default_full',
+        'default_simple' => 'FSO\Pager\Views\default_simple',
         'front_full'     => 'App\Views\Pagers\foundation_full',
     ];
 

@@ -2,7 +2,7 @@
 Image Manipulation Class
 ########################
 
-CodeIgniter's Image Manipulation class lets you perform the following
+FSO's Image Manipulation class lets you perform the following
 actions:
 
 -  Image Resizing
@@ -20,7 +20,7 @@ The following image libraries are supported: GD/GD2, and ImageMagick.
 Initializing the Class
 **********************
 
-Like most other classes in CodeIgniter, the image class is initialized
+Like most other classes in FSO, the image class is initialized
 in your controller by calling the Services class::
 
 	$image = Config\Services::image();
@@ -102,7 +102,7 @@ There are six available processing methods:
 
 
 These methods return the class instance so they can be chained together, as shown above.
-If they fail they will throw a ``CodeIgniter\Images\ImageException`` that contains
+If they fail they will throw a ``FSO\Images\ImageException`` that contains
 the error message. A good practice is to catch the exceptions, showing an
 error upon failure, like this::
 
@@ -112,7 +112,7 @@ error upon failure, like this::
             ->fit(100, 100, 'center')
             ->save('/path/to/image/mypic_thumb.jpg');
 	}
-	catch (CodeIgniter\Images\ImageException $e)
+	catch (FSO\Images\ImageException $e)
 	{
 		echo $e->getMessage();
 	}
@@ -229,7 +229,7 @@ The rotate() method allows you to rotate an image in 90 degree increments::
 - **$angle** is the number of degrees to rotate. One of '90', '180', '270'.
 
 .. note:: While the $angle parameter accepts a float, it will convert it to an integer during the process.
-		If the value is any other than the three values listed above, it will throw a CodeIgniter\Images\ImageException.
+		If the value is any other than the three values listed above, it will throw a FSO\Images\ImageException.
 
 
 Adding a Text Watermark

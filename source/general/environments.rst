@@ -12,7 +12,7 @@ tools loaded that you don't in production environments, etc.
 The ENVIRONMENT Constant
 ========================
 
-By default, CodeIgniter comes with the environment constant set to use
+By default, FSO comes with the environment constant set to use
 the value provided in ``$_SERVER['CI_ENVIRONMENT']``, otherwise defaulting to
 'production'. This can be set in several ways depending on your server setup.
 
@@ -63,7 +63,7 @@ differentiate between which environment you are running in.
 Boot Files
 ----------
 
-CodeIgniter requires that a PHP script matching the environment's name is located
+FSO requires that a PHP script matching the environment's name is located
 under **APPPATH/Config/Boot**. These files can contain any customizations that
 you would like to make for your environment, whether it's updating the error display
 settings, loading addtional developer tools, or anything else. These are
@@ -77,7 +77,7 @@ a fresh install:
 Effects On Default Framework Behavior
 =====================================
 
-There are some places in the CodeIgniter system where the ENVIRONMENT
+There are some places in the FSO system where the ENVIRONMENT
 constant is used. This section describes how default framework behavior
 is affected.
 
@@ -93,7 +93,7 @@ output. Disabling error reporting in production is a
 Configuration Files
 -------------------
 
-Optionally, you can have CodeIgniter load environment-specific
+Optionally, you can have FSO load environment-specific
 configuration files. This may be useful for managing things like
 differing API keys across multiple environments. This is described in
 more detail in the Handling Different Environments section of the

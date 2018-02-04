@@ -2,7 +2,7 @@
 Testing
 #######
 
-CodeIgniter has been built to make testing both the framework and your application as simple as possible.
+FSO has been built to make testing both the framework and your application as simple as possible.
 Support for ``PHPUnit`` is built in, and a ``phpunit.xml`` file is already setup for your application.
 It also provides a number of convenient helper methods to make testing every aspect of your application
 as painless as possible.
@@ -32,7 +32,7 @@ Mocking Services
 
 You will often find that you need to mock one of the services defined in **application/Config/Services.php** to limit
 your tests to only the code in question, while simulating various responses from the services. This is especially
-true when testing controllers and other integration testing. CodeIgniter makes this simple.
+true when testing controllers and other integration testing. FSO makes this simple.
 
 While in test mode, the system loads a wrapper around the **Services** class that provides two new methods,
 ``injectMock()``, and ``reset()``.
@@ -45,7 +45,7 @@ set properties of a service so that it behaves in a certain way, or replace a se
 
     public function testSomething()
     {
-        $curlrequest = $this->getMockBuilder('CodeIgniter\HTTP\CURLRequest')
+        $curlrequest = $this->getMockBuilder('FSO\HTTP\CURLRequest')
                             ->setMethods(['request'])
                             ->getMock();
         Services::injectMock('curlrequest', $curlrequest);
@@ -67,7 +67,7 @@ Testing Your Database
 The Test Class
 ==============
 
-In order to take advantage of the built-in database tools that CodeIgniter provides for testing, your
+In order to take advantage of the built-in database tools that FSO provides for testing, your
 tests must extend ``\CIDatabaseTestCase``::
 
     class MyTests extends \CIDatabaseTestCase
@@ -101,7 +101,7 @@ Test Database Setup
 ===================
 
 When running database tests, you need to provide a database that can be used during testing. Instead of
-using the PHPUnit built-in database features, the framework provides tools specific to CodeIgniter. The first
+using the PHPUnit built-in database features, the framework provides tools specific to FSO. The first
 step is to ensure that you have a ``tests`` database group setup in **application/Config/Database.php**.
 This specifies a database connection that is only used while running tests, to keep your other data safe.
 
@@ -141,7 +141,7 @@ test data prior to every test running.
 
 **$basePath**
 
-By default, CodeIgniter will look in **tests/_support/database/migrations** and **tests/_support_database/seeds**
+By default, FSO will look in **tests/_support/database/migrations** and **tests/_support_database/seeds**
 to locate the migrations and seeds that it should run during testing. You can change this directory by specifying
 the path in the ``$basePath`` property. This should not include the **migrations** or **seeds** directories, but
 the path to the single directory that holds both of those sub-directories.

@@ -34,7 +34,7 @@ This same negotiation can happen with four types of data:
 Class Reference
 ***************
 
-.. php:class:: CodeIgniter\\HTTP\\Message
+.. php:class:: FSO\\HTTP\\Message
 
 	.. php:method:: body()
 
@@ -49,7 +49,7 @@ Class Reference
 
 	   :param  string  $str: The body of the message.
 	   :returns: the Message instance to allow methods to be chained together.
-	   :rtype: CodeIgniter\\HTTP\\Message instance.
+	   :rtype: FSO\\HTTP\\Message instance.
 
 		Sets the body of the current request.
 
@@ -122,7 +122,7 @@ Class Reference
 		:param string $name: The name of the header to set the value for.
 		:param mixed  $value: The value to set the header to.
 		:returns: The current message instance
-		:rtype: CodeIgniter\\HTTP\\Message
+		:rtype: FSO\\HTTP\\Message
 
 		Sets the value of a single header. ``$name`` is the case-insensitive name of the header. If the header
 		doesn't already exist in the collection, it will be created. The ``$value`` can be either a string
@@ -134,7 +134,7 @@ Class Reference
 
 		:param string $name: The name of the header to remove.
 		:returns: The current message instance
-		:rtype: CodeIgniter\\HTTP\\Message
+		:rtype: FSO\\HTTP\\Message
 
 		Removes the header from the Message. ``$name`` is the case-insensitive name of the header::
 
@@ -145,7 +145,7 @@ Class Reference
 		:param string $name:  The name of the header to modify
 		:param mixed  $value: The value to add to the header.
 		:returns: The current message instance
-		:rtype: CodeIgniter\\HTTP\\Message
+		:rtype: FSO\\HTTP\\Message
 
 		Adds a value to an existing header. The header must already be an array of values instead of a single string.
 		If it is a string then a LogicException will be thrown.
@@ -165,7 +165,7 @@ Class Reference
 
 		:param string $version: The HTTP protocol version
 		:returns: The current message instance
-		:rtype: CodeIgniter\\HTTP\\Message
+		:rtype: FSO\\HTTP\\Message
 
 		Sets the HTTP protocol version this Message uses. Valid values are ``1.0`` or ``1.1``::
 

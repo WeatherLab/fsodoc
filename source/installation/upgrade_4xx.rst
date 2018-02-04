@@ -1,4 +1,4 @@
-TODO: rewrite for CodeIgniter4
+TODO: rewrite for FSO
 
 #############################
 Upgrading from 3.x to 4.x
@@ -7,7 +7,7 @@ Upgrading from 3.x to 4.x
 Before performing an update you should take your site offline by
 replacing the index.php file with a static one.
 
-Step 1: Update your CodeIgniter files
+Step 1: Update your FSO files
 =====================================
 
 Replace all files and directories in your *system/* directory.
@@ -31,7 +31,7 @@ considered a connection failure.
 	drivers).
 
 What this means is that if you're unable to connect to a database, or
-have an erroneous character set configured, CodeIgniter will no longer
+have an erroneous character set configured, FSO will no longer
 fail silently, but will throw an exception instead.
 
 You may choose to explicitly catch it (and for that purpose you can't use
@@ -47,7 +47,7 @@ You may choose to explicitly catch it (and for that purpose you can't use
 		// Handle the failure
 	}
 
-Or you may leave it to CodeIgniter's default exception handler, which would
+Or you may leave it to FSO's default exception handler, which would
 log the error message and display an error screen if you're running in
 development mode.
 
@@ -63,7 +63,7 @@ Thus, ``db_set_charset()`` is no longer necessary and is removed.
 Step 3: Check logic related to URI parsing of CLI requests
 ==========================================================
 
-When running a CodeIgniter application from the CLI, the
+When running a FSO application from the CLI, the
 :doc:`URI Library <../libraries/uri>` will now ignore the
 ``$config['url_suffix']`` and ``$config['permitted_uri_chars']``
 configuration settings.

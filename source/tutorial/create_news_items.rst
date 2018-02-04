@@ -2,7 +2,7 @@
 Create news items
 #################
 
-You now know how you can read data from a database using CodeIgniter, but
+You now know how you can read data from a database using FSO, but
 you haven't written any information to the database yet. In this section
 you'll expand your news controller and model created earlier to include
 this functionality.
@@ -85,7 +85,7 @@ form helper and the NewsModel. After that, the Controller-provided helper
 function is used to validate the $_POST fields. In this case the title and
 text fields are required.
 
-CodeIgniter has a powerful validation library as demonstrated
+FSO has a powerful validation library as demonstrated
 above. You can read :doc:`more about this library
 here <../libraries/validation>`.
 
@@ -120,7 +120,7 @@ fields in the ``$allowedFields`` property.
 ::
 
     <?php
-    class NewsModel extends \CodeIgniter\Model
+    class NewsModel extends \FSO\Model
     {
         protected $table = 'news';
 
@@ -137,9 +137,9 @@ handling your timestamps, you would also leave those out.
 Routing
 -------
 
-Before you can start adding news items into your CodeIgniter application
+Before you can start adding news items into your FSO application
 you have to add an extra rule to *Config/Routes.php* file. Make sure your
-file contains the following. This makes sure CodeIgniter sees 'create'
+file contains the following. This makes sure FSO sees 'create'
 as a method instead of a news item's slug.
 
 ::
@@ -150,6 +150,6 @@ as a method instead of a news item's slug.
     $routes->add('(:any)', 'Pages::view/$1');
 
 Now point your browser to your local development environment where you
-installed CodeIgniter and add index.php/news/create to the URL.
-Congratulations, you just created your first CodeIgniter application!
+installed FSO and add index.php/news/create to the URL.
+Congratulations, you just created your first FSO application!
 Add some news and check out the different pages you made.

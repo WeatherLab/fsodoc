@@ -10,7 +10,7 @@ Replace var_dump
 ================
 
 While using XDebug and a good IDE can be indispensable to debug your application, sometimes a quick ``var_dump()`` is
-all you need. CodeIgniter makes that even better by bundling in the excellent `Kint <https://raveren.github.io/kint/>`_
+all you need. FSO makes that even better by bundling in the excellent `Kint <https://raveren.github.io/kint/>`_
 debugging tool for PHP. This goes way beyond your usual tool, providing many alternate pieces of data, like formatting
 timestamps into recognizable dates, showing you hexcodes as colors, display array data like a table for easy reading,
 and much, much more.
@@ -71,25 +71,25 @@ running by removing it from the ``$globals`` property of **application/Config/Fi
 Choosing What to Show
 ---------------------
 
-CodeIgniter ships with several Collectors that, as the name implies, collect data to display on the toolbar. You
+FSO ships with several Collectors that, as the name implies, collect data to display on the toolbar. You
 can easily make your own to customize the toolbar. To determine which collectors are shown, again head over to
 the App configuration file::
 
 	public $toolbarCollectors = [
-		'CodeIgniter\Debug\Toolbar\Collectors\Timers',
-		'CodeIgniter\Debug\Toolbar\Collectors\Database',
-		'CodeIgniter\Debug\Toolbar\Collectors\Logs',
-		'CodeIgniter\Debug\Toolbar\Collectors\Views',
- 		'CodeIgniter\Debug\Toolbar\Collectors\Cache',
-		'CodeIgniter\Debug\Toolbar\Collectors\Files',
-		'CodeIgniter\Debug\Toolbar\Collectors\Routes',
+		'FSO\Debug\Toolbar\Collectors\Timers',
+		'FSO\Debug\Toolbar\Collectors\Database',
+		'FSO\Debug\Toolbar\Collectors\Logs',
+		'FSO\Debug\Toolbar\Collectors\Views',
+ 		'FSO\Debug\Toolbar\Collectors\Cache',
+		'FSO\Debug\Toolbar\Collectors\Files',
+		'FSO\Debug\Toolbar\Collectors\Routes',
 	];
 
 Comment out any collectors that you do not want to show. Add custom Collectors here by providing the fully-qualified
 class name. The exact collectors that appear here will affect which tabs are shown, as well as what information is
 shown on the Timeline.
 
-The Collectors that ship with CodeIgniter are:
+The Collectors that ship with FSO are:
 
 * **Timers** collects all of the benchmark data, both by the system and by your application.
 * **Database** Displays a list of queries that all database connections have performed, and their execution time.
@@ -110,14 +110,14 @@ Creating Custom Collectors
 ==========================
 
 Creating custom collectors is a straightforward task. You create a new class, fully-namespaced so that the autoloader
-can locate it, that extends ``CodeIgniter\Debug\Toolbar\Collectors\BaseCollector``. This provides a number of methods
+can locate it, that extends ``FSO\Debug\Toolbar\Collectors\BaseCollector``. This provides a number of methods
 that you can override, and has four required class properties that you must correctly set depending on how you want
 the Collector to work
 ::
 
 	<?php namespace MyNamespace;
 
-	use CodeIgniter\Debug\Toolbar\Collectors\BaseCollector;
+	use FSO\Debug\Toolbar\Collectors\BaseCollector;
 
 	class MyCollector extends BaseCollector
 	{

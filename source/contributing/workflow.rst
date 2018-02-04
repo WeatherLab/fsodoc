@@ -2,7 +2,7 @@
 Contribution Workflow
 =====================
 
-Much of the workflow for contributing to CodeIgniter (or any project) involves
+Much of the workflow for contributing to FSO (or any project) involves
 understanding how `Git <https://git-scm.com/>`_ is used to 
 manage a shared repository and contributions to it.
 Examples below use the Git bash shell, to be as platform neutral as
@@ -14,12 +14,12 @@ values for when you try these::
     ALL_PROJECTS    // folder location with all your projects in subfolders, eg /lampp/htdocs
     YOUR_PROJECT    // folder containing the project you are working on, inside ALL_PROJECTS
     ORIGIN_URL      // the cloning URL for your repository fork
-    UPSTREAM_URL    // the cloning URL for the CodeIgniter4 repository
+    UPSTREAM_URL    // the cloning URL for the FSO repository
 
 Branching
 =========
 
-CodeIgniter uses the `Git-Flow
+FSO uses the `Git-Flow
 <http://nvie.com/posts/a-successful-git-branching-model/>`_ branching model,
 which requires all pull requests to be sent to the "develop" branch. This is
 where the next planned version will be developed. The "master" branch will
@@ -40,13 +40,13 @@ new branches for both of these features and send two requests.
 Forking
 =======
 
-You work with a fork of the CodeIgniter4 repository. This is a copy of our repository,
+You work with a fork of the FSO repository. This is a copy of our repository,
 in your github account. You can make changes to your forked repository, while
 you cannot do the same with the shared one - you have to submit pull requests
 to it instead.
 
 `Creating a fork <https://help.github.com/articles/fork-a-repo/>`_ is done through the Github website. Navigate to `our
-repository <https://github.com/bcit-ci/CodeIgniter4>`_, 
+repository <https://github.com/bcit-ci/FSO>`_, 
 click the **Fork** button in the top-right of the page, and choose which account or
 organization of yours should contain that fork.
 

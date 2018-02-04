@@ -11,9 +11,9 @@ IncomingRequest 类提供了一个客户端（比如 浏览器）HTTP 请求的�
 获得请求
 =====================
 
-如果当前控制器继承了 ``CodeIgniter\Controller``，则一个 Request 类的实例已被初始化并可作为属性被使用::
+如果当前控制器继承了 ``FSO\Controller``，则一个 Request 类的实例已被初始化并可作为属性被使用::
 
-	class UserController extends CodeIgniter\Controller
+	class UserController extends FSO\Controller
 	{
 		public function index()
 		{
@@ -30,7 +30,7 @@ IncomingRequest 类提供了一个客户端（比如 浏览器）HTTP 请求的�
 
 推荐将 Request 对象作为一个依赖注入到当前类中并保存为一个属性::
 
-	use CodeIgniter\HTTP\RequestInterface;
+	use FSO\HTTP\RequestInterface;
 
 	class SomeClass
 	{
@@ -88,7 +88,7 @@ IncomingRequest 类提供了一个客户端（比如 浏览器）HTTP 请求的�
 
 	$something = isset($_POST['foo']) ? $_POST['foo'] : NULL;
 
-而使用 CodeIgniter 的内建方法你可以很简单的做到同样的事::
+而使用 FSO 的内建方法你可以很简单的做到同样的事::
 
 	$something = $request->getVar('foo');
 
@@ -148,14 +148,14 @@ filter types <http://php.net/manual/en/filter.filters.php>`_.
 获取数据头
 ==================
 
-你可以通过 ``getHeaders()`` 方法获得请求的数据头，该方法会以数组形式返回所有的数据头信息，数据的键值为数据头名称，值则为一个 ``CodeIgniter\HTTP\Header`` 的实例::
+你可以通过 ``getHeaders()`` 方法获得请求的数据头，该方法会以数组形式返回所有的数据头信息，数据的键值为数据头名称，值则为一个 ``FSO\HTTP\Header`` 的实例::
 
 	var_dump($request->getHeaders());
 
 	[
-		'Host' => CodeIgniter\HTTP\Header,
-		'Cache-Control' => CodeIgniter\HTTP\Header,
-		'Accept' => CodeIgniter\HTTP\Header,
+		'Host' => FSO\HTTP\Header,
+		'Cache-Control' => FSO\HTTP\Header,
+		'Accept' => FSO\HTTP\Header,
 	]
 
 如果你只是想获得某个头的信息，你可以将数据头名称作为参数传递给 ``getHeader()`` 方法。数据头名称无视大小写，如果存在则返回指定头信息。如果不存在则返回 ``null`` ::
@@ -253,28 +253,28 @@ filter types <http://php.net/manual/en/filter.filters.php>`_.
 
 以下方法由父类提供::
 
-* :meth:`CodeIgniter\\HTTP\\Request::getIPAddress`
-* :meth:`CodeIgniter\\HTTP\\Request::validIP`
-* :meth:`CodeIgniter\\HTTP\\Request::getMethod`
-* :meth:`CodeIgniter\\HTTP\\Request::getServer`
-* :meth:`CodeIgniter\\HTTP\\Message::body`
-* :meth:`CodeIgniter\\HTTP\\Message::setBody`
-* :meth:`CodeIgniter\\HTTP\\Message::populateHeaders`
-* :meth:`CodeIgniter\\HTTP\\Message::headers`
-* :meth:`CodeIgniter\\HTTP\\Message::header`
-* :meth:`CodeIgniter\\HTTP\\Message::headerLine`
-* :meth:`CodeIgniter\\HTTP\\Message::setHeader`
-* :meth:`CodeIgniter\\HTTP\\Message::removeHeader`
-* :meth:`CodeIgniter\\HTTP\\Message::appendHeader`
-* :meth:`CodeIgniter\\HTTP\\Message::protocolVersion`
-* :meth:`CodeIgniter\\HTTP\\Message::setProtocolVersion`
-* :meth:`CodeIgniter\\HTTP\\Message::negotiateMedia`
-* :meth:`CodeIgniter\\HTTP\\Message::negotiateCharset`
-* :meth:`CodeIgniter\\HTTP\\Message::negotiateEncoding`
-* :meth:`CodeIgniter\\HTTP\\Message::negotiateLanguage`
-* :meth:`CodeIgniter\\HTTP\\Message::negotiateLanguage`
+* :meth:`FSO\\HTTP\\Request::getIPAddress`
+* :meth:`FSO\\HTTP\\Request::validIP`
+* :meth:`FSO\\HTTP\\Request::getMethod`
+* :meth:`FSO\\HTTP\\Request::getServer`
+* :meth:`FSO\\HTTP\\Message::body`
+* :meth:`FSO\\HTTP\\Message::setBody`
+* :meth:`FSO\\HTTP\\Message::populateHeaders`
+* :meth:`FSO\\HTTP\\Message::headers`
+* :meth:`FSO\\HTTP\\Message::header`
+* :meth:`FSO\\HTTP\\Message::headerLine`
+* :meth:`FSO\\HTTP\\Message::setHeader`
+* :meth:`FSO\\HTTP\\Message::removeHeader`
+* :meth:`FSO\\HTTP\\Message::appendHeader`
+* :meth:`FSO\\HTTP\\Message::protocolVersion`
+* :meth:`FSO\\HTTP\\Message::setProtocolVersion`
+* :meth:`FSO\\HTTP\\Message::negotiateMedia`
+* :meth:`FSO\\HTTP\\Message::negotiateCharset`
+* :meth:`FSO\\HTTP\\Message::negotiateEncoding`
+* :meth:`FSO\\HTTP\\Message::negotiateLanguage`
+* :meth:`FSO\\HTTP\\Message::negotiateLanguage`
 
-.. php:class:: CodeIgniter\\HTTP\\IncomingRequest
+.. php:class:: FSO\\HTTP\\IncomingRequest
 
 	.. php:method:: isCLI()
 

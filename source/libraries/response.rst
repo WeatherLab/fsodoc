@@ -9,14 +9,14 @@ HTTP 响应
 使用响应类
 =========================
 
-响应类被实例化并传递到控制器。可以通过 ``$this->response`` 访问它。很多时候不需要直接使用它，因为 CodeIgniter 会为你发送标头和正文。
+响应类被实例化并传递到控制器。可以通过 ``$this->response`` 访问它。很多时候不需要直接使用它，因为 FSO 会为你发送标头和正文。
 如果一切正常，页面会成功创建被请求的内容。
 但是当出现问题时，或者当你需要发送指定的状态码，或者想要使用强大的 HTTP 缓存，可以立即使用它。
 
 设置输出内容
 ------------------
 
-当需要直接设置脚本的输出内容时，不要依赖CodeIgniter来自动获取它，应该手动调用 ``setBody`` 方法。通常用于设置响应的状态码。 ::
+当需要直接设置脚本的输出内容时，不要依赖FSO来自动获取它，应该手动调用 ``setBody`` 方法。通常用于设置响应的状态码。 ::
 
 	$this->response->setStatusCode(404)
 	               ->setBody($body);
@@ -81,7 +81,7 @@ HTTP 缓存
 
 这些都通过 ``Cache-Control`` 和 ``Etag`` 头来处理。本指南并不适合完整介绍缓存的功能，但你可以在 `Google Developers <https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching>`_ 和 `Mobify Blog <https://www.mobify.com/blog/beginners-guide-to-http-cache-headers/>`_ 中了解更多。
 
-默认情况下，所有通过 CodeIgniter 发送的响应都是关闭了 HTTP 缓存的。
+默认情况下，所有通过 FSO 发送的响应都是关闭了 HTTP 缓存的。
 但在实际应用中，情况千变万化，无法简单的设置一个合适的默认值，除非关闭它，
 不过，可以通过 ``setCache()`` 方法设置你需要的缓存的值。这非常简单 ::
 
@@ -119,7 +119,7 @@ HTTP 缓存
 
 	public $CSPEnabled = true;
 
-当开启后，响应对象将包含一个 ``CodeIgniter\HTTP\ContentSecurityPolicy`` 的实例。
+当开启后，响应对象将包含一个 ``FSO\HTTP\ContentSecurityPolicy`` 的实例。
 
 在 **application/Config/ContentSecurityPolicy.php** 中设置的值应用于这个实例，如果在运行时没有修改，那么将会发送正确的格式化后的标题，并且完成所有操作。
 
@@ -179,24 +179,24 @@ HTTP 缓存
 
 父类提供的可用的方法:
 
-* :meth:`CodeIgniter\\HTTP\\Message::body`
-* :meth:`CodeIgniter\\HTTP\\Message::setBody`
-* :meth:`CodeIgniter\\HTTP\\Message::populateHeaders`
-* :meth:`CodeIgniter\\HTTP\\Message::headers`
-* :meth:`CodeIgniter\\HTTP\\Message::header`
-* :meth:`CodeIgniter\\HTTP\\Message::headerLine`
-* :meth:`CodeIgniter\\HTTP\\Message::setHeader`
-* :meth:`CodeIgniter\\HTTP\\Message::removeHeader`
-* :meth:`CodeIgniter\\HTTP\\Message::appendHeader`
-* :meth:`CodeIgniter\\HTTP\\Message::protocolVersion`
-* :meth:`CodeIgniter\\HTTP\\Message::setProtocolVersion`
-* :meth:`CodeIgniter\\HTTP\\Message::negotiateMedia`
-* :meth:`CodeIgniter\\HTTP\\Message::negotiateCharset`
-* :meth:`CodeIgniter\\HTTP\\Message::negotiateEncoding`
-* :meth:`CodeIgniter\\HTTP\\Message::negotiateLanguage`
-* :meth:`CodeIgniter\\HTTP\\Message::negotiateLanguage`
+* :meth:`FSO\\HTTP\\Message::body`
+* :meth:`FSO\\HTTP\\Message::setBody`
+* :meth:`FSO\\HTTP\\Message::populateHeaders`
+* :meth:`FSO\\HTTP\\Message::headers`
+* :meth:`FSO\\HTTP\\Message::header`
+* :meth:`FSO\\HTTP\\Message::headerLine`
+* :meth:`FSO\\HTTP\\Message::setHeader`
+* :meth:`FSO\\HTTP\\Message::removeHeader`
+* :meth:`FSO\\HTTP\\Message::appendHeader`
+* :meth:`FSO\\HTTP\\Message::protocolVersion`
+* :meth:`FSO\\HTTP\\Message::setProtocolVersion`
+* :meth:`FSO\\HTTP\\Message::negotiateMedia`
+* :meth:`FSO\\HTTP\\Message::negotiateCharset`
+* :meth:`FSO\\HTTP\\Message::negotiateEncoding`
+* :meth:`FSO\\HTTP\\Message::negotiateLanguage`
+* :meth:`FSO\\HTTP\\Message::negotiateLanguage`
 
-.. php:class:: CodeIgniter\\HTTP\\Response
+.. php:class:: FSO\\HTTP\\Response
 
 	.. php:method:: statusCode()
 
@@ -212,7 +212,7 @@ HTTP 缓存
 		:param int $code: HTTP 状态码
 		:param string $reason: 一个可选的原因短语
 		:returns: 当前的响应实例
-		:rtype: CodeIgniter\\HTTP\\Response
+		:rtype: FSO\\HTTP\\Response
 
 		设置此次响应的 HTTP 状态码 ::
 
@@ -235,7 +235,7 @@ HTTP 缓存
 
 		:param DateTime $date: 一个设置了此响应的时间的 DateTime 实例。
 		:returns: 	当前的响应类实例
-		:rtype: CodeIgniter\\HTTP\\Response
+		:rtype: FSO\\HTTP\\Response
 
 		设置响应的时间。 ``$date`` 参数必须是一个 ``DateTime`` 实例 ::
 
@@ -247,7 +247,7 @@ HTTP 缓存
 		:param string $mime: 响应的内容类型
 		:param string $charset: 此响应使用的字符集。
 		:returns: 	当前的响应类实例
-		:rtype: CodeIgniter\\HTTP\\Response
+		:rtype: FSO\\HTTP\\Response
 
 		设置此响应的内容类型 ::
 
@@ -262,7 +262,7 @@ HTTP 缓存
 	.. php:method:: noCache()
 
 		:returns: 当前的响应类实例
-		:rtype: CodeIgniter\\HTTP\\Response
+		:rtype: FSO\\HTTP\\Response
 
 		设置 ``Cache-Control`` 标头来关闭所有的 HTTP 缓存。这是所有响应消息的默认设置 ::
 			
@@ -275,7 +275,7 @@ HTTP 缓存
 
 		:param array $options: 一组缓存设置的键值
 		:returns: 当前的响应类实例
-		:rtype: CodeIgniter\\HTTP\\Response
+		:rtype: FSO\\HTTP\\Response
 
 		设置 ``Cache-Control`` 标头，包括 ``ETags`` 和 ``Last-Modified`` 。 典型的键有:
 
@@ -295,7 +295,7 @@ HTTP 缓存
 
 		:param string|DateTime $date: 设置 Last-Modified 的时间
 		:returns: 当前的响应类实例
-		:rtype: CodeIgniter\\HTTP\\Response
+		:rtype: FSO\\HTTP\\Response
 
 		设置 ``Last-Modified`` 头。 ``$date`` 可以是一个字符串或一个 ``DateTime`` 实例 ::
 
@@ -305,9 +305,9 @@ HTTP 缓存
 	.. php:method:: send()
 
 		:returns: 当前的响应类实例
-		:rtype: CodeIgniter\\HTTP\\Response
+		:rtype: FSO\\HTTP\\Response
 
-		通知响应类发送内容给客户端。这将首先发送 HTTP 头，然后是响应的主体内容。对于主应用程序的响应，你不需要调用它，因为它由 CodeIgniter 自动处理。
+		通知响应类发送内容给客户端。这将首先发送 HTTP 头，然后是响应的主体内容。对于主应用程序的响应，你不需要调用它，因为它由 FSO 自动处理。
 
 	.. php:method:: setCookie($name = ''[, $value = ''[, $expire = ''[, $domain = ''[, $path = '/'[, $prefix = ''[, $secure = FALSE[, $httponly = FALSE]]]]]]])
 

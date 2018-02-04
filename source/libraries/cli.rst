@@ -2,7 +2,7 @@
 CLI Library
 ###########
 
-CodeIgniter's CLI library makes creating interactive command-line scripts simple, including:
+FSO's CLI library makes creating interactive command-line scripts simple, including:
 
 * Prompting the user for more information
 * Writing multi-colored text the terminal
@@ -19,9 +19,9 @@ You do not need to create an instance of the CLI library, since all of it's meth
 need to ensure your controller can locate it via a ``use`` statement above your class::
 
 	<?php
-	use \CodeIgniter\CLI\CLI;
+	use \FSO\CLI\CLI;
 
-	class MyController extends \CodeIgniter\Controller
+	class MyController extends \FSO\Controller
 	{
 		. . .
 	}

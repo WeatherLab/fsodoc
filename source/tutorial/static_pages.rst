@@ -2,7 +2,7 @@
 加载静态页
 ############
 
-**Note:** 本教程假设你已经下载好 CodeIgniter，并将其 :doc:`安装 <../installation/index>` 到你的开发环境。
+**Note:** 本教程假设你已经下载好 FSO，并将其 :doc:`安装 <../installation/index>` 到你的开发环境。
 
 首先你需要新建一个 **控制器** 来处理静态页。控制器就是用来帮助你完成工作的一个简单的类，它是你整个 Web 应用程序的"粘合剂"。
 
@@ -22,14 +22,14 @@
 ::
 
 	<?php
-	class Pages extends CodeIgniter\Controller {
+	class Pages extends FSO\Controller {
 
 		public function view($page = 'home')
 		{
 	    }
 	}
 
-你刚创建了一个 ``Pages`` 类，有一个方法 view 并可接受一个 $page 的参数。``Pages`` 类继承自 ``CodeIgniter\Controller`` 类，这意味着它可以访问 ``CodeIgniter\Controller`` 类 (*system/Controller.php*) 中定义的方法和变量。
+你刚创建了一个 ``Pages`` 类，有一个方法 view 并可接受一个 $page 的参数。``Pages`` 类继承自 ``FSO\Controller`` 类，这意味着它可以访问 ``FSO\Controller`` 类 (*system/Controller.php*) 中定义的方法和变量。
 
 控制器将是你 Web 应用程序中处理请求的核心。和其他的 PHP 类一样，可以在你的控制器中使用 ``$this`` 来访问它。
 
@@ -42,7 +42,7 @@
 	<!doctype html>
 	<html>
 	<head>
-		<title>CodeIgniter Tutorial</title>
+		<title>FSO Tutorial</title>
 	</head>
 	<body>
 
@@ -73,7 +73,7 @@
 	    if ( ! file_exists(APPPATH.'/Views/Pages/'.$page.'.php'))
 		{
 			// Whoops, we don't have a page for that!
-			throw new \CodeIgniter\PageNotFoundException($page);
+			throw new \FSO\PageNotFoundException($page);
 		}
 
 		$data['title'] = ucfirst($page); // Capitalize the first letter
@@ -85,7 +85,7 @@
 
 当请求的页面存在时，将给用户加载并展示出一个包含页头页脚的页面。如果不存在，会显示 "404 Page not found" 的错误页面。
 
-此事例方法中，第一行用以检查界面是否存在，``file_exists()`` 是原生的 PHP 函数，用于检查某个文件是否存在。``PageNotFoundException`` 是 CodeIgniter 的内置函数，用来展示默认的错误页面。
+此事例方法中，第一行用以检查界面是否存在，``file_exists()`` 是原生的 PHP 函数，用于检查某个文件是否存在。``PageNotFoundException`` 是 FSO 的内置函数，用来展示默认的错误页面。
 
 在页头模板文件中，``$title`` 变量代表页面的自定义标题，它是在方法中被赋值的，但并不是直接赋值给 title 变量，而是赋值给 ``$data`` 数组中的 title 元素。
 
@@ -106,7 +106,7 @@
 	$routes->setDefaultController('Pages/view');
 	$routes->add('(:any)', 'Pages::view/$1');
 
-CodeIgniter 读取路由的规则为从上到下，并将请求映射到第一个匹配的规则。每个规则都是一个正则表达式（左侧）映射到一个控制器和方法（右侧）。当获取到请求时，CodeIgniter 首先查找能匹配到的第一条规则，然后调用相应的可能存在参数的控制器和方法。
+FSO 读取路由的规则为从上到下，并将请求映射到第一个匹配的规则。每个规则都是一个正则表达式（左侧）映射到一个控制器和方法（右侧）。当获取到请求时，FSO 首先查找能匹配到的第一条规则，然后调用相应的可能存在参数的控制器和方法。
 
 你可以在关于 :doc:`URL路由的文档 <../general/routing>` 中找到更多信息。
 

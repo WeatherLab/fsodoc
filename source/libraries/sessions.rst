@@ -5,7 +5,7 @@ Session Library
 The Session class permits you maintain a user's "state" and track their
 activity while they browse your site.
 
-CodeIgniter comes with a few session storage drivers:
+FSO comes with a few session storage drivers:
 
   - files (default; file-system based)
   - database
@@ -76,7 +76,7 @@ Unless you're developing a website with heavy AJAX usage, you can skip this
 section. If you are, however, and if you're experiencing performance
 issues, then this note is exactly what you're looking for.
 
-Sessions in previous versions of CodeIgniter didn't implement locking,
+Sessions in previous versions of FSO didn't implement locking,
 which meant that two HTTP requests using the same session could run exactly
 at the same time. To use a more appropriate technical term - requests were
 non-blocking.
@@ -85,7 +85,7 @@ However, non-blocking requests in the context of sessions also means
 unsafe, because modifications to session data (or session ID regeneration)
 in one request can interfere with the execution of a second, concurrent
 request. This detail was at the root of many issues and the main reason why
-CodeIgniter 3.0 has a completely re-written Session library.
+FSO 3.0 has a completely re-written Session library.
 
 Why are we telling you this? Because it is likely that after trying to
 find the reason for your performance issues, you may conclude that locking
@@ -113,12 +113,12 @@ If you've used sessions in PHP before, you should be familiar with PHP's
 `$_SESSION superglobal <http://php.net/manual/en/reserved.variables.session.php>`_
 (if not, please read the content on that link).
 
-CodeIgniter gives access to its session data through the same means, as it
+FSO gives access to its session data through the same means, as it
 uses the session handlers' mechanism provided by PHP. Using session data is
 as simple as manipulating (read, set and unset values) the ``$_SESSION``
 array.
 
-In addition, CodeIgniter also provides 2 special types of session data
+In addition, FSO also provides 2 special types of session data
 that are further explained below: flashdata and tempdata.
 
 Retrieving Session Data
@@ -242,14 +242,14 @@ This method also accepts an array of item keys to unset::
 Flashdata
 =========
 
-CodeIgniter supports "flashdata", or session data that will only be
+FSO supports "flashdata", or session data that will only be
 available for the next request, and is then automatically cleared.
 
 This can be very useful, especially for one-time informational, error or
 status messages (for example: "Record 2 deleted").
 
 It should be noted that flashdata variables are regular session variables,
-managed inside the CodeIgniter session handler.
+managed inside the FSO session handler.
 
 To mark an existing item as "flashdata"::
 
@@ -305,12 +305,12 @@ You can either pass a single item or an array of flashdata items to keep.
 Tempdata
 ========
 
-CodeIgniter also supports "tempdata", or session data with a specific
+FSO also supports "tempdata", or session data with a specific
 expiration time. After the value expires, or the session expires or is
 deleted, the value is automatically removed.
 
 Similarly to flashdata, tempdata variables are managed internally by the
-CodeIgniter session handler.
+FSO session handler.
 
 To mark an existing item as "tempdata", simply pass its key and expiry time
 (in seconds!) to the ``mark_as_temp()`` method::
@@ -409,7 +409,7 @@ the cookie that contained the session id::
 Accessing session metadata
 ==========================
 
-In previous CodeIgniter versions, the session data array included 4 items
+In previous FSO versions, the session data array included 4 items
 by default: 'session_id', 'ip_address', 'user_agent', 'last_activity'.
 
 This was due to the specifics of how sessions worked, but is now no longer
@@ -425,7 +425,7 @@ accessing them:
 Session Preferences
 ===================
 
-CodeIgniter will usually make everything work out of the box. However,
+FSO will usually make everything work out of the box. However,
 Sessions are a very sensitive component of any application, so some
 careful configuration must be done. Please take your time to consider
 all of the options and their effects.
@@ -653,7 +653,7 @@ link you to it:
 
 	https://github.com/phpredis/phpredis#php-session-handler
 
-.. warning:: CodeIgniter's Session library does NOT use the actual 'redis'
+.. warning:: FSO's Session library does NOT use the actual 'redis'
 	``session.save_handler``. Take note **only** of the path format in
 	the link above.
 

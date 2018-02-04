@@ -6,7 +6,7 @@ Content negotiation is a way to determine what type of content to return to the 
 can handle, and what the server can handle. This can be used to determine whether the client is wanting HTML or JSON
 returned, whether the image should be returned as a jpg or png, what type of compression is supported and more. This
 is done by analyzing four different headers which can each support multiple value options, each with their own priority.
-Trying to match this up manually can be pretty challenging. CodeIgniter provides the ``Negotiator`` class that
+Trying to match this up manually can be pretty challenging. FSO provides the ``Negotiator`` class that
 can handle this for you.
 
 =================

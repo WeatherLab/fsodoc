@@ -2,8 +2,8 @@
 Events - Extending the Framework Core
 #####################################
 
-CodeIgniter's Events feature provides a means to tap into and modify the inner workings of the framework without hacking
-core files. When CodeIgniter runs it follows a specific execution process. There may be instances, however, when you'd
+FSO's Events feature provides a means to tap into and modify the inner workings of the framework without hacking
+core files. When FSO runs it follows a specific execution process. There may be instances, however, when you'd
 like to cause some action to take place at a particular stage in the execution process. For example, you might want to run
 a script right before your controllers get loaded, or right after, or you might want to trigger one of your own scripts
 in some other location.
@@ -24,7 +24,7 @@ Most events are defined within the **application/Config/Events.php** file. You c
 the Events class' ``on()`` method. The first parameter is the name of the event to subscribe to. The second parameter is
 a callable that will be run when that event is triggered::
 
-	use CodeIgniter\Events\Events;
+	use FSO\Events\Events;
 
 	Events::on('pre_system', ['MyClass', 'MyFunction']);
 
@@ -75,12 +75,12 @@ Publishing your own Events
 The Events library makes it simple for you to create events in your own code, also. To use this feature, you would simply
 need to call the ``trigger()`` method on the **Events** class with the name of the event::
 
-	\CodeIgniter\Events\Events::trigger('some_event');
+	\FSO\Events\Events::trigger('some_event');
 
 You can pass any number of arguments to the subscribers by adding them as additional parameters. Subscribers will be
 given the arguments in the same order as defined::
 
-	\CodeIgniter\Events\Events::trigger('some_events', $foo, $bar, $baz);
+	\FSO\Events\Events::trigger('some_events', $foo, $bar, $baz);
 
 	Events::on('some_event', function($foo, $bar, $baz) {
 		...
@@ -89,7 +89,7 @@ given the arguments in the same order as defined::
 Event Points
 ============
 
-The following is a list of available event points within the CodeIgniter core code:
+The following is a list of available event points within the FSO core code:
 
 * **pre_system** Called very early during system execution. Only the benchmark and events class have been loaded at this point. No routing or other processes have happened.
 * **post_controller_constructor** Called immediately after your controller is instantiated, but prior to any method calls happening.

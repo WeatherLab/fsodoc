@@ -2,12 +2,12 @@
 Working With HTTP Requests
 ##########################
 
-In order to get the most out of CodeIgniter, you need to have a basic understanding of how HTTP requests
+In order to get the most out of FSO, you need to have a basic understanding of how HTTP requests
 and responses work. Since this is what you work with while developing web applications, understanding the
 concepts behind HTTP is a **must** for all developers that want to be successful.
 
 The first part of this chapter gives an overview. After the concepts are out of the way, we will discuss
-how to work with the requests and responses within CodeIgniter.
+how to work with the requests and responses within FSO.
 
 What is HTTP?
 =============
@@ -67,13 +67,13 @@ wasn't found (404). Head over to IANA for a `full list of HTTP status codes
 Working with Requests and Responses
 -----------------------------------
 
-While PHP provides ways to interact with the request and response headers, CodeIgniter, like most frameworks,
+While PHP provides ways to interact with the request and response headers, FSO, like most frameworks,
 abstract them so that you have a consistent, simple interface to them. The :doc:`IncomingRequest class </libraries/incomingrequest>`
 is an object-oriented representation of the HTTP request. It provides everything you need::
 
-  use CodeIgniter\HTTP\IncomingRequest;
+  use FSO\HTTP\IncomingRequest;
 
-  $request = new IncomingRequest(new \Config\App(), new \CodeIgniter\HTTP\URI());
+  $request = new IncomingRequest(new \Config\App(), new \FSO\HTTP\URI());
 
   // the URI being requested (i.e. /about)
   $request->uri->getPath();
@@ -99,10 +99,10 @@ is an object-oriented representation of the HTTP request. It provides everything
 The request class does a lot of work in the background for you, that you never need to worry about.
 The ``isAJAX()`` and ``isSecure()`` methods check several different methods to determine the correct answer.
 
-CodeIgniter also provides a :doc:`Response class </libraries/response>` that is an object-oriented representation
+FSO also provides a :doc:`Response class </libraries/response>` that is an object-oriented representation
 of the HTTP response. This gives you an easy and powerful way to construct your response to the client::
 
-  use CodeIgniter\HTTP\Response;
+  use FSO\HTTP\Response;
 
   $response = new Response();
 

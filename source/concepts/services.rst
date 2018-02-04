@@ -5,14 +5,14 @@ Services
 Introduction
 ============
 
-All of the classes within CodeIgniter are provided as "services". This simply means that, instead
+All of the classes within FSO are provided as "services". This simply means that, instead
 of hard-coding a class name to load, the classes to call are defined within a very simple
 configuration file. This file acts as a type of factory to create new instances of the required class.
 
 A quick example will probably make things clearer, so imagine that you need to pull in an instance
 of the Timer class. The simplest method would simply be to create a new instance of that class::
 
-	$timer = new \CodeIgniter\Debug\Timer();
+	$timer = new \FSO\Debug\Timer();
 
 And this works great. Until you decide that you want to use a different timer class in its place.
 Maybe this one has some advanced reporting the default timer does not provide. In order to do this,
@@ -66,7 +66,7 @@ Defining Services
 
 To make services work well, you have to be able to rely on each class having a constant API, or
 `interface <http://php.net/manual/en/language.oop5.interfaces.php>`_, to use. Almost all of
-CodeIgniter's classes provide an interface that they adhere to. When you want to extend or replace
+FSO's classes provide an interface that they adhere to. When you want to extend or replace
 core classes, you only need to ensure you meet the requirements of the interface and you know that
 the classes are compatible.
 
@@ -74,13 +74,13 @@ For example, the ``RouterCollection`` class implements the ``RouterCollectionInt
 want to create a replacement that provides a different way to create routes, you just need to
 create a new class that implements the ``RouterCollectionInterface``::
 
-	class MyRouter implements \CodeIgniter\Router\RouteCollectionInterface
+	class MyRouter implements \FSO\Router\RouteCollectionInterface
 	{
 	    // Implement required methods here.
 	}
 
 Finally, modify **/application/Config/Services.php** to create a new instance of ``MyRouter``
-instead of ``CodeIgniter\Router\RouterCollection``::
+instead of ``FSO\Router\RouterCollection``::
 
 	public static function routes()
 	{
@@ -103,7 +103,7 @@ as a constructor parameter. The service method looks like this::
 
 	public static function renderer($viewPath=APPPATH.'views/')
 	{
-	    return new \CodeIgniter\View\View($viewPath);
+	    return new \FSO\View\View($viewPath);
 	}
 
 This sets the default path in the constructor method, but allows for easily changing
@@ -126,7 +126,7 @@ within the class, and, if not, creates a new one. All of the factory methods pro
         {
             if (! $getShared)
             {
-                return new \CodeIgniter\Router\RouteCollection();
+                return new \FSO\Router\RouteCollection();
             }
 
             return self::getSharedInstance('routes');

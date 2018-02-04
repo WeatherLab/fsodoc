@@ -46,7 +46,7 @@ to set these up globally or for a single repository.
 	git config --global user.name "John Q Public"
  
 Once in place, you merely have to use `--signoff` on your commits to your
-CodeIgniter fork.
+FSO fork.
 
 .. code-block:: bash
 

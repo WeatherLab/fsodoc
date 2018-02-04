@@ -2,7 +2,7 @@
 Validation
 ##########
 
-CodeIgniter provides a comprehensive data validation class that
+FSO provides a comprehensive data validation class that
 helps minimize the amount of code you'll write.
 
 .. contents:: Page Contents
@@ -11,7 +11,7 @@ helps minimize the amount of code you'll write.
 Overview
 ********
 
-Before explaining CodeIgniter's approach to data validation, let's
+Before explaining FSO's approach to data validation, let's
 describe the ideal scenario:
 
 #. A form is displayed.
@@ -45,7 +45,7 @@ and tedious to implement.
 Form Validation Tutorial
 ************************
 
-What follows is a "hands on" tutorial for implementing CodeIgniter's Form
+What follows is a "hands on" tutorial for implementing FSO's Form
 Validation.
 
 In order to implement form validation you'll need three things:
@@ -121,7 +121,7 @@ this code and save it to your **application/Controllers/** folder::
 
 	<?php namespace App\Controllers;
 
-    use CodeIgniter\Controller;
+    use FSO\Controller;
 
 	class Form extends Controller
 	{
@@ -206,7 +206,7 @@ for including multiple Rule sets, and collections of rules that can be easily re
 Setting Validation Rules
 ========================
 
-CodeIgniter lets you set as many validation rules as you need for a
+FSO lets you set as many validation rules as you need for a
 given field, cascading them in order. To set validation rules you
 will use the ``setRule()``, ``setRules()``, or ``withRequest()``
 methods.
@@ -459,8 +459,8 @@ Inside, you'll find the ``$templates`` property where you can list as many custo
 short alias they can be referenced by. If we were to add our example file from above, it would look something like::
 
     public $templates = [
-        'list'   => 'CodeIgniter\Validation\Views\list',
-        'single' => 'CodeIgniter\Validation\Views\single',
+        'list'   => 'FSO\Validation\Views\list',
+        'single' => 'FSO\Validation\Views\single',
         'my_list' => '_errors_list'
     ];
 
@@ -485,9 +485,9 @@ autoloader can find it. These files are called RuleSets. To add a new RuleSet, e
 add the new file to the ``$ruleSets`` array::
 
     public $ruleSets = [
-		\CodeIgniter\Validation\Rules::class,
-		\CodeIgniter\Validation\FileRules::class,
-        \CodeIgniter\Validation\CreditCardRules::class,
+		\FSO\Validation\Rules::class,
+		\FSO\Validation\FileRules::class,
+        \FSO\Validation\CreditCardRules::class,
 	];
 
 You can add it as either a simple string with the fully qualified class name, or using the ``::class`` suffix as
@@ -504,7 +504,7 @@ a boolean true or false value signifying true if it passed the test or false if 
         }
     }
 
-By default, the system will look within ``CodeIgniter\Language\en\Validation.php`` for the language strings used
+By default, the system will look within ``FSO\Language\en\Validation.php`` for the language strings used
 within errors. In custom rules you may provide error messages by accepting an $error variable by reference in the
 second parameter::
 

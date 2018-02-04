@@ -23,7 +23,7 @@ The library can be loaded either manually or through the :doc:`Services class </
 
 To load with the Services class call the ``curlrequest()`` method::
 
-	$client = \CodeIgniter\HTTP\Services::curlrequest();
+	$client = \FSO\HTTP\Services::curlrequest();
 
 You can pass in an array of default options as the first parameter to modify how cURL will handle the request.
 The options are described later in this document::
@@ -38,10 +38,10 @@ When creating the class manually, you need to pass a few dependencies in. The fi
 instance of the ``Config\App`` class. The second parameter is a URI instance. The third
 parameter is a Response object. The fourth parameter is the optional ``$options`` array::
 
-	$client = new \CodeIgniter\HTTP\CURLRequest(
+	$client = new \FSO\HTTP\CURLRequest(
 		new \Config\App(),
-		new \CodeIgniter\HTTP\URI(),
-		new \CodeIgniter\HTTP\Response(),
+		new \FSO\HTTP\URI(),
+		new \FSO\HTTP\Response(),
 		$options
 	);
 
@@ -66,7 +66,7 @@ a Response instance to you. This takes the HTTP method, the url and an array of 
 		'auth' => ['user', 'pass']
 	]);
 
-Since the response is an instance of ``CodeIgniter\HTTP\Response`` you have all of the normal information
+Since the response is an instance of ``FSO\HTTP\Response`` you have all of the normal information
 available to you::
 
 	echo $response->statusCode();
@@ -226,7 +226,7 @@ as the path to the certificate, and the second as the password::
 connect_timeout
 ===============
 
-By default, CodeIgniter does not impose a limit for cURL to attempt to connect to a website. If you need to
+By default, FSO does not impose a limit for cURL to attempt to connect to a website. If you need to
 modify this value, you can do so by passing the amount of time in seconds with the ``connect_timeout`` option.
 You can pass 0 to wait indefinitely::
 

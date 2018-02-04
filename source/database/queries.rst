@@ -100,7 +100,7 @@ Escaping Queries
 ****************
 
 It's a very good security practice to escape your data before submitting
-it into your database. CodeIgniter has three methods that help you do
+it into your database. FSO has three methods that help you do
 this:
 
 #. **$db->escape()** This function determines the data type so
@@ -299,7 +299,7 @@ Working with Query Objects
 **************************
 
 Internally, all queries are processed and stored as instances of
-\CodeIgniter\Database\Query. This class is responsible for binding
+\FSO\Database\Query. This class is responsible for binding
 the parameters, otherwise preparing the query, and storing performance
 data about its query.
 

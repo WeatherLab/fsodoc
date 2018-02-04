@@ -9,7 +9,7 @@ Localization
 Working With Locales
 ********************
 
-CodeIgniter provides several tools to help you localize your application for different languages. While full
+FSO provides several tools to help you localize your application for different languages. While full
 localization of an application is a complex subject, it's simple to swap out strings in your application
 with different supported languages.
 
@@ -85,11 +85,11 @@ Retrieving the Current Locale
 =============================
 
 The current locale can always be retrieved from the IncomingRequest object, through the ``getLocale()`` method.
-If your controller is extending ``CodeIgniter\Controller``, this will be available through ``$this->request``::
+If your controller is extending ``FSO\Controller``, this will be available through ``$this->request``::
 
     namespace App\Controllers;
 
-    class UserController extends \CodeIgniter\Controller
+    class UserController extends \FSO\Controller
     {
         public function index()
         {

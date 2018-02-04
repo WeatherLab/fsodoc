@@ -1,8 +1,8 @@
 ################
-CodeIgniter URLs
+FSO URLs
 ################
 
-在默认情况下，CodeIgniter 中的 URL 被设计成对搜索引擎和用户友好的样式。 不同于使用传统的在动态系统中使用代词的标准 “查询字符串” 的方式，CodeIgniter 使用基于段的方法::
+在默认情况下，FSO 中的 URL 被设计成对搜索引擎和用户友好的样式。 不同于使用传统的在动态系统中使用代词的标准 “查询字符串” 的方式，FSO 使用基于段的方法::
 
 	example.com/news/article/my_article
 

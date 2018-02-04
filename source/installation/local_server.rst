@@ -5,7 +5,7 @@ Local Development Server
 PHP provides a built-in web server that is can be used locally when developing an application without
 the need to setup a dedicated web server like MAMP, XAMPP, etc. If you have PHP installed on your
 development machine, you can use the ``serve`` script to launch PHP's built-in server and have
-it all setup to work with your CodeIgniter application. To launch the server type the following
+it all setup to work with your FSO application. To launch the server type the following
 from the command line in the main directory::
 
     > php serve

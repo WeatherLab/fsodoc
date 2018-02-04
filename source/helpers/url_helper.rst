@@ -106,7 +106,7 @@ The following functions are available:
 
 	Returns the full URL (including segments) of the page the user was previously on.
 
-	Due to security issues of blindly trusting the HTTP_REFERER system variable, CodeIgniter will
+	Due to security issues of blindly trusting the HTTP_REFERER system variable, FSO will
 	store previously visited pages in the session if it's available. This ensures that we always
 	use a known and trusted source. If the session hasn't been loaded, or is otherwise unavailable,
 	then a sanitized version of HTTP_REFERER will be used.

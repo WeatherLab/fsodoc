@@ -9,18 +9,18 @@ you create form elements, **Text Helpers** perform various text formatting
 routines, **Cookie Helpers** set and read cookies, **File Helpers** help you
 deal with files, etc.
 
-Unlike most other systems in CodeIgniter, Helpers are not written in an
+Unlike most other systems in FSO, Helpers are not written in an
 Object Oriented format. They are simple, procedural functions. Each
 helper function performs one specific task, with no dependence on other
 functions.
 
-CodeIgniter does not load Helper Files by default, so the first step in
+FSO does not load Helper Files by default, so the first step in
 using a Helper is to load it. Once loaded, it becomes globally available
 in your :doc:`controller <../general/controllers>` and
 :doc:`views <../general/views>`.
 
 Helpers are typically stored in your **system/Helpers**, or
-**application/Helpers directory**. CodeIgniter will look first in your
+**application/Helpers directory**. FSO will look first in your
 **application/Helpers directory**. If the directory does not exist or the
 specified helper is not located there CI will instead look in your
 global *system/Helpers/* directory.

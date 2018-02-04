@@ -18,7 +18,7 @@ article <http://en.wikipedia.org/wiki/Command-line_interface>`_.
 Why run via the command-line?
 =============================
 
-There are many reasons for running CodeIgniter from the command-line,
+There are many reasons for running FSO from the command-line,
 but they are not always obvious.
 
 -  Run your cron-jobs without needing to use *wget* or *curl*.
@@ -37,7 +37,7 @@ text editor, create a file called Tools.php, and put the following code
 in it::
 
 	<?php
-	class Tools extends \CodeIgniter\Controller {
+	class Tools extends \FSO\Controller {
 
 		public function message($to = 'World')
 		{
@@ -52,7 +52,7 @@ Now normally you would visit the your site using a URL similar to this::
 	example.com/index.php/tools/message/to
 
 Instead, we are going to open Terminal in Mac/Linux or go to Run > "cmd"
-in Windows and navigate to our CodeIgniter project's web root.
+in Windows and navigate to our FSO project's web root.
 
 .. code-block:: bash
 
@@ -77,7 +77,7 @@ That, in a nutshell, is all there is to know about controllers on the
 command line. Remember that this is just a normal controller, so routing
 and ``_remap()`` works fine.
 
-However, CodeIgniter provides additional tools to make creating CLI-accessible
+However, FSO provides additional tools to make creating CLI-accessible
 scripts even more pleasant, include CLI-only routing, and a library that helps
 you with CLI-only tools.
 

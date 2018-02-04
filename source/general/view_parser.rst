@@ -27,7 +27,7 @@ These variables are not actual PHP variables, but rather plain text
 representations that allow you to eliminate PHP from your templates
 (view files).
 
-.. note:: CodeIgniter does **not** require you to use this class since
+.. note:: FSO does **not** require you to use this class since
 	using pure PHP in your view pages (for instance using the
 	:doc:`View renderer </general/view_renderer>` )
 	lets them run a little faster.
@@ -46,7 +46,7 @@ The simplest method to load the parser class is through its service::
 Alternately, if you are not using the ``Parser`` class as your default renderer, you
 can instantiate it directly::
 
-	$parser = new \CodeIgniter\View\Parser();
+	$parser = new \FSO\View\Parser();
 
 Then you can use any of the three standard rendering methods that it provides:
 **render(viewpath, options, save)**, **setVar(name, value, context)** and
@@ -346,7 +346,7 @@ of the comparison operators you would normally, like ``==``, ``===``, ``!==``, `
 Escaping Data
 =============
 
-By default, all variable substitution is escaped to help prevent XSS attacks on your pages. CodeIgniter's ``esc`` method
+By default, all variable substitution is escaped to help prevent XSS attacks on your pages. FSO's ``esc`` method
 supports several different contexts, like general **html**, when it's in an HTML **attr*, in **css**, etc. If nothing
 else is specified, the data will be assumed to be in an HTML context. You can specify the context used by using the **esc**
 filter::
@@ -425,8 +425,8 @@ You can easily create your own filters by editing **application/Config/View.php*
 callable::
 
 	public $filters = [
-		'abs'               => '\CodeIgniter\View\Filters::abs',
-		'capitalize'        => '\CodeIgniter\View\Filters::capitalize',
+		'abs'               => '\FSO\View\Filters::abs',
+		'capitalize'        => '\FSO\View\Filters::capitalize',
 	];
 
 Parser Plugins
@@ -620,7 +620,7 @@ Result::
 Class Reference
 ***************
 
-.. php:class:: CodeIgniter\\View\\Parser
+.. php:class:: FSO\\View\\Parser
 
 	.. php:method:: render($view[, $options[, $saveData=false]]])
 
@@ -665,7 +665,7 @@ Class Reference
 		:param  array   $data: Array of view data strings, as key/value pairs
     		:param  string  $context: The context to use for data escaping.
     		:returns: The Renderer, for method chaining
-    		:rtype: CodeIgniter\\View\\RendererInterface.
+    		:rtype: FSO\\View\\RendererInterface.
 
     		Sets several pieces of view data at once::
 
@@ -680,7 +680,7 @@ Class Reference
     		:param  mixed   $value: The value of this view data
     		:param  string  $context: The context to use for data escaping.
     		:returns: The Renderer, for method chaining
-    		:rtype: CodeIgniter\\View\\RendererInterface.
+    		:rtype: FSO\\View\\RendererInterface.
 
     		Sets a single piece of view data::
 
@@ -694,7 +694,7 @@ Class Reference
 		:param  string  $leftDelimiter: Left delimiter for substitution fields
     		:param  string  $rightDelimiter: right delimiter for substitution fields
     		:returns: The Renderer, for method chaining
-    		:rtype: CodeIgniter\\View\\RendererInterface.
+    		:rtype: FSO\\View\\RendererInterface.
 
     		Over-ride the substitution field delimiters::
 

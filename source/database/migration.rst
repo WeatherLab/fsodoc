@@ -29,11 +29,11 @@ method taken. Two numbering styles are available:
 
 * **Sequential:** each migration is numbered in sequence, starting with **001**.
   Each number must be three digits, and there must not be any gaps in the
-  sequence. (This was the numbering scheme prior to CodeIgniter 3.0.)
+  sequence. (This was the numbering scheme prior to FSO 3.0.)
 * **Timestamp:** each migration is numbered using the timestamp when the migration
   was created, in **YYYYMMDDHHIISS** format (e.g. **20121031100537**). This
   helps prevent numbering conflicts when working in a team environment, and is
-  the preferred scheme in CodeIgniter 3.0 and later.
+  the preferred scheme in FSO 3.0 and later.
 
 The desired style may be selected using the ``$type`` setting in your
 *application/Config/Migrations.php* file. The default setting is timestamp.
@@ -56,7 +56,7 @@ as *20121031100537_Add_blog.php*.
 
 	<?php
 
-	class Migration_Add_blog extends \CodeIgniter\Database\Migration {
+	class Migration_Add_blog extends \FSO\Database\Migration {
 
 		public function up()
 		{
@@ -115,7 +115,7 @@ another database is used for mission critical data. You can ensure that migratio
 against the proper group by setting the ``$DBGroup`` property on your migration. This name must
 match the name of the database group exactly::
 
-  class Migration_Add_blog extends \CodeIgniter\Database\Migration
+  class Migration_Add_blog extends \FSO\Database\Migration
   {
     protected $DBGroup = 'alternate_db_group';
 
@@ -154,7 +154,7 @@ to update the schema::
 
 	<?php
 
-	class Migrate extends \CodeIgniter\Controller
+	class Migrate extends \FSO\Controller
 	{
 
 		public function index()
@@ -176,7 +176,7 @@ to update the schema::
 *******************
 Commnand-Line Tools
 *******************
-CodeIgniter ships with several :doc:`commands </general/cli_commands>` that are available from the command line to help
+FSO ships with several :doc:`commands </general/cli_commands>` that are available from the command line to help
 you work with migrations. These tools are not required to use migrations but might make things easier for those of you
 that wish to use them. The tools primarily provide access to the same methods that are available within the MigrationRunner class.
 
@@ -296,7 +296,7 @@ Preference                 Default                Options                    Des
 Class Reference
 ***************
 
-.. php:class:: CodeIgniter\Database\MigrationRunner
+.. php:class:: FSO\Database\MigrationRunner
 
 	.. php:method:: current($group)
 
@@ -351,7 +351,7 @@ Class Reference
 
 	  :param  string  $namespace: application namespace.
 	  :returns:   The current MigrationRunner instance
-	  :rtype:     CodeIgniter\Database\MigrationRunner
+	  :rtype:     FSO\Database\MigrationRunner
 
 	  Sets the path the library should look for migration files::
 
@@ -361,7 +361,7 @@ Class Reference
 
 	  :param  string  $group: database group name.
 	  :returns:   The current MigrationRunner instance
-	  :rtype:     CodeIgniter\Database\MigrationRunner
+	  :rtype:     FSO\Database\MigrationRunner
 
 	  Sets the path the library should look for migration files::
 

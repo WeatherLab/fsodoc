@@ -1,7 +1,7 @@
 ##############
 错误处理
 ##############
-CodeIgniter 通过 `SPL collection <http://php.net/manual/en/spl.exceptions.php>`_ 和一些框架内自定义异常来生成系统错误报告。错误处理的行为取决于你部署环境的设置，当一个错误或异常被抛出时，只要应用不是在 ``production`` 环境下运行，就会默认展示出详细的错误报告。在这种情况下，应为用户显示一个更为通用的信息来保证最佳的用户体验。
+FSO 通过 `SPL collection <http://php.net/manual/en/spl.exceptions.php>`_ 和一些框架内自定义异常来生成系统错误报告。错误处理的行为取决于你部署环境的设置，当一个错误或异常被抛出时，只要应用不是在 ``production`` 环境下运行，就会默认展示出详细的错误报告。在这种情况下，应为用户显示一个更为通用的信息来保证最佳的用户体验。
 
 使用异常处理
 ================
@@ -25,14 +25,14 @@ CodeIgniter 通过 `SPL collection <http://php.net/manual/en/spl.exceptions.php>
 
 在这个例子中，我们可以捕捉任意类型的异常。如果我们仅仅想要监视特定类型的异常，比如 UnknownFileException，我们就可以把它在 catch 参数中指定出来。这样一来，其它异常和非监视类型子类的异常都会被传递给错误处理程序::
 
-	catch (\CodeIgniter\UnknownFileException $e)
+	catch (\FSO\UnknownFileException $e)
 	{
 		// do something here...
 	}
 
 这便于你自己进行错误处理或是在脚本结束前做好清理工作。如果你希望错误处理程序正常运行，可以在 catch 语句块中再抛出一个新的异常。
 
-	catch (\CodeIgniter\UnknownFileException $e)
+	catch (\FSO\UnknownFileException $e)
 	{
 		// do something here...
 
@@ -42,7 +42,7 @@ CodeIgniter 通过 `SPL collection <http://php.net/manual/en/spl.exceptions.php>
 配置
 =============
 
-默认情况下，CodeIgniter 将在 ``development`` 和 ``testing`` 环境中展示所有的错误，而在 ``production`` 环境中不展示任何错误。你可以在主 ``index.php`` 文件的顶部找到环境配置部分来更改此设置。
+默认情况下，FSO 将在 ``development`` 和 ``testing`` 环境中展示所有的错误，而在 ``production`` 环境中不展示任何错误。你可以在主 ``index.php`` 文件的顶部找到环境配置部分来更改此设置。
 
 .. important:: 如果发生错误，禁用错误报告将不会阻止日志的写入。
 
@@ -58,7 +58,7 @@ PageNotFoundException
 
 	if (! $page = $pageModel->find($id))
 	{
-		throw new \CodeIgniter\PageNotFoundException();
+		throw new \FSO\PageNotFoundException();
 	}
 
 你可以通过异常传递消息，它将在 404 页默认消息位置被展示。
@@ -68,7 +68,7 @@ ConfigException
 
 当配置文件中的值无效或 class 类不是正确类型等情况时，请使用此异常::
 
-	throw new \CodeIgniter\ConfigException();
+	throw new \FSO\ConfigException();
 
 它将 HTTP 状态码置为 500，退出状态码被置为 3.
 
@@ -77,7 +77,7 @@ UnknownFileException
 
 在文件没有被找到时，请使用此异常::
 
-	throw new \CodeIgniter\UnknownFileException();
+	throw new \FSO\UnknownFileException();
 
 它将 HTTP 状态码置为 500，退出状态码被置为 4.
 
@@ -86,7 +86,7 @@ UnknownClassException
 
 当一个类没有被找到时，请使用此异常::
 
-	throw new \CodeIgniter\UnknownClassException($className);
+	throw new \FSO\UnknownClassException($className);
 
 它将 HTTP 状态码置为 500，退出状态码被置为 5.
 
@@ -95,7 +95,7 @@ UnknownMethodException
 
 当一个类的方法不存在时，请使用此异常::
 
-	throw new \CodeIgniter\UnknownMethodException();
+	throw new \FSO\UnknownMethodException();
 
 它将 HTTP 状态码置为 500，退出状态码被置为 6.
 
@@ -104,7 +104,7 @@ UserInputException
 
 当用户的输入无效时，请使用此异常::
 
-	throw new \CodeIgniter\UserInputException();
+	throw new \FSO\UserInputException();
 
 它将 HTTP 状态码置为 500，退出状态码被置为 7.	
 
@@ -113,6 +113,6 @@ DatabaseException
 
 当产生如连接不能建立或连接临时丢失的数据库错误时，请使用此异常::
 
-	throw new \CodeIgniter\DatabaseException();
+	throw new \FSO\DatabaseException();
 
 它将 HTTP 状态码置为 500，退出状态码被置为 8.

@@ -12,7 +12,7 @@ In that case you can access the View service directly::
 Alternately, if you are not using the ``View`` class as your default renderer, you
 can instantiate it directly::
 
-	$view = new \CodeIgniter\View\View();
+	$view = new \FSO\View\View();
 
 
 .. important:: You should create services only within controllers. If you need
@@ -101,7 +101,7 @@ Several options can be passed to the ``render()`` or ``renderString()`` methods:
 Class Reference
 ***************
 
-.. php:class:: CodeIgniter\\View\\View
+.. php:class:: FSO\\View\\View
 
 	.. php:method:: render($view[, $options[, $saveData=false]]])
 
@@ -137,7 +137,7 @@ Class Reference
 		:param  array   $data: Array of view data strings, as key/value pairs
 		:param  string  $context: The context to use for data escaping.
 		:returns: The Renderer, for method chaining
-		:rtype: CodeIgniter\\View\\RendererInterface.
+		:rtype: FSO\\View\\RendererInterface.
 
 		Sets several pieces of view data at once::
 
@@ -155,7 +155,7 @@ Class Reference
 		:param  mixed   $value: The value of this view data
 		:param  string  $context: The context to use for data escaping.
 		:returns: The Renderer, for method chaining
-		:rtype: CodeIgniter\\View\\RendererInterface.
+		:rtype: FSO\\View\\RendererInterface.
 
 		Sets a single piece of view data::
 

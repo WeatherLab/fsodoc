@@ -12,7 +12,7 @@
 类参考
 ===============
 
-.. php:class:: CodeIgniter\\HTTP\\IncomingRequest
+.. php:class:: FSO\\HTTP\\IncomingRequest
 
 	.. php:method:: getIPAddress()
 

@@ -29,7 +29,7 @@ Some commands take additional arguments, which should be provided directly after
 
     > php spark db:seed DevUserSeeder
 
-For all of the commands CodeIgniter provides, if you do not provide the required arguments, you will be prompted
+For all of the commands FSO provides, if you do not provide the required arguments, you will be prompted
 for the information it needs to run correctly::
 
     > php spark migrate:version
@@ -48,7 +48,7 @@ Creating New Commands
 *********************
 
 You can very easily create new commands to use in your own development. Each class must be in its own file,
-and must extend ``CodeIgniter\CLI\BaseCommand``, and implement the ``run()`` method.
+and must extend ``FSO\CLI\BaseCommand``, and implement the ``run()`` method.
 
 The following properties should be used in order to get listed in CLI commands and to add help functionality to your command:
 
@@ -68,7 +68,7 @@ Commands must be stored within a directory named **Commands**. However, that dir
 that the :doc:`Autoloader </concepts/autoloader>` can locate it. This could be in **/application/Commands**, or
 a directory that you keep commands in to use in all of your project development, like **Acme/Commands**.
 
-.. note:: When the commands are executed, the full CodeIgniter cli environment has been loaded, making it
+.. note:: When the commands are executed, the full FSO cli environment has been loaded, making it
  possible to get environment information, path information, and to use any of the tools you would use when making a Controller.
 
 An Example Command
@@ -80,7 +80,7 @@ should contain the following code::
 
     <?php namespace App\Commands;
 
-    use CodeIgniter\CLI\BaseCommand;
+    use FSO\CLI\BaseCommand;
 
     class AppInfo extends BaseCommand
     {
@@ -126,7 +126,7 @@ Our demo command might have a ``run`` method something like::
     public function run(array $params)
     {
         CLI::write('PHP Version: '. CLI::color(phpversion(), 'yellow'));
-        CLI::write('CI Version: '. CLI::color(CodeIgniter::CI_VERSION, 'yellow'));
+        CLI::write('CI Version: '. CLI::color(FSO::CI_VERSION, 'yellow'));
         CLI::write('APPPATH: '. CLI::color(APPPATH, 'yellow'));
         CLI::write('BASEPATH: '. CLI::color(BASEPATH, 'yellow'));
         CLI::write('ROOTPATH: '. CLI::color(ROOTPATH, 'yellow'));
@@ -143,7 +143,7 @@ The ``BaseCommand`` class that all commands must extend have a couple of helpful
 be familiar with when creating your own commands. It also has a :doc:`Logger </general/logging>` available at
 **$this->logger**.
 
-.. php:class:: CodeIgniter\CLI\BaseCommand
+.. php:class:: FSO\CLI\BaseCommand
 
     .. php:method:: call(string $command[, array $params=[] ])
 

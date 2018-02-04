@@ -2,7 +2,7 @@
 Code Modules
 ############
 
-CodeIgniter supports a very simple form of modularization to help you create reusable code. Modules are typically
+FSO supports a very simple form of modularization to help you create reusable code. Modules are typically
 centered around a specific subject, and can be thought of as mini-applications within your larger application. Any
 of the standard file types within the framework are supported, like controllers, models, views, config files, helpers,
 language files, etc. Modules may contain as few, or as many, of these as you like.
@@ -14,7 +14,7 @@ Namespaces
 ==========
 
 The core element of the modules functionality comes from the :doc:`PSR4-compatible autoloading </concepts/autoloader>`
-that CodeIgniter uses. While any code can use the PSR4 autoloader and namespaces, the only way to take full advantage of
+that FSO uses. While any code can use the PSR4 autoloader and namespaces, the only way to take full advantage of
 modules is to namespace your code and add it to **application/Config/Autoload.php**, in the ``psr4`` section.
 
 For example, let's say we want to keep a simple blog module that we can re-use between components. We might create

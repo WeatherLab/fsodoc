@@ -2,7 +2,7 @@
 使用文件类
 ******************
 
-CodeIgniter提供了一个文件类,它将提供 `SplFileInfo <http://php.net/manual/en/class.splfileinfo.php>`_ class 
+FSO提供了一个文件类,它将提供 `SplFileInfo <http://php.net/manual/en/class.splfileinfo.php>`_ class 
 方法和一些额外的便利方法.这个类是 :doc:`uploaded files </libraries/uploaded_files>` 的基类
 和 :doc:`images </libraries/images>`.
 
@@ -16,7 +16,7 @@ CodeIgniter提供了一个文件类,它将提供 `SplFileInfo <http://php.net/ma
 
 ::
 
-    $file = new \CodeIgniter\Files\File($path);
+    $file = new \FSO\Files\File($path);
 
 利用Spl
 =======================

@@ -1,5 +1,5 @@
 ##############################
-CodeIgniter Internals Overview
+FSO Internals Overview
 ##############################
 
 This guide should help contributors understand how the core of the framework works, and what needs to be done
@@ -10,7 +10,7 @@ Dependencies
 ============
 
 All packages should be designed to be completely isolated from the rest of the packages. This will allow
-them to be used in projects outside of CodeIgniter. Basically, this means that all dependencies should be
+them to be used in projects outside of FSO. Basically, this means that all dependencies should be
 kept to a minimum. Any dependencies must be able to be passed into the constructor. If you do need to use one
 of the other core packages, you can create that in the constructor using the Services class, as long as you
 provide a way for dependencies to override that::
@@ -53,14 +53,14 @@ classes within the package.
 Namespaces and Files
 ====================
 
-All new packages should live under the ``CodeIgniter`` namespace. The package itself will need its own sub-namespace
-that collects all related files into one grouping, like ``CodeIgniter\HTTP``.
+All new packages should live under the ``FSO`` namespace. The package itself will need its own sub-namespace
+that collects all related files into one grouping, like ``FSO\HTTP``.
 
 Files MUST be named the same as the class they hold, and they must match the :doc:`Style Guide <styleguide>`, meaning
 CamelCase class and file names. The should be in their own directory that matches the sub-namespace under the **system**
 directory.
 
-The the Router as an example. The Router lives in the ``CodeIgniter\Router`` namespace. It has two classes,
+The the Router as an example. The Router lives in the ``FSO\Router`` namespace. It has two classes,
 **RouteCollection** and **Router**, which are in the files, **system/Router/RouteCollection.php** and
 **system/Router/Router.php** respectively. 
 
@@ -72,7 +72,7 @@ and passed in other classes as a dependency without breaking the type-hinting. T
 the name of the class with "Interface" appended to it, like ``RouteCollectionInterface``.
 
 The Router package mentioned above includes the 
-``CodeIgniter\Router\RouterCollectionInterface`` and ``CodeIgniter\Router\RouterInterface``
+``FSO\Router\RouterCollectionInterface`` and ``FSO\Router\RouterInterface``
 interfaces to provide the abstractions for the two classes in the package.
 
 Handlers
@@ -99,7 +99,7 @@ This is only used for core framework files, and helps to minimize file system sc
 Command-Line Support
 ====================
 
-CodeIgniter has never been known for it's strong CLI support. However, if your package could benefit from it, create a
+FSO has never been known for it's strong CLI support. However, if your package could benefit from it, create a
 new file under **system/Commands**. The class contained within is simply a controller that is intended for CLI
 usage only. The ``index()`` method should provide a list of available commands provided by that package.
 

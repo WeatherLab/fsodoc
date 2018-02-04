@@ -41,7 +41,7 @@ Where _name_ is the name of your view file.
 
 Now, open the controller file you made earlier called ``Blog.php``, and replace the echo statement with the view function::
 
-	class Blog extends \CodeIgniter\Controller
+	class Blog extends \FSO\Controller
 	{
 		public function index()
 		{
@@ -59,11 +59,11 @@ If you visit your site using the URL you did earlier you should see your new vie
 Loading Multiple Views
 ======================
 
-CodeIgniter will intelligently handle multiple calls to ``view()`` from within a controller. If more than one
+FSO will intelligently handle multiple calls to ``view()`` from within a controller. If more than one
 call happens they will be appended together. For example, you may wish to have a header view, a menu view, a
 content view, and a footer view. That might look something like this::
 
-	class Page extends \CodeIgniter\Controller
+	class Page extends \FSO\Controller
 	{
 		public function index()
 		{
@@ -92,7 +92,7 @@ Namespaced Views
 ================
 
 You can store views under a **View** directory that is namespaced, and load that view as if it was namespaced. While
-PHP does not support loading non-class files from a namespace, CodeIgniter provides this feature to make it possible
+PHP does not support loading non-class files from a namespace, FSO provides this feature to make it possible
 to package your views together in a module-like fashion for easy re-use or distribution.
 
 If you have ``Blog`` directory that has a PSR-4 mapping setup in the :doc:`Autoloader </concepts/autoloader>` living
@@ -132,7 +132,7 @@ Here's an example::
 
 Let's try it with your controller file. Open it and add this code::
 
-	class Blog extends \CodeIgniter\Controller
+	class Blog extends \FSO\Controller
 	{
 		public function index()
 		{
@@ -182,7 +182,7 @@ typically be in the form of a multi-dimensional array.
 
 Here’s a simple example. Add this to your controller::
 
-	class Blog extends \CodeIgniter\Controller
+	class Blog extends \FSO\Controller
 	{
 		public function index()
 		{

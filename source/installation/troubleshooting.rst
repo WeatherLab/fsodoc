@@ -20,7 +20,7 @@ REQUEST_URI variable needed to serve search-engine friendly URLs. As a
 first step, open your *application/Config/App.php* file and look for
 the URI Protocol information. It will recommend that you try a couple of
 alternate settings. If it still doesn't work after you've tried this
-you'll need to force CodeIgniter to add a question mark to your URLs. To
+you'll need to force FSO to add a question mark to your URLs. To
 do this open your *application/Config/App.php* file and change this::
 
 	public $indexPage = 'index.php';

@@ -1,9 +1,8 @@
 #######################
-CodeIgniter4 用户指南
+FSO 用户指南
 #######################
 
 - :doc:`许可协议 <license>`
-- :doc:`变更记录 <changelog>`
 
 .. contents::
    :local:
@@ -41,7 +40,7 @@ CodeIgniter4 用户指南
 	tutorial/index
 
 *********************
-CodeIgniter4 介绍
+FSO 介绍
 *********************
 .. toctree::
    :titlesonly:
@@ -86,7 +85,7 @@ CodeIgniter4 介绍
 
 
 ***************************
-贡献 CodeIgniter
+贡献 FSO
 ***************************
 
 .. toctree::

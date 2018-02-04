@@ -22,13 +22,13 @@ your database properly as described :doc:`here <../database/configuration>`.
 ::
 
 	<?php
-	class NewsModel extends \CodeIgniter\Model
+	class NewsModel extends \FSO\Model
 	{
 		protected $table = 'news';
 	}
 
 This code looks similar to the controller code that was used earlier. It
-creates a new model by extending ``CodeIgniter\Model`` and loads the database
+creates a new model by extending ``FSO\Model`` and loads the database
 library. This will make the database class available through the
 ``$this->db`` object.
 
@@ -51,7 +51,7 @@ and :doc:`Seeds <../database/seeds>` to create more useful database setups.
 
 Now that the database and a model have been set up, you'll need a method
 to get all of our posts from our database. To do this, the database
-abstraction layer that is included with CodeIgniter —
+abstraction layer that is included with FSO —
 :doc:`Query Builder <../database/query_builder>` — is used. This makes it
 possible to write your 'queries' once and make them work on :doc:`all
 supported database systems <../intro/requirements>`. The Model class
@@ -100,7 +100,7 @@ a new ``News`` controller is defined. Create the new controller at
 
 	use App\Models\NewsModel;
 
-	class News extends \CodeIgniter\Controller
+	class News extends \FSO\Controller
 	{
 		public function index()
 		{
@@ -118,7 +118,7 @@ a new ``News`` controller is defined. Create the new controller at
 	}
 
 Looking at the code, you may see some similarity with the files we
-created earlier. First, it extends a core CodeIgniter class, ``Controller``,
+created earlier. First, it extends a core FSO class, ``Controller``,
 which provides a couple of helper methods, and makes sure that you have
 access to the current ``Request`` and ``Response`` objects, as well as the
 ``Logger`` class, for saving information to disk.
@@ -179,7 +179,7 @@ and add the next piece of code.
 
 Here, each news item is looped and displayed to the user. You can see we
 wrote our template in PHP mixed with HTML. If you prefer to use a template
-language, you can use CodeIgniter's :doc:`View
+language, you can use FSO's :doc:`View
 Parser <../general/view_parser>` or a third party parser.
 
 The news overview page is now done, but a page to display individual
@@ -198,7 +198,7 @@ add some code to the controller and create a new view. Go back to the
 
 		if (empty($data['news']))
 		{
-			throw new \CodeIgniter\PageNotFoundException('Cannot find the page: '. $slug);
+			throw new \FSO\PageNotFoundException('Cannot find the page: '. $slug);
 		}
 
 		$data['title'] = $data['news']['title'];

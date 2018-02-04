@@ -3,7 +3,7 @@ PHP Coding Style Guide
 ######################
 
 The following document declares a set of coding convention rules to be
-followed when contributing PHP code to the CodeIgniter project.
+followed when contributing PHP code to the FSO project.
 
 Some of these rules, like naming conventions for example, *may* be
 incorporated into the framework's logic and therefore be functionally
@@ -12,7 +12,7 @@ recommend it, there's no requirement that you follow these conventions in
 your own applications.
 
 The `PHP Interop Group <http://www.php-fig.org/>`_ has proposed a number of
-canonical recommendations for PHP code style. CodeIgniter is not a member of
+canonical recommendations for PHP code style. FSO is not a member of
 of PHP-FIG. We commend their efforts to unite the PHP community,
 but no not agree with all of their recommendations.
 
@@ -21,7 +21,7 @@ although there are a lot of similarities. The differences will be pointed out
 below.
 
 .. note:: See the 
-    `CodeIgniter4-developer-setup <https://github.com/bcit-ci/CodeIgniter4-developer-setup>`_ 
+    `FSO-developer-setup <https://github.com/bcit-ci/FSO-developer-setup>`_ 
     repository for tips on configuring your IDE or editor to help you conform
     to the style guide.
 
@@ -50,7 +50,7 @@ Structure
   Examples where we feel that more than one class in a source file
   is appropriate:
 
-    -   `system/Debug/CustomExceptions` contains a number of CodeIgniter
+    -   `system/Debug/CustomExceptions` contains a number of FSO
         exceptions and errors, that we want to use for a consistent
         experience across applications. 
         If we stick with the purist route, then each of the 13+/- custom 

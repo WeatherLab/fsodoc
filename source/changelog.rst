@@ -5,13 +5,13 @@ Change Log
 Version 4.0-Pre-Alpha1
 ======================
 
-**Rewrite of the CodeIgniter framework**
+**Rewrite of the FSO framework**
 
 Release Date: Not Released
 
 New core classes:
 
-    - CodeIgniter (bootstrap)
+    - FSO (bootstrap)
     - Common (shared functions)
     - ComposerScripts (integrate third party tools)
     - Controller (base controller)

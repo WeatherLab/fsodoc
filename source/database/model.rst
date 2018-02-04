@@ -1,5 +1,5 @@
 #########################
-Using CodeIgniter's Model
+Using FSO's Model
 #########################
 
 .. contents::
@@ -14,7 +14,7 @@ instance of the database connection and you're good to go.
 
 ::
 
-	use \CodeIgniter\Database\ConnectionInterface;
+	use \FSO\Database\ConnectionInterface;
 
 	class UserModel
 	{
@@ -26,10 +26,10 @@ instance of the database connection and you're good to go.
 		}
 	}
 
-CodeIgniter's Model
+FSO's Model
 ===================
 
-CodeIgniter does provide a model class that provides a few nice features, including:
+FSO does provide a model class that provides a few nice features, including:
 
 - automatic database connection
 - basic CRUD methods
@@ -43,10 +43,10 @@ rapidly build out your application's model layer.
 Creating Your Model
 ===================
 
-To take advantage of CodeIgniter's model, you would simply create a new model class
-that extends ``CodeIgniter\Model``::
+To take advantage of FSO's model, you would simply create a new model class
+that extends ``FSO\Model``::
 
-	class UserModel extends \CodeIgniter\Model
+	class UserModel extends \FSO\Model
 	{
 
 	}
@@ -64,7 +64,7 @@ This ensures that within the model any references to ``$this->db`` are made thro
 connection.
 ::
 
-	class UserModel extends \CodeIgniter\Model
+	class UserModel extends \FSO\Model
 	{
 		protected $DBGroup = 'group_name';
 	}
@@ -79,7 +79,7 @@ The model class has a few configuration options that can be set to allow the cla
 to work seamlessly for you. The first two are used by all of the CRUD methods to determine
 what table to use and how we can find the required records::
 
-	class UserModel extends \CodeIgniter\Model
+	class UserModel extends \FSO\Model
 	{
 		protected $table      = 'users';
 		protected $primaryKey = 'id';
@@ -344,7 +344,7 @@ simplest, they might look like this::
 
 A very simple model to work with this might look like::
 
-	class JobModel extends \CodeIgniter\Model
+	class JobModel extends \FSO\Model
 	{
 		protected $table = 'jobs';
 		protected $returnType = '\App\Entities\Job';
@@ -366,7 +366,7 @@ model's ``save()`` method to inspect the class, grab any public and private prop
 	// Save the changes
 	$model->save($job);
 
-.. note:: If you find yourself working with Entities a lot, CodeIgniter provides a built-in :doc:`Entity class </database/entities>`
+.. note:: If you find yourself working with Entities a lot, FSO provides a built-in :doc:`Entity class </database/entities>`
 	that provides several handy features that make developing Entities simpler.
 
 Deleting Data

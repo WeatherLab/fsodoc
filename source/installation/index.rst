@@ -2,17 +2,17 @@
 Installation
 ############
 
-CodeIgniter4 can be installed manually, or using Composer.
+FSO can be installed manually, or using Composer.
 
 Manual Installation
 ===================
 
-CodeIgniter is installed via manual download and unzip the package.
+FSO is installed via manual download and unzip the package.
 
 Composer Installation
 =====================
 
-While not required, CodeIgniter can be installed via `composer <https://getcomposer.org>`_ create-project command.
+While not required, FSO can be installed via `composer <https://getcomposer.org>`_ create-project command.
 
 ::
 
@@ -22,7 +22,7 @@ While not required, CodeIgniter can be installed via `composer <https://getcompo
 Running
 =======
 
-#. Upload the CodeIgniter folders and files to your server. The
+#. Upload the FSO folders and files to your server. The
    **index.php** file will be in the **public** folder inside
    your project root.
 #. Open the **application/Config/App.php** file with a text editor and
@@ -48,7 +48,7 @@ preferably with a full path, e.g. '*/www/MyUser/system*'.
 
 One additional measure to take in production environments is to disable
 PHP error reporting and any other development-only functionality. In
-CodeIgniter, this can be done by setting the ``ENVIRONMENT`` constant, which
+FSO, this can be done by setting the ``ENVIRONMENT`` constant, which
 is more fully described on the :doc:`environments page </general/environments>`.
 By default, the application will run using the "production" environment. To
 take advantage of the debugging tools provided, you should set the environment
@@ -56,7 +56,7 @@ to "develop".
 
 That's it!
 
-If you're new to CodeIgniter, please read the :doc:`Getting
+If you're new to FSO, please read the :doc:`Getting
 Started <../intro/index>` section of the User Guide
 to begin learning how to build dynamic PHP applications. Enjoy!
 

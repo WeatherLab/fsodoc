@@ -2,12 +2,12 @@
 Creating Core System Classes
 ****************************
 
-Every time CodeIgniter runs there are several base classes that are initialized automatically as part of the core
+Every time FSO runs there are several base classes that are initialized automatically as part of the core
 framework. It is possible, however, to swap any of the core system classes with your own version or even just extend
 the core versions.
 
 **Most users will never have any need to do this, but the option to replace or extend them does exist for those
-who would like to significantly alter the CodeIgniter core.**
+who would like to significantly alter the FSO core.**
 
 .. note:: Messing with a core system class has a lot of implications, so make sure you know what you are doing before
     attempting it.
@@ -15,28 +15,28 @@ who would like to significantly alter the CodeIgniter core.**
 System Class List
 =================
 
-The following is a list of the core system files that are invoked every time CodeIgniter runs:
+The following is a list of the core system files that are invoked every time FSO runs:
 
 * Config\\Services
-* CodeIgniter\\Autoloader\\Autoloader
-* CodeIgniter\\Config\\DotEnv
-* CodeIgniter\\Controller
-* CodeIgniter\\Debug\\Exceptions
-* CodeIgniter\\Debug\\Timer
-* CodeIgniter\\Events\\Events
-* CodeIgniter\\HTTP\\CLIRequest (if launched from command line only)
-* CodeIgniter\\HTTP\\IncomingRequest (if launched over HTTP)
-* CodeIgniter\\HTTP\\Request
-* CodeIgniter\\HTTP\\Response
-* CodeIgniter\\HTTP\\Message
-* CodeIgniter\\Log\\Logger
-* CodeIgniter\\Log\\Handlers\\BaseHandler
-* CodeIgniter\\Log\\Handlers\\FileHandler
-* CodeIgniter\\Router\\RouteCollection
-* CodeIgniter\\Router\\Router
-* CodeIgniter\\Security\\Security
-* CodeIgniter\\View\\View
-* CodeIgniter\\View\\Escaper
+* FSO\\Autoloader\\Autoloader
+* FSO\\Config\\DotEnv
+* FSO\\Controller
+* FSO\\Debug\\Exceptions
+* FSO\\Debug\\Timer
+* FSO\\Events\\Events
+* FSO\\HTTP\\CLIRequest (if launched from command line only)
+* FSO\\HTTP\\IncomingRequest (if launched over HTTP)
+* FSO\\HTTP\\Request
+* FSO\\HTTP\\Response
+* FSO\\HTTP\\Message
+* FSO\\Log\\Logger
+* FSO\\Log\\Handlers\\BaseHandler
+* FSO\\Log\\Handlers\\FileHandler
+* FSO\\Router\\RouteCollection
+* FSO\\Router\\Router
+* FSO\\Security\\Security
+* FSO\\View\\View
+* FSO\\View\\Escaper
 
 Replacing Core Classes
 ======================
@@ -50,7 +50,7 @@ the core system class, you would create your class like this::
 
     namespace App\Libraries;
 
-    class RouteCollection implements \CodeIgniter\Router\RouteCollectionInterface
+    class RouteCollection implements \FSO\Router\RouteCollectionInterface
     {
 
     }
@@ -78,14 +78,14 @@ identical to replacing a class with a one exception:
 
 For example, to extend the native RouteCollection class, you would declare your class with::
 
-    class RouteCollection extends \CodeIgniter\Router\RouteCollection
+    class RouteCollection extends \FSO\Router\RouteCollection
     {
 
     }
 
 If you need to use a constructor in your class make sure you extend the parent constructor::
 
-        class RouteCollection implements \CodeIgniter\Router\RouteCollection
+        class RouteCollection implements \FSO\Router\RouteCollection
         {
             public function __construct()
             {
@@ -94,7 +94,7 @@ If you need to use a constructor in your class make sure you extend the parent c
         }
 
 **Tip:**  Any functions in your class that are named identically to the methods in the parent class will be used
-instead of the native ones (this is known as “method overriding”). This allows you to substantially alter the CodeIgniter core.
+instead of the native ones (this is known as “method overriding”). This allows you to substantially alter the FSO core.
 
 If you are extending the Controller core class, then be sure to extend your new class in your application controller’s
 constructors::

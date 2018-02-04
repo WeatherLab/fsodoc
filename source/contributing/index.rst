@@ -1,5 +1,5 @@
 ###########################
-Contributing to CodeIgniter
+Contributing to FSO
 ###########################
 
 .. toctree::
@@ -14,13 +14,13 @@ Contributing to CodeIgniter
     PHP Style Guide <styleguide>
     ../DCO
 
-CodeIgniter is a community driven project and accepts contributions of code
+FSO is a community driven project and accepts contributions of code
 and documentation from the community. These contributions are made in the form
 of Issues or `Pull Requests <https://help.github.com/articles/using-pull-requests/>`_ 
-on the `CodeIgniter4 repository <https://github.com/bcit-ci/CodeIgniter4>`_ on GitHub.
+on the `FSO repository <https://github.com/bcit-ci/FSO>`_ on GitHub.
 
 Issues are a quick way to point out a bug. If you find a bug or documentation
-error in CodeIgniter then please check a few things first:
+error in FSO then please check a few things first:
 
 - There is not already an open Issue
 - The issue has already been fixed (check the develop branch, or look for
@@ -36,7 +36,7 @@ Support
 *******
 
 Please note that GitHub is not for general support questions! If you are
-having trouble using a feature of CodeIgniter, ask for help on our
+having trouble using a feature of FSO, ask for help on our
 `forums <http://forum.codeigniter.com/>`_ instead.
 
 If you are not sure whether you are using something correctly or if you
@@ -46,7 +46,7 @@ have found a bug, again - please ask on the forums first.
 Security
 ********
 
-Did you find a security issue in CodeIgniter?
+Did you find a security issue in FSO?
 
 Please *don't* disclose it publicly, but e-mail us at security@codeigniter.com,
 or report it via our page on `HackerOne <https://hackerone.com/codeigniter>`_.
@@ -62,7 +62,7 @@ Use a descriptive subject line (eg parser library chokes on commas) rather than 
 
 Address a single issue in a report.
 
-Identify the CodeIgniter version (eg 3.0-develop) and the component if you know it (eg. parser library)
+Identify the FSO version (eg 3.0-develop) and the component if you know it (eg. parser library)
 
 Explain what you expected to happen, and what did happen.
 Include error messages and stacktrace, if any.

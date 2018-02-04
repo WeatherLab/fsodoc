@@ -57,7 +57,7 @@ Creating and Dropping Tables
 ****************************
 
 There are several things you may wish to do when creating tables. Add
-fields, add keys to the table, alter columns. CodeIgniter provides a
+fields, add keys to the table, alter columns. FSO provides a
 mechanism for this.
 
 Adding fields
@@ -311,7 +311,7 @@ change the name you can add a "name" key into the field defining array.
 Class Reference
 ***************
 
-.. php:class:: \CodeIgniter\Database\Forge
+.. php:class:: \FSO\Database\Forge
 
 	.. php:method:: addColumn($table[, $field = array()])
 
@@ -325,8 +325,8 @@ Class Reference
 	.. php:method:: addField($field)
 
 		:param	array	$field: Field definition to add
-		:returns:	\CodeIgniter\Database\Forge instance (method chaining)
-		:rtype:	\CodeIgniter\Database\Forge
+		:returns:	\FSO\Database\Forge instance (method chaining)
+		:rtype:	\FSO\Database\Forge
 
                 Adds a field to the set that will be used to create a table. Usage:  See `Adding fields`_.
 
@@ -334,8 +334,8 @@ Class Reference
 
 		:param	array	$key: Name of a key field
 		:param	bool	$primary: Set to TRUE if it should be a primary key or a regular one
-		:returns:	\CodeIgniter\Database\Forge instance (method chaining)
-		:rtype:	\CodeIgniter\Database\Forge
+		:returns:	\FSO\Database\Forge instance (method chaining)
+		:rtype:	\FSO\Database\Forge
 
 		Adds a key to the set that will be used to create a table. Usage:  See `Adding Keys`_.
 

@@ -3,12 +3,12 @@
 ###################
 
 我们需要认真对待安全问题。
-CodeIgniter有多项功能和技术来执行良好的安全习惯，这样你需要做的就比较简单。
+FSO有多项功能和技术来执行良好的安全习惯，这样你需要做的就比较简单。
 
 我们尊重 `开放式Web应用程序安全项目 (OWASP) <https://www.owasp.org>`_ 组织并且尽可能遵循他们的建议。
 
 
-以下是来自 `OWASP Top Ten Cheat Sheet <https://www.owasp.org/index.php/OWASP_Top_Ten_Cheat_Sheet>`_, 确定 Web 应用程序上的漏洞。针对每一个漏洞，我们提供了一个简短的描述和 OWASP 建议，然后根据 CodeIgniter 的规定来解决这个漏洞。
+以下是来自 `OWASP Top Ten Cheat Sheet <https://www.owasp.org/index.php/OWASP_Top_Ten_Cheat_Sheet>`_, 确定 Web 应用程序上的漏洞。针对每一个漏洞，我们提供了一个简短的描述和 OWASP 建议，然后根据 FSO 的规定来解决这个漏洞。
 
 
 ************
@@ -25,7 +25,7 @@ OWASP 建议
 - 控制器：净化输入；使用正确的字符集验证输入
 - 模型：参数化检查
 
-CodeIgniter 规定
+FSO 规定
 ----------------------
 
 - `HTTP library <../libraries/message.html>`_ 提供输入字段和内容元数据的过滤
@@ -49,7 +49,7 @@ OWASP 建议
 - 提示：考虑使用 request 管理器
 
 
-CodeIgniter 规定
+FSO 规定
 ----------------------
 
 - `Session <../libraries/sessions.html>`_ 库
@@ -72,7 +72,7 @@ OWASP 建议
 - 提示：只处理可信数据；不要将 HTML 转义数据存入数据库中。
 
 
-CodeIgniter 规定
+FSO 规定
 ----------------------
 
 - esc 函数
@@ -93,7 +93,7 @@ OWASP 建议
 - 模型： 更新数据之前验证用户角色
 
 
-CodeIgniter 规定
+FSO 规定
 ----------------------
 
 - 表格验证库
@@ -113,7 +113,7 @@ OWASP 建议
 - 控制器：强化 Web 和应用服务器；保护 XML 堆栈
 - 模型：强化数据库服务器
 
-CodeIgniter 规定
+FSO 规定
 ----------------------
 
 - bootstrap 合理的检查
@@ -133,7 +133,7 @@ OWASP 建议
 - 控制器：使用强密码和哈希
 - 模型：加密和服务器的通信和授权
 
-CodeIgniter 规定
+FSO 规定
 ----------------------
 
 - 存储加密的会话密钥
@@ -154,7 +154,7 @@ OWASP 建议
 - 模块： 验证角色而
 
 
-CodeIgniter 规定
+FSO 规定
 ----------------------
 
 - 公共文件夹，放在 application 和 system 外面
@@ -175,7 +175,7 @@ OWASP 建议
 - 控制器：验证用户和角色；验证 CSRF tokens
 - 模型：验证角色
 
-CodeIgniter 规定
+FSO 规定
 ----------------------
 
 - `HTTP library <../libraries/message.html>`_ 提供 CSRF 验证
@@ -194,7 +194,7 @@ OWASP 建议
 - 不要使用这些有漏洞的组件
 
 
-CodeIgniter 规定
+FSO 规定
 ----------------------
 
 - 添加第三方库时必须审查
@@ -212,7 +212,7 @@ OWASP 建议
 - 控制器：不要使用 URL 重定向；使用随机的间接引用
 - 模型：验证角色
 
-CodeIgniter 规定
+FSO 规定
 ----------------------
 
 - `HTTP library <../libraries/message.html>`_ 提供 ...

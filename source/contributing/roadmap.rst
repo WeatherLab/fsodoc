@@ -1,5 +1,5 @@
 =====================
-CodeIgniter4 Roadmap
+FSO Roadmap
 =====================
 
 The roadmap we are working to was `announced on our forum
@@ -37,7 +37,7 @@ Phase 2: Core Components (in progress)
 ======================================
 
 The second phase focuses on providing and refining the existing classes and 
-features that CodeIgniter users know and love.
+features that FSO users know and love.
 
 Phase 2 packages include:
 
@@ -78,7 +78,7 @@ Planned optional packages:
 - Typography
 - Template Parser
 
-These optional packages will constitute the "official" addins for CodeIgniter4.
+These optional packages will constitute the "official" addins for FSO.
 Developers will undoubtedly create their own as well. We have not settled
 on the best way to promote/integrate these.
 

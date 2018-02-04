@@ -16,7 +16,7 @@
 
 	example.com/index.php/blog/
 
-上例中，CodeIgniter 将会尝试查询一个名为 Blog.php 的控制器并加载它。
+上例中，FSO 将会尝试查询一个名为 Blog.php 的控制器并加载它。
 
 **当控制器的名称和 URI 的第一段匹配上时，它将会被加载。**
 
@@ -28,7 +28,7 @@
 接下来你会看到如何创建一个简单的控制器，打开你的文本编辑器，新建一个文件 Blog.php ， 然后放入以下代码::
 
 	<?php
-	class Blog extends \CodeIgniter\Controller
+	class Blog extends \FSO\Controller
 	{
 		public function index()
 		{
@@ -57,14 +57,14 @@
 这是有效的::
 
 	<?php
-	class Blog extends \CodeIgniter\Controller {
+	class Blog extends \FSO\Controller {
 
 	}
 
 这是 **无效** 的::
 
 	<?php
-	class blog extends \CodeIgniter\Controller {
+	class blog extends \FSO\Controller {
 
 	}
 
@@ -86,7 +86,7 @@
 让我们试一下，向你的控制器添加一个新的方法::
 
 	<?php
-	class Blog extends \CodeIgniter\Controller {
+	class Blog extends \FSO\Controller {
 
 		public function index()
 		{
@@ -120,7 +120,7 @@
 你的方法将会收到第三段和第四段两个参数（"sandals" 和 "123"）::
 
 	<?php
-	class Products extends \CodeIgniter\Controller {
+	class Products extends \FSO\Controller {
 
 		public function shoes($sandals, $id)
 		{
@@ -136,7 +136,7 @@
 定义默认控制器
 =============================
 
-CodeIgniter 可以设置一个默认的控制器，当 URI 没有分段参数时加载，例如当用户直接访问你网站的首页时。 打开 **application/config/routes.php** 文件，通过下面的参数指定一个默认的控制器::
+FSO 可以设置一个默认的控制器，当 URI 没有分段参数时加载，例如当用户直接访问你网站的首页时。 打开 **application/config/routes.php** 文件，通过下面的参数指定一个默认的控制器::
 
 	$routes->setDefaultController('Blog');
 
@@ -150,7 +150,7 @@ CodeIgniter 可以设置一个默认的控制器，当 URI 没有分段参数时
 ======================
 
 
-正如上文所说，URI 的第二段通常决定控制器的哪个方法被调用。CodeIgniter 允许你使用 ``_remap()`` 方法来重写该规则::
+正如上文所说，URI 的第二段通常决定控制器的哪个方法被调用。FSO 允许你使用 ``_remap()`` 方法来重写该规则::
 
 	public function _remap()
 	{
@@ -175,7 +175,7 @@ CodeIgniter 可以设置一个默认的控制器，当 URI 没有分段参数时
 		}
 	}
 
-方法名之后的所有其他段将作为 ``_remap()`` 方法的第二个参数，它是可选的。这个参数可以使用 PHP 的 call_user_func_array() 函数来模拟 CodeIgniter 的默认行为。
+方法名之后的所有其他段将作为 ``_remap()`` 方法的第二个参数，它是可选的。这个参数可以使用 PHP 的 call_user_func_array() 函数来模拟 FSO 的默认行为。
 
 例如::
 
@@ -209,7 +209,7 @@ CodeIgniter 可以设置一个默认的控制器，当 URI 没有分段参数时
 将控制器放入子目录中
 ================================================
 
-如果你正在构建一个比较大的应用，那么将控制器放到子目录下进行组织可能会方便一点。CodeIgniter 也可以实现这一点。
+如果你正在构建一个比较大的应用，那么将控制器放到子目录下进行组织可能会方便一点。FSO 也可以实现这一点。
 
 你只需要简单的在 *application/controllers/* 目录下创建新的目录，并将控制器文件放到子目录下。
 
@@ -223,7 +223,7 @@ CodeIgniter 可以设置一个默认的控制器，当 URI 没有分段参数时
 
 每个子目录包含一个默认控制器，将在 URL 只包含子目录的时候被调用。默认控制器在 *application/Config/Routes.php* 中定义。
 
-你也可以使用 CodeIgniter 的 :doc:`./source/general/routing.rst` 功能来重定向 URI。
+你也可以使用 FSO 的 :doc:`./source/general/routing.rst` 功能来重定向 URI。
 
 
 构造函数
@@ -239,7 +239,7 @@ CodeIgniter 可以设置一个默认的控制器，当 URI 没有分段参数时
 例如::
 
 	<?php
-	class Blog extends \CodeIgniter\Controller
+	class Blog extends \FSO\Controller
 	{
 		public function __construct(...$params)
 		{
@@ -254,7 +254,7 @@ CodeIgniter 可以设置一个默认的控制器，当 URI 没有分段参数时
 包含属性
 ===================
 
-你创建的每一个 controller 都应该继承 ``CodeIgniter\Controller`` 类。这个类提供了适合所有控制器的几个属性。
+你创建的每一个 controller 都应该继承 ``FSO\Controller`` 类。这个类提供了适合所有控制器的几个属性。
 
 Request 对象
 --------------
@@ -295,7 +295,7 @@ forceHTTPS
 你可以定义一个辅助文件数组作为类属性。每当控制器被加载时，
 这些辅助文件将自动加载到内存中，这样就可以在控制器的任何地方使用它们的方法。::
 
-	class MyController extends \CodeIgniter\Controller
+	class MyController extends \FSO\Controller
 	{
 		protected $helpers = ['url', 'form'];
 	}

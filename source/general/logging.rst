@@ -74,7 +74,7 @@ __names__ that the handler will log information for.
 		// File Handler
 		//--------------------------------------------------------------------
 
-		'CodeIgniter\Log\Handlers\FileHandler' => [
+		'FSO\Log\Handlers\FileHandler' => [
 
 			'handles' => ['critical', 'alert', 'emergency', 'debug', 'error', 'info', 'notice', 'warning'],
 		]
@@ -151,7 +151,7 @@ LoggerAware Trait
 =================
 
 If you would like to implement your libraries in a framework-agnostic method, you can use
-the ``CodeIgniter\Log\LoggerAwareTrait`` which implements the ``setLogger()`` method for you.
+the ``FSO\Log\LoggerAwareTrait`` which implements the ``setLogger()`` method for you.
 Then, when you use your library under different environments for frameworks, your library should
 still be able to log as it would expect, as long as it can find a PSR3 compatible logger.
 

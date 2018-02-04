@@ -2,11 +2,11 @@
 Query Builder Class
 ###################
 
-CodeIgniter gives you access to a Query Builder class. This pattern
+FSO gives you access to a Query Builder class. This pattern
 allows information to be retrieved, inserted, and updated in your
 database with minimal scripting. In some cases only one or two lines
 of code are necessary to perform a database action.
-CodeIgniter does not require that each database table be its own class
+FSO does not require that each database table be its own class
 file. It instead provides a more simplified interface.
 
 Beyond simplicity, a major benefit to using the Query Builder features
@@ -118,11 +118,11 @@ Permits you to write the SELECT portion of your query::
 	// Executes: SELECT title, content, date FROM mytable
 
 .. note:: If you are selecting all (\*) from a table you do not need to
-	use this function. When omitted, CodeIgniter assumes that you wish
+	use this function. When omitted, FSO assumes that you wish
 	to select all fields and automatically adds 'SELECT \*'.
 
 ``$builder->select()`` accepts an optional second parameter. If you set it
-to FALSE, CodeIgniter will not try to protect your field or table names.
+to FALSE, FSO will not try to protect your field or table names.
 This is useful if you need a compound select statement where automatic
 escaping of fields may break them.
 
@@ -279,7 +279,7 @@ methods:
 
 
 ``$builder->where()`` accepts an optional third parameter. If you set it to
-FALSE, CodeIgniter will not try to protect your field or table names.
+FALSE, FSO will not try to protect your field or table names.
 
 ::
 
@@ -446,7 +446,7 @@ You can also pass an array of multiple values as well::
 	// Produces: HAVING title = 'My Title', id < 45
 
 
-If you are using a database that CodeIgniter escapes queries for, you
+If you are using a database that FSO escapes queries for, you
 can prevent escaping content by passing an optional third argument, and
 setting it to FALSE.
 
@@ -986,7 +986,7 @@ run the query::
 Class Reference
 ***************
 
-.. php:class:: \CodeIgniter\Database\BaseBuilder
+.. php:class:: \FSO\Database\BaseBuilder
 
 	.. php:method:: resetQuery()
 
@@ -1009,8 +1009,8 @@ Class Reference
 
 		:param	int	$limit: The LIMIT clause
 		:param	int	$offset: The OFFSET clause
-		:returns:	\CodeIgniter\Database\ResultInterface instance (method chaining)
-		:rtype:	\CodeIgniter\Database\ResultInterface
+		:returns:	\FSO\Database\ResultInterface instance (method chaining)
+		:rtype:	\FSO\Database\ResultInterface
 
 		Compiles and runs SELECT statement based on the already
 		called Query Builder methods.
@@ -1020,8 +1020,8 @@ Class Reference
 		:param	string	$where: The WHERE clause
 		:param	int	$limit: The LIMIT clause
 		:param	int	$offset: The OFFSET clause
-		:returns:	\CodeIgniter\Database\ResultInterface instance (method chaining)
-		:rtype:	\CodeIgniter\Database\ResultInterface
+		:returns:	\FSO\Database\ResultInterface instance (method chaining)
+		:rtype:	\FSO\Database\ResultInterface
 
 		Same as ``get()``, but also allows the WHERE to be added directly.
 

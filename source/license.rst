@@ -2,7 +2,7 @@
 The MIT License (MIT)
 #####################
 
-Copyright (c) 2014-2017 British Columbia Institute of Technology
+Copyright (c) 2016-2018 北京朗润知天科技有限公司
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

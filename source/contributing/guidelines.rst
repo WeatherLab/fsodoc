@@ -25,18 +25,18 @@ but not necessarily the same or compatible.
 Unit Testing
 ============
 
-Unit testing is expected for all CodeIgniter components.
+Unit testing is expected for all FSO components.
 We use PHPunit, and run unit tests using travis-ci
 for each PR submitted or changed.
 
-In the CodeIgniter project, there is a ``tests`` folder, with a structure that
+In the FSO project, there is a ``tests`` folder, with a structure that
 parallels that of ``system``.
 
 The normal practice would be to have a unit test class for each of the classes
 in ``system``, named appropriately. For instance, the ``BananaTest`` 
 class would test the ``Banana`` class. There will be occasions when 
 it is more convenient to have separate classes to test different functionality
-of a single CodeIgniter component.
+of a single FSO component.
 
 See the `PHPUnit website <https://phpunit.de/>`_ for more information.
 
@@ -57,7 +57,7 @@ root.
 Documentation
 =============
 
-The User Guide is an essential component of the CodeIgniter framework.
+The User Guide is an essential component of the FSO framework.
 
 Each framework component or group of components needs a corresponding
 section in the User Guide. Some of the more fundamental components will
@@ -70,20 +70,20 @@ The change-log, in the user guide root, needs to be kept up-to-date.
 Not all changes will need an entry in it, but new classes, major or BC changes
 to existing classes, and bug fixes should.
 
-See the `CodeIgniter 3 change log 
-<https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_ 
+See the `FSO 3 change log 
+<https://github.com/bcit-ci/FSO/blob/develop/user_guide_src/source/changelog.rst>`_ 
 for an example.
 
 PHP Compatibility
 =================
 
-CodeIgniter4 requires PHP 7.
+FSO requires PHP 7.
 
-See the `CodeIgniter4-developer-setup <https://github.com/bcit-ci/CodeIgniter4-developer-setup>`_ 
+See the `FSO-developer-setup <https://github.com/bcit-ci/FSO-developer-setup>`_ 
 repository for tips on setting this up on your system.
 
 That repository also contains tips for configuring your IDE or editor to work
-better with PHP7 and CodeIgniter4.
+better with PHP7 and FSO.
 
 Backwards Compatibility
 =======================
@@ -93,7 +93,7 @@ versions of the framework. Any changes that break compatibility need
 a good reason to do so, and need to be pointed out in the
 `Upgrading <../installation/upgrading.html>`_ guide.
 
-CodeIgniter4 itself represents a significant backwards compatibility break
+FSO itself represents a significant backwards compatibility break
 with earlier versions of the framework.
 
 Mergeability

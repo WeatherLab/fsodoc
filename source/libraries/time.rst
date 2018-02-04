@@ -2,9 +2,9 @@
 Dates and Times
 ###############
 
-CodeIgniter provides a fully-localized, immutable, date/time class that is built on PHP's DateTime object, but uses the Intl
+FSO provides a fully-localized, immutable, date/time class that is built on PHP's DateTime object, but uses the Intl
 extension's features to convert times across timezones and display the output correctly for different locales. This class
-is the **Time** class and lives in the **CodeIgniter\I18n** namespace.
+is the **Time** class and lives in the **FSO\I18n** namespace.
 
 .. note:: Since the Time class extends DateTime, if there are features that you need that this class doesn't provide,
     you can likely find them within the DateTime class itself.
@@ -20,7 +20,7 @@ There are several ways that a new Time instance can be created. The first is sim
 like any other class. When you do it this way, you can pass in a string representing the desired time. This can
 be any string that PHP's strtotime function can parse::
 
-    use CodeIgniter\I18n\Time;
+    use FSO\I18n\Time;
 
     $myTime = new Time('+3 week');
     $myTime = new Time('now');
@@ -461,7 +461,7 @@ Works exactly the same as **isBefore()** except checks if the time is after the 
 Viewing Differences
 ===================
 
-To compare two Times directly, you would use the **difference()** method, which returns a **CodeIgniter\I18n\TimeDifference**
+To compare two Times directly, you would use the **difference()** method, which returns a **FSO\I18n\TimeDifference**
 instance. The first parameter is either a Time instance, a DateTime instance, or a string with the date/time. If
 a string is passed in the first parameter, the second parameter can be a timezone string::
 

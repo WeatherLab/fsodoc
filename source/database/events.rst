@@ -19,10 +19,10 @@ in STDOUT, or logging to a file, or even creating tools to do automatic query an
 potentially missing indexes, slow queries, etc. An example usage might be::
 
     // In Config\Events.php
-    Events::on('DBQuery', 'CodeIgniter\Debug\Toolbar\Collectors\Database::collect');
+    Events::on('DBQuery', 'FSO\Debug\Toolbar\Collectors\Database::collect');
 
     // Collect the queries so something can be done with them later.
-    public static function collect(CodeIgniter\Database\Query $query)
+    public static function collect(FSO\Database\Query $query)
     {
         static::$queries[] = $query;
     }

@@ -2,7 +2,7 @@
 数据库配置
 ######################
 
-CodeIgniter 中有一个用来保存数据库配置（用户名，密码，数据库名等）的文件，这个配置文件位于 application/Config/Database.php。你也可以在 .env 文件中配置数据库连接参数。接下来让我们详细看下配置信息。
+FSO 中有一个用来保存数据库配置（用户名，密码，数据库名等）的文件，这个配置文件位于 application/Config/Database.php。你也可以在 .env 文件中配置数据库连接参数。接下来让我们详细看下配置信息。
 
 数据库配置信息存放在数组中::
 
@@ -37,9 +37,9 @@ CodeIgniter 中有一个用来保存数据库配置（用户名，密码，数�
 	// Oracle
 	$default['DSN'] = '//localhost/XE';
 
-.. 注解:: 如果你没有指定 DNS 驱动需要的参数信息，CodeIgniter 将使用你提供的其它配置信息自动构造它。
+.. 注解:: 如果你没有指定 DNS 驱动需要的参数信息，FSO 将使用你提供的其它配置信息自动构造它。
 
-.. 注解:: 如果你提供了一个 DNS 参数，但是缺少了某些配置（例如：数据库的字符集），若该配置存在在其它的配置项中，CodeIgniter 将自动在 DNS 上附加上该配置。
+.. 注解:: 如果你提供了一个 DNS 参数，但是缺少了某些配置（例如：数据库的字符集），若该配置存在在其它的配置项中，FSO 将自动在 DNS 上附加上该配置。
 
 当主数据库由于某些原因无法连接时，你可以配置故障转移。例如可以像下面这样为一个连接配置故障转移::
 
@@ -150,7 +150,7 @@ CodeIgniter 中有一个用来保存数据库配置（用户名，密码，数�
 **password**            登录数据库的密码
 **database**            需要连接的数据库名
 **DBDriver**            数据库类型。如：MySQLi、Postgre等。事例必须与程序名匹配
-**DBPrefix**            当使用 :doc:`查询构造器 <query_builder>` 查询时，可以选择性的为表加个前缀，它允许在一个数据库上安装多个 CodeIgniter 程序
+**DBPrefix**            当使用 :doc:`查询构造器 <query_builder>` 查询时，可以选择性的为表加个前缀，它允许在一个数据库上安装多个 FSO 程序
 **pConnect**            TRUE/FALSE (boolean) - 是否使用持续连接
 **DBDebug**             TRUE/FALSE (boolean) - 是否显示数据库错误信息
 **cacheOn**             TRUE/FALSE (boolean) - 是否开启数据库查询缓存

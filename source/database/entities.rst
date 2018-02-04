@@ -2,7 +2,7 @@
 Working With Entities
 #####################
 
-CodeIgniter supports Entity classes as a first-class citizen in it's database layer, while keeping
+FSO supports Entity classes as a first-class citizen in it's database layer, while keeping
 them completely optional to use. They are commonly used as part of the Repository pattern, but can
 be used directly with the :doc:`Model </database/model>` if that fits your needs better.
 
@@ -41,7 +41,7 @@ Entity itself at **application/Entities/User.php**.
 
     <?php namespace App\Entities;
 
-    use CodeIgniter\Entity;
+    use FSO\Entity;
 
     class User extends Entity
     {
@@ -63,7 +63,7 @@ Create the model first at **application/Models/UserModel.php** so that we can in
 
     <?php namespace App\Models;
 
-    use CodeIgniter\Model;
+    use FSO\Model;
 
     class UserModel extends Model
     {
@@ -107,7 +107,7 @@ Now that all of the pieces are in place, you would work with the Entity class as
     $userModel->save($user);
 
 You may have noticed that the User class has all of the properties as **protected** not **public**, but you can still
-access them as if they were public properties. The base class, **CodeIgniter\Entity**, takes care of this for you, as
+access them as if they were public properties. The base class, **FSO\Entity**, takes care of this for you, as
 well as providing the ability to check the properties with **isset()**, or **unset()** the property.
 
 When the User is passed to the model's **save()** method, it automatically takes care of reading the protected properties
@@ -139,7 +139,7 @@ Here's an updated User entity to provide some examples of how this could be used
 
     <?php namespace App\Entities;
 
-    use CodeIgniter\Entity;
+    use FSO\Entity;
 
     class User extends Entity
     {
@@ -212,7 +212,7 @@ As an example, imagine your have the simplified User Entity that is used through
 
     <?php namespace App\Entities;
 
-    use CodeIgniter\Entity;
+    use FSO\Entity;
 
     class User extends Entity
     {
@@ -235,7 +235,7 @@ simply map the ``full_name`` column in the database to the ``$name`` property, a
 
     <?php namespace App\Entities;
 
-    use CodeIgniter\Entity;
+    use FSO\Entity;
 
     class User extends Entity
     {
@@ -278,7 +278,7 @@ You can define which properties are automatically converted by adding the name t
 
     <?php namespace App\Entities;
 
-    use CodeIgniter\Entity;
+    use FSO\Entity;
 
     class User extends Entity
     {
@@ -320,7 +320,7 @@ For example, if you had a User entity with an **is_banned** property, you can ca
 
     <?php namespace App\Entities;
 
-    use CodeIgniter\Entity;
+    use FSO\Entity;
 
     class User extends Entity
     {
@@ -342,7 +342,7 @@ you can cast properties into, the **array** cast type will serialize the value w
 
     <?php namespace App\Entities;
 
-    use CodeIgniter\Entity;
+    use FSO\Entity;
 
     class User extends Entity
     {

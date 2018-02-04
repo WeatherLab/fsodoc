@@ -9,13 +9,13 @@ classes that your project is using. Keeping track of where every single file is,
 hard-coding that location into your files in a series of ``requires()`` is a massive
 headache and very error-prone. That's where autoloaders come in.
 
-CodeIgniter provides a very flexible autoloader that can be used with very little configuration.
+FSO provides a very flexible autoloader that can be used with very little configuration.
 It can locate individual non-namespaced classes, namespaced classes that adhere to 
 `PSR4 <http://www.php-fig.org/psr/psr-4/>`_ autoloading
 directory structures, and will even attempt to locate classes in common directories (like Controllers,
 Models, etc). 
 
-For performance improvement, the core CodeIgniter components have been added to the classmap.
+For performance improvement, the core FSO components have been added to the classmap.
 
 The autoloader works great by itself, but can also work with other autoloaders, like
 `Composer <https://getcomposer.org>`_, or even your own custom autoloaders, if needed.
@@ -42,7 +42,7 @@ those classes can be found in::
 
 	$psr4 = [
 		'App'         => APPPATH,
-		'CodeIgniter' => BASEPATH,
+		'FSO' => BASEPATH,
 	];
 
 The key of each row is the namespace itself. This does not need a trailing slash. If you use double-quotes
@@ -66,7 +66,7 @@ You will need to modify any existing files that are referencing the current name
 Classmap
 ========
 
-The classmap is used extensively by CodeIgniter to eke the last ounces of performance out of the system
+The classmap is used extensively by FSO to eke the last ounces of performance out of the system
 by not hitting the file-system with extra ``file_exists()`` calls. You can use the classmap to link to
 third-party libraries that are not namespaced::
 

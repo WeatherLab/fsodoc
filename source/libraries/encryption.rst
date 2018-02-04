@@ -33,7 +33,7 @@ The following extensions are currently supported:
 Using the Encryption Library
 ****************************
 
-Like all services in CodeIgniter, it can be loaded via ``Config\Services``::
+Like all services in FSO, it can be loaded via ``Config\Services``::
 
     $encrypter = \Config\Services::encrypter();
 
@@ -66,7 +66,7 @@ must not lose it or you will also lose access to the data.
 It must be noted that to ensure maximum security, such a key *should* not
 only be as strong as possible, but also often changed. Such behavior
 however is rarely practical or possible to implement, and that is why
-CodeIgniter gives you the ability to configure a single key that is to be
+FSO gives you the ability to configure a single key that is to be
 used (almost) every time.
 
 It goes without saying that you should guard your key carefully. Should
@@ -342,7 +342,7 @@ You don't need to worry about it.
 Class Reference
 ***************
 
-.. php:class:: CodeIgniter\\Encryption\\Encryption
+.. php:class:: FSO\\Encryption\\Encryption
 
 	.. php:staticmethod:: createKey($length)
 
@@ -357,9 +357,9 @@ Class Reference
 	.. php:method:: initialize($params)
 
 		:param	array	$params: Configuration parameters
-		:returns:	CodeIgniter\\Encryption\\EncrypterInterface instance (for method chaining)
-		:rtype:	CodeIgniter\\Encryption\\EncrypterInterface
-		:throws:	CodeIgniter\\Encryption\\EncryptionException
+		:returns:	FSO\\Encryption\\EncrypterInterface instance (for method chaining)
+		:rtype:	FSO\\Encryption\\EncrypterInterface
+		:throws:	FSO\\Encryption\\EncryptionException
 
 		Initializes (configures) the library to use different settings.
 
@@ -369,7 +369,7 @@ Class Reference
 
 		Please refer to the :ref:`configuration` section for detailed info.
 
-.. php:interface:: CodeIgniter\\Encryption\\EncrypterInterface
+.. php:interface:: FSO\\Encryption\\EncrypterInterface
 
 	.. php:method:: encrypt($data)
 
@@ -388,7 +388,7 @@ Class Reference
 		:param	string	$data: Data to decrypt
 		:returns:	Decrypted data or FALSE on failure
 		:rtype:	string
-		:throws:	CodeIgniter\\Encryption\\EncryptionException
+		:throws:	FSO\\Encryption\\EncryptionException
 
 		Decrypts the input data and returns it in plain-text.
 

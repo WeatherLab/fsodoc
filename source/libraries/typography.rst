@@ -9,7 +9,7 @@ in semantically relevant ways.
 Loading the Library
 *******************
 
-Like all services in CodeIgniter, it can be loaded via ``Config\Services``, though you usually will not need
+Like all services in FSO, it can be loaded via ``Config\Services``, though you usually will not need
 to load it manually::
 
     $typography = \Config\Services::typography();
