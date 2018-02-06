@@ -1,25 +1,12 @@
-.. image:: https://travis-ci.org/CodeIgniter-Chinese/codeigniter4-user-guide.svg?branch=master
-    :target: https://travis-ci.org/CodeIgniter-Chinese/codeigniter4-user-guide
-
-#############################
-CodeIgniter 4 中文手册翻译计划
-#############################
-
-***********
-翻译准则
-***********
-
-中文翻译请遵守 `中文文案排版指北 <http://mazhuang.org/wiki/chinese-copywriting-guidelines/>`_ 和 `文档翻译指南 <translation-guide.md>`_
-
-`文档翻译进度 <TODO.md>`_
-
-`预览最新文档 <https://codeigniter-chinese.github.io/codeigniter4-user-guide/>`_
+############
+FSO 用户指南
+############
 
 ******************
 安装步骤
 ******************
 
-CodeIgniter 的用户指南是使用 Sphinx 软件进行管理，并可以生成各种不同的格式。
+FSO 的用户指南是使用 Sphinx 软件进行管理，并可以生成各种不同的格式。
 所有的页面都是采用 `ReStructured Text <http://sphinx.pocoo.org/rest.html>`_
 格式书写，这种格式非常方便人们阅读。
 
@@ -65,9 +52,3 @@ http://python.org/download/releases/2.7.2/
 你将会看到正在编译中的信息，编译成功后，生成的用户指南和图片都位于 *build/html/* 目录下。
 在 HTML 第一次编译之后，后面将只会针对修改的文件进行重编译，这将大大的节约我们的时间。
 如果你想再重新全部编译一次，只需删除 *build* 目录然后编译即可。
-
-***************
-风格指南
-***************
-
-使用 Sphinx 为 CodeIgniter 编写文档，请参考 `source/contributing/documentation.rst <source/contributing/documentation.rst>`_ 的一般准则。
