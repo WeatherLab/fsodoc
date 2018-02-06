@@ -7,7 +7,7 @@ Airflow介绍
 安装
 ======================
 
-airflow 的安装十分简单，用**pip**轻松搞定::
+airflow 的安装十分简单，用**pip**来安装：
 
 .. code :: bash
 
