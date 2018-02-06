@@ -19,7 +19,7 @@ FSO 用户指南
 	intro/index
 
 *********************
-FSO 介绍
+介绍
 *********************
 .. toctree::
    :titlesonly:
