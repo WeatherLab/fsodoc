@@ -9,6 +9,8 @@ Airflow介绍
 
 airflow 的安装十分简单，用**pip**轻松搞定::
 
+.. code :: bash
+
         export AIRFLOW_HOME=~/airflow
         pip install airflow[slack]
         airflow initdb
