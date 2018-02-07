@@ -7,8 +7,8 @@ FSO 概览
 .. toctree::
 	:titlesonly:
 
-	structure
-	mvc
+	targetObs
+	review
 	autoloader
 	services
 	http
