@@ -1,3 +1,4 @@
+
 #######################
 Welcome to FSO
 #######################
@@ -16,6 +17,8 @@ any certain way. The framework can have core parts easily extended
 or completely replaced to make the system work the way you need it to.
 In short, FSO is the malleable framework that tries to provide
 the tools you need while staying out of the way.
+
+.. image:: images/FSO.png
 
 ***********************
 Who is FSO For?
