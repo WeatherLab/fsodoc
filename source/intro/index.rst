@@ -18,7 +18,7 @@ In short, FSO is the malleable framework that tries to provide
 the tools you need while staying out of the way.
 
 .. image:: ../images/FSOWorkflow.png
-   :align: "center"
+   :align: center
    
 ***********************
 Who is FSO For?
