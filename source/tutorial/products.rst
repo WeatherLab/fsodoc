@@ -36,7 +36,7 @@ FSO输出结果位于作业目录下的FSO/west3.4/run/ccyymmddhh/obsimpact/gts_
 
    探空观测的不同观测变量对12小时预报误差的贡献
 
-.. figure:: ./images/var_sound.png
+.. figure:: ./images/var_surface.png
    :align: center
 
    地面观测的不同观测变量对12小时预报误差的贡献
