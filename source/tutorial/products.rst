@@ -19,4 +19,14 @@ FSO输出结果位于作业目录下的FSO/west3.4/run/ccyymmddhh/obsimpact/gts_
 .. figure:: ./images/fso_all.png
    :align: center
 
-   地面观测对12小时预报误差的贡献
+   观测类型对12小时预报误差的贡献
+
+.. figure:: ./images/var_all.png
+   :align: center
+
+   变量类型对12小时预报误差的贡献
+
+.. figure:: ./images/lev_all.png
+   :align: center
+
+   不同层次变量类型对12小时预报误差的贡献
