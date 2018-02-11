@@ -57,6 +57,16 @@ FSO 用户指南
 
 	monitor/index
 	
+***********
+故障处理
+***********
+
+.. toctree::
+        :includehidden:
+        :titlesonly:
+
+        helpers/index
+
 ***************************
 贡献 FSO
 ***************************
