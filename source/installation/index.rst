@@ -1,72 +1,28 @@
-############
+#############
 Installation
-############
+#############
 
-FSO can be installed manually, or using Composer.
+实况分析系统采用Singularity容器技术进行封装，可以有效隔离依赖软件环境的搭建、环境变量的配置等细节。
 
-Manual Installation
-===================
+系统环境配置
+------------
 
-FSO is installed via manual download and unzip the package.
+业务工作站推荐安装Linux操作系统，以Ubuntu发行版本为例。需要安装`Sigularity软件 <http://singularity.lbl.gov/all-releases>`_：
 
-Composer Installation
-=====================
+工作站中应该存在FSO系统的Singularity镜像文件。
 
-While not required, FSO can be installed via `composer <https://getcomposer.org>`_ create-project command.
+.. code:: 
 
-::
-
-    composer create-project codeigniter4/framework
+   > ls -al fso3.simg
 
 
-Running
-=======
+准备运行环境
+------------
 
-#. Upload the FSO folders and files to your server. The
-   **index.php** file will be in the **public** folder inside
-   your project root.
-#. Open the **application/Config/App.php** file with a text editor and
-   set your base URL. If you intend to use encryption or sessions, set
-   your encryption key.
-#. If you intend to use a database, open the
-   **application/Config/Database.php** file with a text editor and set your
-   database settings.
-
-For the best security, both the system and any application directories
-come placed above the web root so that they are not directly accessible
-via a browser. By default, **.htaccess** files are included in each directory
-to help prevent direct access, but it is best to remove them from public
-access entirely in case the web server configuration changes or doesn't
-abide by the **.htaccess**.
-
-If you would like to keep your views public it is also possible to move
-the **views** directory out of your **application** directory, to a
-corresponding folder inside **public**. If you do this, remember to
-open your main index.php file and set the
-``$system_path``, ``$application_folder`` and ``$view_folder`` variables,
-preferably with a full path, e.g. '*/www/MyUser/system*'.
-
-One additional measure to take in production environments is to disable
-PHP error reporting and any other development-only functionality. In
-FSO, this can be done by setting the ``ENVIRONMENT`` constant, which
-is more fully described on the :doc:`environments page </general/environments>`.
-By default, the application will run using the "production" environment. To
-take advantage of the debugging tools provided, you should set the environment
-to "develop".
-
-That's it!
-
-If you're new to FSO, please read the :doc:`Getting
-Started <../intro/index>` section of the User Guide
-to begin learning how to build dynamic PHP applications. Enjoy!
-
+需要创建/data目录，用来存放原始观测数据（/data/raw）、中间输入数据（/data/input）、静态数据（/data/geog）、业务运行（如/data/gfs-5km-prod-v1.0）。其中静态数据是需要提前准备好的，其它三个会在运行中创建。
 
 .. toctree::
     :hidden:
     :titlesonly:
 
-    downloads
     self
-    upgrading
-    troubleshooting
-    local_server
