@@ -47,16 +47,6 @@ FSO 用户指南
 
 	tutorial/index
 
-********
-系统监控
-********
-
-.. toctree::
-	:includehidden:
-	:titlesonly:
-
-	monitor/index
-	
 ***********
 故障处理
 ***********

@@ -1,239 +1,94 @@
-############
-News section
-############
+################################
+Airflow介绍
+################################
 
-In the last section, we went over some basic concepts of the framework
-by writing a class that includes static pages. We cleaned up the URI by
-adding custom routing rules. Now it's time to introduce dynamic content
-and start using a database.
+采用基于Python语言的Airflow流程管理软件，对实时运行的FSO作业进行管理。针对每个作业编写DAG（定向非循环图）配置脚本，设置各个任务以及任务间的执行依赖关系。Airflow后台运行程序包括：1）调度器（Scheduler），负责在指定时间运行作业；2）管理页面后端服务器（Webserver），负责向前端（浏览器）提供HTML服务。通过在运行机器上访问http://localhost:8080/admin链接可以查看所有在运行的作业列表。其中DAG列显示的是作业名称，如gfs-10km-prod，点击可以进入作业详情页面；Schedule列显示的是作业运行时间，如 30 * * * *表示每小时的30分运行，@hourly是Airflow提供的一种简记，表明每小时00分运行；Recent Tasks列显示作业运行状态，以不同颜色表示不同运行状态，如深绿色表示已经完成的作业数，浅绿色是正在运行的任务数，灰色是等待执行的任务数，红色表示出错的任务数，通过点击相应颜色的按钮可以进入查看任务；Last Run列可以查看最近运行时间；Links列提供一些快捷的操作按钮。
 
-Setting up your model
----------------------
+安装
+======================
 
-Instead of writing database operations right in the controller, queries
-should be placed in a model, so they can easily be reused later. Models
-are the place where you retrieve, insert, and update information in your
-database or other data stores. They provide access to your data.
+airflow 的安装十分简单，用``pip``来安装：
 
-Open up the *application/Models/* directory and create a new file called
-*NewsModel.php* and add the following code. Make sure you've configured
-your database properly as described :doc:`here <../database/configuration>`.
+.. code-block :: bash
 
-::
+        export AIRFLOW_HOME=~/airflow
+        pip install airflow[slack]
+        airflow initdb
 
-	<?php
-	class NewsModel extends \FSO\Model
-	{
-		protected $table = 'news';
-	}
+pip 安装的**slackclient**为可选，当你需要通知到**slack**时才会用到，但我十分建议也一起安装， 能够及时收到任务执行状况报告。
 
-This code looks similar to the controller code that was used earlier. It
-creates a new model by extending ``FSO\Model`` and loads the database
-library. This will make the database class available through the
-``$this->db`` object.
+一些概念
+======================
 
-Before querying the database, a database schema has to be created.
-Connect to your database and run the SQL command below (MySQL).
-Also add some seed records. For now, we'll just show you the query needed
-to create the table, but you should read about :doc:`Migrations <../database/migration>`
-and :doc:`Seeds <../database/seeds>` to create more useful database setups.
+DAG (Directed Acyclic Graph)
+-----------------------------
 
-::
+它表示的是一些任务的集合，描述了任务之间的依赖关系，以及整个DAG的一些属性， 比如起止时间，执行周期，重试策略等等。通常一个.py文件就是一个DAG。 你也可以理解为这就是一个完整的shell脚本，只是它可以保证脚本中的命令有序执行。
 
-	CREATE TABLE news (
-		id int(11) NOT NULL AUTO_INCREMENT,
-		title varchar(128) NOT NULL,
-		slug varchar(128) NOT NULL,
-		text text NOT NULL,
-		PRIMARY KEY (id),
-		KEY slug (slug)
-	);
+task 任务
+-----------------------------
 
-Now that the database and a model have been set up, you'll need a method
-to get all of our posts from our database. To do this, the database
-abstraction layer that is included with FSO —
-:doc:`Query Builder <../database/query_builder>` — is used. This makes it
-possible to write your 'queries' once and make them work on :doc:`all
-supported database systems <../intro/requirements>`. The Model class
-also allows you to easily work with the Query Builder and provides
-some additional tools to make working with data simpler. Add the
-following code to your model.
 
-::
+它就是DAG文件中的一个个Operator，它描述了具体的一个操作。
 
-	public function getNews($slug = false)
-	{
-		if ($slug === false)
-		{
-			return $this->findAll();
-		}
+Operator 执行器
+-----------------------------
 
-		return $this->asArray()
-		            ->where(['slug' => $slug])
-		            ->first();
-	}
+airflow定义了很多的 Operator，通常一个操作就是一个特定的 Operator， 比如调用 shell 命令要用 BashOperator，调用 python 函数要用PythonOperator， 发邮件要用 EmailOperator，连SSH要用 SSHOperator。社区还在不断地贡献新的 Operator。
 
-With this code you can perform two different queries. You can get all
-news records, or get a news item by its `slug <#>`_. You might have
-noticed that the ``$slug`` variable wasn't sanitized before running the
-query; :doc:`Query Builder <../database/query_builder>` does this for you.
+ds 日期
+-----------------------------
 
-The two methods used here, ``findAll()`` and ``first()``, are provided
-by the Model class. They already know the table to use based on the ``$table``
-property we set in **NewsModel** class, earlier. They are helper methods
-that use the Query Builder to run their commands on the current table, and
-returning an array of results in the format of your choice. In this example,
-``findAll()`` returns an array of objects.
+前面的脚本里用到了{{ ds }}变量，每个DAG在执行时都会传入一个具体的时间（datetime对象）， 这个ds就会在 render 命令时被替换成对应的时间。
 
-Display the news
-----------------
+.. important:: 这里要特别强调一下， 对于周期任务，airflow传入的时间是上一个周期的时间（划重点），比如你的任务是每天执行， 那么今天传入的是昨天的日期，如果是周任务，那传入的是上一周今天的值。
 
-Now that the queries are written, the model should be tied to the views
-that are going to display the news items to the user. This could be done
-in our ``Pages`` controller created earlier, but for the sake of clarity,
-a new ``News`` controller is defined. Create the new controller at
-*application/Controllers/News.php*.
+Macros
+-----------------------------
 
-::
+上一条说了ds变量，你肯定会说我的脚本里如果需要不同的时间格式或者不同的时间段怎么办， 这时候就到Macro出场了，airflow本身提供了几种时间格式，比如ds_nodash，顾名思义就是不带短横-的时间格式， 而且还会有一些相关的函数可以直接调用，比如ds_add可以对时间进行加减。
 
-	<?php
+airflow 配置
+-----------------------------
 
-	use App\Models\NewsModel;
+前面为了尽快展示airflow的强大，我跳过了许多东西，比如它的配置。 在 airflow 初始化时，它会自动在AIRFLOW_HOME目录下生成ariflow.cfg文件，现在打开它让我们看看里面的构造。
 
-	class News extends \FSO\Controller
-	{
-		public function index()
-		{
-			$model = new NewsModel();
+executor
+-----------------------------
 
-			$data['news'] = $model->getNews();
-		}
+这是airflow最关键的一个配置，它指示了airflow以何种方式来执行任务。它有三个选项：
 
-		public function view($slug = null)
-		{
-			$model = new NewsModel();
+- SequentialExecutor：表示单进程顺序执行，通常只用于测试
+- LocalExecutor：表示多进程本地执行，它用python的多进程库从而达到多进程跑任务的效果。
+- CeleryExecutor：表示使用celery作为执行器，只要配置了celery，就可以分布式地多机跑任务，一般用于生产环境。
 
-			$data['news'] = $model->getNews($slug);
-		}
-	}
+sql_alchemy_conn
+-----------------------------
 
-Looking at the code, you may see some similarity with the files we
-created earlier. First, it extends a core FSO class, ``Controller``,
-which provides a couple of helper methods, and makes sure that you have
-access to the current ``Request`` and ``Response`` objects, as well as the
-``Logger`` class, for saving information to disk.
+这个配置让你指定 airflow 的元信息用何种方式存储，默认用 sqlite，如果要部署到生产环境，推荐使用 mysql。
 
-Next, there are two methods to view all news items and one for a specific
-news item. You can see that the ``$slug`` variable is passed to the model's
-method in the second method. The model is using this slug to identify the
-news item to be returned.
+smtp
+-----------------------------
 
-Now the data is retrieved by the controller through our model, but
-nothing is displayed yet. The next thing to do is passing this data to
-the views. Modify the ``index()`` method to look like this::
+如果你需要邮件通知或用到 EmailOperator 的话，需要配置发信的 smtp 服务器。
 
-	public function index()
-	{
-		$model = new NewsModel();
+celery
+-----------------------------
 
-		$data = [
-			'news'  => $model->getNews(),
-			'title' => 'News archive',
-		];
+前面所说的当使用 CeleryExecutor 时要配置 celery 的环境。
 
-		echo view('Templates/Header', $data);
-		echo view('News/Index', $data);
-		echo view('Templates/Footer');
-	}
 
-The code above gets all news records from the model and assigns it to a
-variable. The value for the title is also assigned to the ``$data['title']``
-element and all data is passed to the views. You now need to create a
-view to render the news items. Create *application/Views/News/Index.php*
-and add the next piece of code.
+命令
+============================
 
-::
+airflow 的所有执行操作都需要在命令行下完成，界面只能看任务的依赖， 包括任务执行状态，但如果任务失败了，还是要在命令行下执行。
+airflow 的命令总的来说很符合直觉，常用的有如下几个：
 
-	<h2><?= $title ?></h2>
+- test： 用于测试特定的某个task，不需要依赖满足
+- run: 用于执行特定的某个task，需要依赖满足
+- backfill: 执行某个DAG，会自动解析依赖关系，按依赖顺序执行
+- unpause: 将一个DAG启动为例行任务，默认是关的，所以编写完DAG文件后一定要执行这和要命令，相反命令为pause
+- scheduler: 这是整个 airflow 的调度程序，一般是在后台启动
+- clear: 清除一些任务的状态，这样会让scheduler来执行重跑
 
-	<?php if (! empty($news) && is_array($news)) : ?>
-
-		<?php foreach ($news as $news_item): ?>
-
-			<h3><?= $news_item['title'] ?></h3>
-
-			<div class="main">
-				<?= $news_item['text'] ?>
-			</div>
-			<p><a href="<?= '/news/'.$news_item['slug'] ?>">View article</a></p>
-
-		<?php endforeach; ?>
-
-	<?php else : ?>
-
-		<h3>No News</h3>
-
-		<p>Unable to find any news for you.</p>
-
-	<?php endif ?>
-
-Here, each news item is looped and displayed to the user. You can see we
-wrote our template in PHP mixed with HTML. If you prefer to use a template
-language, you can use FSO's :doc:`View
-Parser <../general/view_parser>` or a third party parser.
-
-The news overview page is now done, but a page to display individual
-news items is still absent. The model created earlier is made in such
-way that it can easily be used for this functionality. You only need to
-add some code to the controller and create a new view. Go back to the
-``News`` controller and update ``view()`` with the following:
-
-::
-
-	public function view($slug = NULL)
-	{
-		$model = new NewsModel();
-
-		$data['news'] = $model->getNews($slug);
-
-		if (empty($data['news']))
-		{
-			throw new \FSO\PageNotFoundException('Cannot find the page: '. $slug);
-		}
-
-		$data['title'] = $data['news']['title'];
-
-		echo view('Templates/Header', $data);
-		echo view('News/View', $data);
-		echo view('Templates/Footer');
-	}
-
-Instead of calling the ``getNews()`` method without a parameter, the
-``$slug`` variable is passed, so it will return the specific news item.
-The only things left to do is create the corresponding view at
-*application/Views/News/View.php*. Put the following code in this file.
-
-::
-
-	<?php
-	echo '<h2>'.$news['title'].'</h2>';
-	echo $news['text'];
-
-Routing
--------
-
-Because of the wildcard routing rule created earlier, you need an extra
-route to view the controller that you just made. Modify your routing file
-(*application/config/routes.php*) so it looks as follows.
-This makes sure the requests reach the ``News`` controller instead of
-going directly to the ``Pages`` controller. The first line routes URI's
-with a slug to the ``view()`` method in the ``News`` controller.
-
-::
-
-	$routes->get('news/(:segment)', 'News::view/$1');
-	$routes->get('news', 'News::index');
-	$routes->add('(:any)', 'Pages::view/$1');
-
-Point your browser to your document root, followed by index.php/news and
-watch your news page.
+从上面的命令顺序也可以看出，通常的执行顺序是这样：编写完DAG文件， 直接用backfill命令测试整个DAG是否有问题，如果单个任务出错，查看log解决错误， 这时可以用test来单独执行，如果有依赖关系就用run执行，都搞定了后就用unpause打开周期执行， 当然 scheduler 是在后台默认打开的。之后运行过程中发现需要重跑则用clear命令。

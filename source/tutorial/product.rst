@@ -1,26 +1,17 @@
 ##########
-Conclusion
+产品
 ##########
 
-This tutorial did not cover all of the things you might expect of a
-full-fledged content management system, but it introduced you to the
-more important topics of routing, writing controllers, and models. We
-hope this tutorial gave you an insight into some of FSO's basic
-design patterns, which you can expand upon.
+LAPS输出结果位于作业目录下的output/lapsprd子目录，如云量分析结果位于lcv目录。目前使用NCL语言编写了绘制多种要素的脚本，位于laps-scripts里的plot-laps.ncl，将分散的输出数据绘制成图。绘制的图形位于作业目录下的figures子目录。调用该脚本时需要提供若干参数：1）lapsprd_dir，指定某个作业output/lapsprd目录路径；2）analysis_time，指定分析时间，也即是最后生成图形的文件名前缀，后缀是pdf；3）lga_file和lgb_file，背景场文件名，用于显示分析减背景场的差异；4）lsx_file，地面分析文件名；5）lt1_file，三维温度分析文件名；6）lw3_file，三维风场分析文件名；7）lq3_file，三维湿度分析文件名；8）vrc_file，二维雷达拼图文件名；9）lcv_file，二维云量分析文件名。
 
-Now that you've completed this tutorial, we recommend you check out the
-rest of the documentation. FSO is often praised because of its
-comprehensive documentation. Use this to your advantage and read the
-"Introduction" and "General Topics" sections thoroughly. You should read
-the class and helper references when needed.
+LAPS输出数据目录 
 
-Every intermediate PHP programmer should be able to get the hang of
-FSO within a few days.
+绘制图形目录，PDF文件名显示分析时刻的年月日小时
 
-If you still have questions about the framework or your own FSO
-code, you can:
+地表2米温度，左列为分析结果，中列为GFS 0.25度背景场，右列为分析减背景的差值。
 
--  Check out our `forums <http://forum.codeigniter.com/>`_
--  Visit our `IRC chatroom <https://github.com/bcit-ci/FSO/wiki/IRC>`_
--  Explore the `Wiki <https://github.com/bcit-ci/FSO/wiki/>`_
+71部SA波段雷达的二维反射率拼图，其中红点为雷达站点
 
+云量分析结果，其中红点为雷达站点。
+
+有无雷达的云量差别
