@@ -33,7 +33,7 @@
     </style>
    </head>
    <body>
-   	<h1>Directory Tree</h1><p>
+   	<h1>FSO目录结构</h1><p>
    	<a href="/home/dell">/home/dell</a><br>
    	├── <a href="/home/dell/FSO3.4/">FSO3.4</a><br>
    	│   ├── <a href="/home/dell/FSO3.4/be/">be</a><br>
