@@ -7,9 +7,4 @@ FSO 概览
 .. toctree::
 	:titlesonly:
 
-	targetObs
 	review
-	autoloader
-	services
-	http
-	security
