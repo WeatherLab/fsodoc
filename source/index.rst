@@ -16,15 +16,15 @@ FSO 用户指南
 	:includehidden:
 	:titlesonly:
 
-	intro/index
+	welcome/index
 
 *********************
 介绍
 *********************
 .. toctree::
-   :titlesonly:
+        :titlesonly:
 
-   concepts/index
+        intro/index
 
 ************
 安装

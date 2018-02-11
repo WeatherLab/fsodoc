@@ -24,13 +24,13 @@ through the following pages:
 
 -  Introduction, this page, which gives you an overview of what to
    expect.
--  :doc:`Static pages <static_pages>`, which will teach you the basics
+-  :doc:`Airflow的启动 <startAirflow>`, which will teach you the basics
    of controllers, views and routing.
--  :doc:`News section <news_section>`, where you'll start using models
+-  :doc:`加载DAGs <loadDAGs>`, where you'll start using models
    and will be doing some basic database operations.
--  :doc:`Create news items <create_news_items>`, which will introduce
+-  :doc:`监控作业的运行 <monitor>`, which will introduce
    more advanced database operations and form validation.
--  :doc:`Conclusion <conclusion>`, which will give you some pointers on
+-  :doc:`产品的图形输出 <products>`, which will give you some pointers on
    further reading and other resources.
 
 Enjoy your exploration of the FSO framework.
@@ -39,7 +39,7 @@ Enjoy your exploration of the FSO framework.
 	:hidden:
 	:titlesonly:
 
-	static_pages
-	news_section
-	create_news_items
-	conclusion
+	startAirflow
+	loadDAGs
+	monitor
+	products
