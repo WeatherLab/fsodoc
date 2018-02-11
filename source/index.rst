@@ -66,12 +66,3 @@ FSO 用户指南
         :titlesonly:
 
         helpers/index
-
-***************************
-贡献 FSO
-***************************
-
-.. toctree::
-	:titlesonly:
-
-   	contributing/index
