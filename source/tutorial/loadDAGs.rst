@@ -1,5 +1,5 @@
 #################
-加载DASs
+加载DAGs
 #################
 
 python语言的Airflow流程管理软件，对实时运行的FSO作业进行管理。针对每个作业编写DAG（定向非循环图）配置脚本，设置各个任务以及任务间的执行依赖关系。Airflow后台运行程序包括：
@@ -9,7 +9,7 @@ python语言的Airflow流程管理软件，对实时运行的FSO作业进行管�
 
 将所有准备好的DAG的python文件放到Airflow指定的目录中（由airflow.cfg的dags_folder指定）:
 
-.. code :：
+.. code::
 
     dell@dell-Precision-Tower-7810:~$ cd airflow/dags/
     dell@dell-Precision-Tower-7810:~/airflow/dags$ pwd
