@@ -1,5 +1,5 @@
 #############
-Installation
+安装
 #############
 
 实况分析系统采用Singularity容器技术进行封装，可以有效隔离依赖软件环境的搭建、环境变量的配置等细节。
@@ -7,7 +7,7 @@ Installation
 系统环境配置
 ------------
 
-业务工作站推荐安装Linux操作系统，以Ubuntu发行版本为例。需要安装`Sigularity软件 <http://singularity.lbl.gov/all-releases>`_：
+业务工作站推荐安装Linux操作系统，以Ubuntu发行版本为例。需要安装`Sigularity <http://singularity.lbl.gov/all-releases>`_：
 
 工作站中应该存在FSO系统的Singularity镜像文件。
 
