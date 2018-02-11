@@ -25,4 +25,6 @@
     :hidden:
     :titlesonly:
 
-    self
+    airflow
+    singularity
+    structure
