@@ -2,38 +2,12 @@
 Tutorial
 ########
 
-This tutorial is intended to introduce you to the FSO framework
-and the basic principles of MVC architecture. It will show you how a
-basic FSO application is constructed in step-by-step fashion.
+该教程包括以下几个部分:
 
-In this tutorial, you will be creating a **basic news application**. You
-will begin by writing the code that can load static pages. Next, you
-will create a news section that reads news items from a database.
-Finally, you'll add a form to create news items in the database.
-
-This tutorial will primarily focus on:
-
--  Model-View-Controller basics
--  Routing basics
--  Form validation
--  Performing basic database queries using "Query Builder"
-
-The entire tutorial is split up over several pages, each explaining a
-small part of the functionality of the FSO framework. You'll go
-through the following pages:
-
--  Introduction, this page, which gives you an overview of what to
-   expect.
--  :doc:`Airflow的启动 <startAirflow>`, which will teach you the basics
-   of controllers, views and routing.
--  :doc:`加载DAGs <loadDAGs>`, where you'll start using models
-   and will be doing some basic database operations.
--  :doc:`监控作业的运行 <monitor>`, which will introduce
-   more advanced database operations and form validation.
--  :doc:`产品的图形输出 <products>`, which will give you some pointers on
-   further reading and other resources.
-
-Enjoy your exploration of the FSO framework.
+-  :doc:`Airflow的启动 <startAirflow>`, 介绍如何启动Airflow。
+-  :doc:`加载DAGs <loadDAGs>`, 介绍如何将作业加到Airflow的流程管理中去。
+-  :doc:`监控作业的运行 <monitor>`, 介绍如何监控FSO业务系统的运行。
+-  :doc:`产品的图形输出 <products>`, 介绍FSO产品的输出和目录。
 
 .. toctree::
 	:hidden:
