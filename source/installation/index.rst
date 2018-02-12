@@ -8,6 +8,14 @@
 -  :doc:`安装Singularity <singularity>`, 介绍Singularity的安装和基本概念。
 -  :doc:`准备运行环境 <structure>`, 介绍运行环境的准备。
 
+.. uml::
+
+   Alice -> Bob: Authentication Request
+   Bob --> Alice: Authentication Response
+
+   Alice -> Bob: Another authentication Request
+   Alice <-- Bob: another authentication Response
+
 .. toctree::
     :hidden:
     :titlesonly:
