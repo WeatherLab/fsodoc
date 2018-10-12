@@ -34,9 +34,9 @@ The list below shows the outstanding ones.
   - Interbase/Firebird via the *ibase* and *pdo* drivers
   - ODBC via the *odbc* and *pdo* drivers (you should know that ODBC is actually an abstraction layer)
   
-#######
+#############
 Credits
-#######
+#############
 
 This FSO was originally developed by `MMM/NCAR  <https://www.mmm.ucar.edu/>`_. 
 The framework was written for performance in the real world, 
