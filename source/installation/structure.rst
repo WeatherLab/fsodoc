@@ -1,5 +1,5 @@
 #############
-准备运行目录
+运行目录
 #############
 
 .. raw:: html
@@ -34,7 +34,7 @@
    </head>
    <body>
    	<h1>FSO目录结构</h1><p>
-   	<a href="/home/dell">/home/dell</a><br>
+   	<a href="/home/*">/home/*</a><br>
    	├── <a href="/home/dell/FSO3.4/">FSO3.4</a><br>
    	│   ├── <a href="/home/dell/FSO3.4/be/">be</a><br>
    	│   ├── <a href="/home/dell/FSO3.4/fc/">fc</a><br>
@@ -45,20 +45,9 @@
    	│   ├── <a href="/home/dell/FSO3.4/plot/">plot</a><br>
    	│   ├── <a href="/home/dell/FSO3.4/rc/">rc</a><br>
    	│   └── <a href="/home/dell/FSO3.4/run/">run</a><br>
-   	├── <a href="/home/dell/gjx_static/">gjx_static</a><br>
-   	├── <a href="/home/dell/gjx_working/">gjx_working</a><br>
-   	├── <a href="/home/dell/west3.4/">west3.4</a><br>
-   	│   ├── <a href="/home/dell/west3.4/be/">be</a><br>
-   	│   ├── <a href="/home/dell/west3.4/fc/">fc</a><br>
-   	│   ├── <a href="/home/dell/west3.4/fsoplot/">fsoplot</a><br>
-   	│   │   ├── <a href="/home/dell/west3.4/fsoplot/china/">china</a><br>
-   	│   │   └── <a href="/home/dell/west3.4/fsoplot/database/">database</a><br>
-   	│   ├── <a href="/home/dell/west3.4/ob/">ob</a><br>
-   	│   ├── <a href="/home/dell/west3.4/plot/">plot</a><br>
-   	│   ├── <a href="/home/dell/west3.4/rc/">rc</a><br>
-   	│   └── <a href="/home/dell/west3.4/run/">run</a><br>
-   	├── <a href="/home/dell/west_static/">west_static</a><br>
-   	└── <a href="/home/dell/west_working/">west_working</a><br>
+   	├── <a href="/home/dell/china_static/">china_static</a><br>
+   	├── <a href="/home/dell/china_working/">china_working</a><br>
+
    	<br><br>
    	</p>
    	<p>
