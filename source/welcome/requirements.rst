@@ -1,5 +1,5 @@
 #############
-FSO服务器要求
+服务器要求
 #############
 
 `PHP <http://php.net/>`_ version 7.0.15 or newer is required, with the *intl* extension installed.
