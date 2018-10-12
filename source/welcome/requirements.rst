@@ -9,6 +9,7 @@ Currently supported databases are:
 
   - MySQL (5.1+) via the *MySQLi* driver
   - PostgreSQL via the *Postgre* driver
+  - Python3 external packages: pendulum
 
 Not all of the drivers have been converted/rewritten for FSO.
 The list below shows the outstanding ones.
