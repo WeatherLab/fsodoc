@@ -29,7 +29,7 @@ Singularity
 导入镜像文件
 ======================
 
-工作站中应存在FSO Singularity镜像文件**fso3.simg**。
+工作站中应存在FSO Singularity镜像文件fso3.simg。
 
 .. code:: bash 
 
