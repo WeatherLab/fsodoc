@@ -9,12 +9,16 @@ Singularity
 
 业务工作站推荐Linux操作系统，Ubuntu/centos发行版本,以centos为例：
 
+.. code:: bash 
+
     #安装或更新依赖
+    
     sudo yum update && \
     sudo yum groupinstall 'Development Tools' && \
     sudo yum install libarchive-devel
 
     #下载并安装最新版本
+    
     git clone https://github.com/singularityware/singularity.git
     cd singularity
     ./autogen.sh
@@ -28,6 +32,7 @@ Singularity
 工作站中应存在FSO Singularity镜像文件**fso3.simg**。
 
 .. code:: bash 
+
         ls -al fso3.simg
 
 参考网页
