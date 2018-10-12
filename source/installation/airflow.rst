@@ -1,16 +1,49 @@
 ################################
-Airflow的安装
+Airflow
 ################################
 
-airflow 的安装十分简单，用``pip``来安装：
+Airflow是一种用编程方式编写以安排和监控工作流程的平台。
+
+安装
+======================
 
 .. code-block :: bash
 
-        export AIRFLOW_HOME=~/airflow
-        pip install airflow[slack]
-        airflow initdb
+      export AIRFLOW_HOME=/指定路径/airflow #设置环境变量airflow主路径
+      pip install airflow #安装
 
-pip 安装的**slackclient**为可选，当你需要通知到**slack**时才会用到，但我十分建议也一起安装， 能够及时收到任务执行状况报告。
+安装完成后
+
+.. code-block :: bash
+
+      cd  $AIRFLOW_HOME
+      vim airflow.cfg
+      
+主要修改以下参数
+.. code-block :: bash
+      airflow_home = /指定路径/airflow   #
+      dags_folder = /指定路径/airflow/dags #dag python文件目录 
+      executor = LocalExecutor #先使用local模式
+      base_log_folder = /指定路径/airflow/logs #主日志目录
+      sql_alchemy_conn = postgresql+psycopg2://yangxiaowen:yangxiaowen@10.38.1.78:5432/yangxiaowen
+      load_examples = True
+      default_impersonation = xiaowen.yang
+      [webserver]
+      authenticate = True
+      auth_backend = airflow.contrib.auth.backends.password_auth #1.8.1版本中cfg文件没有写这个参数,一定要加上,不然会     报"airflow.exceptions.AirflowException: Failed to import authentication backend"错误
+      filter_by_owner = true
+      web_server_host = XXX.XXX.XXX.XXX  #web server 机器IP
+      base_url = http://XXX.XXX.XXX.XXX:8080  #web server 机器IP:PORT
+
+初始化数据库
+.. code-block :: bash
+     airflow initdb
+     
+
+参考网页
+======================
+
+<https://airflow.incubator.apache.org/tutorial.html>
 
 一些概念
 ======================
