@@ -23,7 +23,7 @@ Airflow是一种用编程方式编写以安排和监控工作流程的平台。
 
 .. code-block :: bash
 
-      airflow_home = /指定路径/airflow   #
+      airflow_home = /指定路径/airflow   #airflow路径
       dags_folder = /指定路径/airflow/dags #dag python文件目录 
       executor = LocalExecutor #先使用local模式
       base_log_folder = /指定路径/airflow/logs #主日志目录
