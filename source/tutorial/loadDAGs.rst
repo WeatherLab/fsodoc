@@ -4,14 +4,14 @@ DAG加载与Airflow启动
 
 
 DAG加载
-
-.. code::
+======================
+.. code:: bash
 
      cd $AIRFLOW_HOME/dags
 
 将DAG python脚本（fso-prod-v2.0.py,wrf-prod-v2.0.py)放入该目录下
 
-.. code::
+.. code:: bash
 
      ls -all
 
@@ -20,7 +20,12 @@ DAG加载
      wrf-prod-v2.0.py
      
 
-####Airflow启动
+Airflow启动
+======================
+
+Airflow后台运行程序包括
+
+.. code:: bash
 
      airflow webserver  #启动调度器
 
