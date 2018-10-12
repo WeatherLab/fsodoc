@@ -20,6 +20,7 @@ Airflow是一种用编程方式编写以安排和监控工作流程的平台。
       vim airflow.cfg
       
 主要修改以下参数
+
 .. code-block :: bash
       airflow_home = /指定路径/airflow   #
       dags_folder = /指定路径/airflow/dags #dag python文件目录 
@@ -36,6 +37,7 @@ Airflow是一种用编程方式编写以安排和监控工作流程的平台。
       base_url = http://XXX.XXX.XXX.XXX:8080  #web server 机器IP:PORT
 
 初始化数据库
+
 .. code-block :: bash
      airflow initdb
      
