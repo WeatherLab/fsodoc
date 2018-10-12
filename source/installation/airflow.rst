@@ -31,7 +31,6 @@ Airflow是一种用编程方式编写以安排和监控工作流程的平台。
       default_impersonation = xiaowen.yang
       [webserver]
       authenticate = True
-      auth_backend = airflow.contrib.auth.backends.password_auth #1.8.1版本中cfg文件没有写这个参数,一定要加上,不然会     报"airflow.exceptions.AirflowException: Failed to import authentication backend"错误
       filter_by_owner = true
       web_server_host = XXX.XXX.XXX.XXX  #web server 机器IP
       base_url = http://XXX.XXX.XXX.XXX:8080  #web server 机器IP:PORT
