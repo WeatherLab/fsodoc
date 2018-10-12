@@ -4,6 +4,8 @@ WRF FSO 简介
 
 WRF（Weather Research And Forecast Model) FSO系统包括预报模式（WRF）及其伴随（WRFPLUS）、变分数据同化系统（WRFDA）和诊断、绘图工具（TOOLS)。该系统框架和流程如下：
 
+.. image:: ../images/WRF-FSO.gif
+   :align: center
 
 1.观测场与背景场进入WRFDA得到分析场，从分析场和背景场出发，分别进行相同时效的非线性前向预报。
 
