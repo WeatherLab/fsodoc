@@ -10,7 +10,7 @@ FSO（Forecast sensitivity to observation）即预报对观测的敏感性，最
 	:hidden:
 	:titlesonly:
 
-	self
+	foreword
 	requirements
 	credits
 
