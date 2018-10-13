@@ -64,3 +64,21 @@
    	</p>
    </body>
    </html>
+   
+   .. code-block :: bash
+      cd /home/FSO/china_FSO/be
+      > be.d01.dat
+      cd /home/FSO/china_FSO/fsoplot
+      > data2pg.py
+        drawfso.py 
+        drawlev.py 
+        drawmap.py 
+        drawvar.py 
+        drawvarlev.py
+        sql.py
+        timepath.py
+        chn.ncl
+        fso.ncl
+        map.ncl
+        var.ncl
+        varmap.ncl
