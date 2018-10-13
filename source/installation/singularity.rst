@@ -33,7 +33,7 @@ Singularity安装
 
 .. code-block:: bash 
 
-        ls -al fso3.simg
+       >ls -al fso3.simg
 
 参考网页
 ======================
