@@ -48,9 +48,7 @@ DAG基本构架
       ulimit -s unlimited  \      
       && cd /home/FSO \    #FSO主目录
       && SINGULARITYENV_CURR_DATE={{ ts_nodash }} \     
-      singularity exec -e -B china_FSO:/FSO3.4 -B china_working:/gjx_working -B china_static:/gjx_static -B /data1/raw/gfs:/gfs          fso3.simg ./wrf_check_gfs.py""" # 绑定主机路径与容器路径,运行wrf_check_gfs.py
-   
-.. note::在singularity操作命令（run，exec，shell等）后加上-B来指定绑定路径，冒号前是主机目录路径，冒号后面是容器目录路径
+      singularity exec -e -B china_FSO:/FSO3.4 -B china_working:/gjx_working -B china_static:/gjx_static -B /data1/raw/gfs:/gfs          fso3.simg ./wrf_check_gfs.py""" # 将主机路径与容器路径绑定，冒号前是主机目录路径，冒号后面是容器目录路径；运行wrf_check_gfs.py
 
 .. code:: bash
     >t0 = BashOperator(
