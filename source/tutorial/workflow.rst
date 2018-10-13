@@ -4,9 +4,9 @@ FSO运行流程
 
 FSO由两个DAG共同完成：wrf-prod-v2.0与fso-prod-v2.0。
 
-wrf-prod-v2.0：为fso-prod-v1.0准备初始场、真实场及观测数据，由wrf-test-00Z-v2.0.py脚本控制。
+wrf-prod-v2.0：为fso-prod-v1.0准备初始场、真实场及观测数据，由wrf-prdo-v2.0.py脚本控制。
 
-fso-prod-v2.0：运行FSO、产品输出及绘图，由fso-test-00Z-v2.0.py脚本控制。
+fso-prod-v2.0：运行FSO、产品输出及绘图，由fso-prod-v2.0.py脚本控制。
 
 二者关系
 ======================
@@ -26,7 +26,7 @@ wrf-prod-v2.0
 
 - wrf_obsproc
 
-检测观测资料是否已到位；进行观测资料前处理，得到ob.ascii,存放在FSO3.4/ob/路径下。
+检测观测资料是否已到位；进行观测资料前处理，得到ob.ascii,存放在china_FSO/ob/路径下。
 
 - wps-prod
 
@@ -34,11 +34,11 @@ wrf-prod-v2.0
 
 - real-ana-prod
 
-由该时刻GFS分析场(gfs.*.f000)得到wrfinput_d01.ana,用作计算预报误差的真实场，存放在FSO/FSO3.4/rc/路径下。
+由该时刻GFS分析场(gfs.*.f000)得到wrfinput_d01.ana,用作计算预报误差的真实场，存放在china_FSO/rc/路径下。
 
 - real-icbc-prod
 
-将GFS-36小时预报场(gfs.*.f036)用作同化系统的背景场wrfinput_d01,存放于FSO3.4/rc/。
+将GFS-36小时预报场(gfs.*.f036)用作同化系统的背景场wrfinput_d01,存放于china_FSO/rc/。
 
 - wrf-prod
 
@@ -53,7 +53,7 @@ fso-prod-v2.0
 
 - 1-data-assimialtion
  
-三维变分同化，得到分析场wrfvar_output,保存为FSO3.4/fc/wrfinput_d01。
+三维变分同化，得到分析场wrfvar_output,保存为china_FSO/fc/wrfinput_d01。
 
 - 2-1-nl-forecast
 
