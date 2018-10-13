@@ -5,6 +5,7 @@
 FSO目录结构
 
 /home/FSO
+
 ├── china_FSO   #*FSO主目录*
 
 │   ├── be    #*背景误差协方差路径*
