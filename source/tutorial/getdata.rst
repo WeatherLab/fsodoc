@@ -9,7 +9,7 @@ GFS数据
 
 至少需要每日UTC00时和UTC12时的GFS数据，且每个时刻至少存放该时刻分析场(*.f000)及其12、24、36、48、60（f012,f024,..,f060)时效的预报场。
 
-GFS存放路径：GFS_PATH /gfs.yyyymmddhh
+GFS存放路径：/data1/raw/gfs/gfs.yyyymmddhh
  
 .. code:: bash
 
@@ -27,7 +27,7 @@ GFS存放路径：GFS_PATH /gfs.yyyymmddhh
   
 观测数据需存储为WRFDA可识别的little_r格式ob.ascii或prebufr格式ob.bufr。
 
-观测数据存放路径：OBDATA_PATH/yyyymmddhh
+观测数据存放路径：/data1/little_r/yyyymmddhh
 
 .. code:: bash
 
