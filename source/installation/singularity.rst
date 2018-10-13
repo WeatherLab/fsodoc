@@ -9,7 +9,7 @@ Singularity安装
 
 业务工作站推荐Linux操作系统，Ubuntu/centos发行版本,以centos为例：
 
-.. code:: bash 
+.. code-block:: bash 
 
     #安装或更新依赖
     
@@ -31,7 +31,7 @@ Singularity安装
 
 工作站中应存在FSO Singularity镜像文件fso3.simg。
 
-.. code:: bash 
+.. code-block:: bash 
 
         ls -al fso3.simg
 
