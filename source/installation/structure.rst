@@ -35,12 +35,12 @@
    <body>
    	<h1>FSO目录结构</h1><p>
    	/home/FSO </a><br>
-   	├── chna_FSO</a><br>
-   	│   ├── <a href="/home/dell/FSO3.4/be/">be</a><br>
-   	│   ├── <a href="/home/dell/FSO3.4/fc/">fc</a><br>
-   	│   ├── <a href="/home/dell/FSO3.4/fsoplot/">fsoplot</a><br>
-   	│   │   ├── <a href="/home/dell/FSO3.4/fsoplot/china/">china</a><br>
-   	│   │   └── <a href="/home/dell/FSO3.4/fsoplot/database/">database</a><br>
+   	├── china_FSO</a><主目录>
+   	│   ├── be</a><br>
+   	│   ├── fc</a><br>
+   	│   ├── fsoplot</a><br>
+   	│   │   ├── china</a><br>
+   	│   │   └── database</a><br>
    	│   ├── <a href="/home/dell/FSO3.4/ob/">ob</a><br>
    	│   ├── <a href="/home/dell/FSO3.4/plot/">plot</a><br>
    	│   ├── <a href="/home/dell/FSO3.4/rc/">rc</a><br>
