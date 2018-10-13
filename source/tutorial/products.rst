@@ -95,7 +95,7 @@ profiler
 
 .. code:: bash
 
-psql -U dell -d fso -h 10.255.1.4 -p 5432 -w
+   psql -U dell -d fso -h 10.255.1.4 -p 5432 -w
 
 后台连接
 
