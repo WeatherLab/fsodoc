@@ -4,6 +4,7 @@ FSO结果后处理
 
 gts_omb_oma_01结构说明
 ====================
+
 FSO系统计算得到的预报误差对观测敏感性结果位于/home/FSO/china_FSO/run/ccyymmddhh/obsimpact/gts_omb_oma_01 文件中。以下图为例对当前gts_omb_oma_01数据结构作简要说明。
 
 .. code:: bash
@@ -99,7 +100,7 @@ psql -U dell -d fso -h 10.255.1.4 -p 5432 -w
 数据表说明
 ------------------------
 
-####tb\_*
+..tb\_*::
 
 \* 代表观测类型，如tb\_surface。tb\_* 每条数据依次存放
 
@@ -107,7 +108,7 @@ id  time(时间） stnid(类型标识） lon(经度） 纬度（lat)
 
 
 
-#####tb\_*data
+..tb\_*data::
 
 \* 代表观测类型,如tb\_surfacedata。tb\_*data存放gts\_omb\_oma_01中各点具体数据，tb\_\*data与tb\_\*的id一致。每条数据依次存放：
 
@@ -118,7 +119,6 @@ id  var(观测变量)   lev(高度层)   pres(气压)   obs(观测值） inv(新
 ====================
 
 有了数据库对结果的管理，可直接读取数据库数据进行结果的统计，并传递到NCL绘图脚本中进行绘图。可参考/china_FSO/fsoplot/drawfso.py/等脚本。
-
 绘图产品最终存放于/china_FSO/run/ccyymmddhh/fsoplot/目录中。
 
 
