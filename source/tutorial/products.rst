@@ -9,7 +9,7 @@ FSO系统计算得到的预报误差对观测敏感性结果位于/home/FSO/chin
 
 .. code-block:: bash
 
-   vim gts_omb_oma_01
+   >vim gts_omb_oma_01
   
 .. figure:: ./images/gts_omb_oma.png
    :align: center
