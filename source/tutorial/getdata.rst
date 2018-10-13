@@ -11,7 +11,7 @@ GFS数据
 
 GFS存放路径：/data1/raw/gfs/gfs.yyyymmddhh
  
-.. code:: bash
+.. code-block:: bash
 
    cd GFS_PATH
    
@@ -29,7 +29,7 @@ GFS存放路径：/data1/raw/gfs/gfs.yyyymmddhh
 
 观测数据存放路径：/data1/input/little_r/yyyymmddhh
 
-.. code:: bash
+.. code-block:: bash
 
    cd OBDATA_PATH
    
