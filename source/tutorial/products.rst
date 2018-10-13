@@ -7,7 +7,7 @@ gts_omb_oma_01
 
 FSO系统计算得到的预报误差对观测敏感性结果位于/home/FSO/china_FSO/run/ccyymmddhh/obsimpact/gts_omb_oma_01文件中。以下图为例对当前gts_omb_oma_01数据结构作简要说明。
 
-.. code:: bash
+.. code-block:: bash
 
    vim gts_omb_oma_01
   
@@ -19,7 +19,7 @@ FSO系统计算得到的预报误差对观测敏感性结果位于/home/FSO/chin
 metar
 ---------------------
 
-.. code:: bash
+.. code-block:: bash
        
       metar  站点个数  # 2个
 
@@ -38,7 +38,7 @@ metar
 sound
 ------------------
 
-.. code:: bash
+.. code-block:: bash
 
     sound 站点个数  # 1个
 
@@ -53,7 +53,7 @@ sound
 profiler 
 ------------------------
 
-.. code:: bash
+.. code-block:: bash
     
     profiler 站点个数  # 1个
 
@@ -76,7 +76,7 @@ profiler
 
 前台查看
 
-.. code:: bash
+.. code-block:: bash
 
     >psql -U dell -d fso
 
@@ -93,13 +93,13 @@ profiler
 
 从其他电脑登录数据库
 
-.. code:: bash
+.. code-block:: bash
 
    psql -U dell -d fso -h 10.36.4.24 -p 5432 -w
 
 后台连接
 
-.. code:: bash
+.. code-block:: bash
 
     #!/usr/bin/python
     import psycopg2
