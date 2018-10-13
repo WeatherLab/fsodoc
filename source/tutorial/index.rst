@@ -10,7 +10,7 @@
 
 -  :doc:`FSO运行流程 <workflow>`, 介绍FSO系统运行流程。
 
--  :doc:`FSO业务系统监控 <monitor>`, 介绍如何监控FSO业务系统的运行。
+-  :doc:`FSO业务系统监控 <monitor>`, 介绍FSO业务系统网页监控。
 
 -  :doc:`产品的图形输出 <products>`, 介绍FSO产品的输出和目录。
 
