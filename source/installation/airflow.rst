@@ -9,15 +9,15 @@ Airflow是一种用编程方式编写以安排和监控工作流程的平台。
 
 .. code-block :: bash
 
-      export AIRFLOW_HOME=/指定路径/airflow #设置环境变量airflow主路径
-      pip install airflow #安装
+      >export AIRFLOW_HOME=/指定路径/airflow #设置环境变量airflow主路径
+      >pip install airflow #安装
 
 安装完成后
 
 .. code-block :: bash
 
       cd  $AIRFLOW_HOME
-      vim airflow.cfg
+      >vim airflow.cfg
       
 主要修改以下参数
 
@@ -40,7 +40,7 @@ Airflow是一种用编程方式编写以安排和监控工作流程的平台。
 
 .. code-block :: bash
 
-     airflow initdb
+     >airflow initdb
      
 Airflow基本概念
 ======================
