@@ -2,28 +2,75 @@
 运行目录
 #############
 
-FSO目录结构
+.. raw:: html
 
-/home/FSO
-
-├── china_FSO       *FSO主目录*
-
-│   ├── be          *背景误差协方差路径*
-
-│   ├── fc          *分析场存放路径*
-
-│   ├── fsoplot     *数据库处理及绘图路径*
-
-│   ├── ob          *obsproc后ob.ascii/ob.bufr存放路径*
-
-│   ├── plot        *额外的绘图脚本*
-
-│   ├── rc          *初始场（背景场）和边界场、真实场路径*
-
-│   ├── run         *FSO运行目录,及wrapper_run_fso_v3.4.ksh参数设置脚本*
-
-├── china_static    *wps\\wrf所需namelist、解码表等存放目录*
-
-├── china_working   *初始场、边界场生成，及观测前处理运行路径*
-
-├── scripts         *控制FSO步骤运行的外部脚本*
+   <!DOCTYPE html>
+   <html>
+   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="Author" content="Made by 'tree'">
+    <meta name="GENERATOR" content="$Version: $ tree v1.7.0 (c) 1996 - 2014 by Steve Baker, Thomas Moore, Francesc Rocher, Florian Sesser, Kyosuke Tokoro $">
+    <title>FSO目录结构</title>
+    <style type="text/css">
+     <!-- 
+     BODY { font-family : ariel, monospace, sans-serif; }
+     P { font-weight: normal; font-family : ariel, monospace, sans-serif; color: black; background-color: transparent;}
+     B { font-weight: normal; color: black; background-color: transparent;}
+     A:visited { font-weight : normal; text-decoration : none; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+     A:link    { font-weight : normal; text-decoration : none; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+     A:hover   { color : #000000; font-weight : normal; text-decoration : underline; background-color : yellow; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+     A:active  { color : #000000; font-weight: normal; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+     .VERSION { font-size: small; font-family : arial, sans-serif; }
+     .NORM  { color: black;  background-color: transparent;}
+     .FIFO  { color: purple; background-color: transparent;}
+     .CHAR  { color: yellow; background-color: transparent;}
+     .DIR   { color: blue;   background-color: transparent;}
+     .BLOCK { color: yellow; background-color: transparent;}
+     .LINK  { color: aqua;   background-color: transparent;}
+     .SOCK  { color: fuchsia;background-color: transparent;}
+     .EXEC  { color: green;  background-color: transparent;}
+     -->
+    </style>
+   </head>
+   <body>
+   	<h1>FSO目录结构</h1><p>
+   	/home/FSO </a><br>
+   	├── chna_FSO</a><br>
+   	│   ├── <a href="/home/dell/FSO3.4/be/">be</a><br>
+   	│   ├── <a href="/home/dell/FSO3.4/fc/">fc</a><br>
+   	│   ├── <a href="/home/dell/FSO3.4/fsoplot/">fsoplot</a><br>
+   	│   │   ├── <a href="/home/dell/FSO3.4/fsoplot/china/">china</a><br>
+   	│   │   └── <a href="/home/dell/FSO3.4/fsoplot/database/">database</a><br>
+   	│   ├── <a href="/home/dell/FSO3.4/ob/">ob</a><br>
+   	│   ├── <a href="/home/dell/FSO3.4/plot/">plot</a><br>
+   	│   ├── <a href="/home/dell/FSO3.4/rc/">rc</a><br>
+   	│   └── <a href="/home/dell/FSO3.4/run/">run</a><br>
+   	├── <a href="/home/dell/gjx_static/">gjx_static</a><br>
+   	├── <a href="/home/dell/gjx_working/">gjx_working</a><br>
+   	├── <a href="/home/dell/west3.4/">west3.4</a><br>
+   	│   ├── <a href="/home/dell/west3.4/be/">be</a><br>
+   	│   ├── <a href="/home/dell/west3.4/fc/">fc</a><br>
+   	│   ├── <a href="/home/dell/west3.4/fsoplot/">fsoplot</a><br>
+   	│   │   ├── <a href="/home/dell/west3.4/fsoplot/china/">china</a><br>
+   	│   │   └── <a href="/home/dell/west3.4/fsoplot/database/">database</a><br>
+   	│   ├── <a href="/home/dell/west3.4/ob/">ob</a><br>
+   	│   ├── <a href="/home/dell/west3.4/plot/">plot</a><br>
+   	│   ├── <a href="/home/dell/west3.4/rc/">rc</a><br>
+   	│   └── <a href="/home/dell/west3.4/run/">run</a><br>
+   	├── <a href="/home/dell/west_static/">west_static</a><br>
+   	└── <a href="/home/dell/west_working/">west_working</a><br>
+   	<br><br>
+   	</p>
+   	<p>
+   
+   	<br><br>
+   	</p>
+   	<hr>
+   	<p class="VERSION">
+   		 tree v1.7.0 © 1996 - 2014 by Steve Baker and Thomas Moore <br>
+   		 HTML output hacked and copyleft © 1998 by Francesc Rocher <br>
+   		 JSON output hacked and copyleft © 2014 by Florian Sesser <br>
+   		 Charsets / OS/2 support © 2001 by Kyosuke Tokoro
+   	</p>
+   </body>
+   </html>
