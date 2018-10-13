@@ -117,18 +117,19 @@ id  time(时间） stnid(类型标识） lon(经度） 纬度（lat)
 
 .. figure:: ./images/tb_surface.png
    :align: center
+   
 
 tb\_*data
 ----------------------------
 
-.. figure:: ./images/tb_surfacedata.png
-   :align: center
-   
 \* 代表观测类型,如tb\_surfacedata。tb\_surfacedata存放gts\_omb\_oma_01中各点具体数据，tb\_\*data与tb\_\*的id一致。每条数据依次存放：
 
 
 id  var(观测变量)   lev(高度层)   pres(气压)   obs(观测值） inv(新息增量)  qc(质控码) error(观测误差) inv(贡献率)
 
+
+.. figure:: ./images/tb_surfacedata.png
+   :align: center 
 
 绘图产品
 ====================
