@@ -13,11 +13,11 @@ GFS存放路径：/data1/raw/gfs/gfs.yyyymmddhh
  
 .. code-block:: bash
 
-   cd GFS_PATH
+    cd GFS_PATH
    
    > gfs.2018080112  gfs.2018080200  gfs.2018080212 gfs.2018080300
 
-   cd gfs.2018080112
+    cd gfs.2018080112
    
    > gfs.t00Z.pgrb2.0p25.f000   gfs.t00Z.pgrb2.0p25.f012  gfs.t00Z.pgrb2.0p25.f024  
      gfs.t00Z.pgrb2.0p25.f036   gfs.t00Z.pgrb2.0p25.f048  gfs.t00Z.pgrb2.0p25.f060
