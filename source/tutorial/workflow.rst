@@ -15,7 +15,7 @@ fso-prod-v2.0：运行FSO、产品输出及绘图，由fso-test-00Z-v2.0.py脚�
    :align: center
    
 
-wrf-test-00Z-v2.0(对应DAG:wrf-test-00Z-v2.0.py)
+wrf-prod-v2.0
 ======================
  
 每天运行2次，分别准备UTC00时和UTC12时的背景场及观测数据。每一步骤对应一个外部python脚本。
@@ -44,7 +44,7 @@ wrf-test-00Z-v2.0(对应DAG:wrf-test-00Z-v2.0.py)
 
 以real-icbc-prod得到的wrfinput_d01作为初始场，向前预报24小时，长时间的计算结果可用于统计背景误差协方差等
 
-fso-test-00Z-v2.0
+fso-prod-v2.0
 ======================
 
 - check-obs, check-icbc, check-ana
