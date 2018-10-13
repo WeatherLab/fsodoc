@@ -41,24 +41,14 @@
    	│   ├── fsoplot</a><br>
    	│   │   ├── china</a><br>
    	│   │   └── database</a><br>
-   	│   ├── <a href="/home/dell/FSO3.4/ob/">ob</a><br>
-   	│   ├── <a href="/home/dell/FSO3.4/plot/">plot</a><br>
-   	│   ├── <a href="/home/dell/FSO3.4/rc/">rc</a><br>
-   	│   └── <a href="/home/dell/FSO3.4/run/">run</a><br>
-   	├── <a href="/home/dell/gjx_static/">gjx_static</a><br>
-   	├── <a href="/home/dell/gjx_working/">gjx_working</a><br>
-   	├── <a href="/home/dell/west3.4/">west3.4</a><br>
-   	│   ├── <a href="/home/dell/west3.4/be/">be</a><br>
-   	│   ├── <a href="/home/dell/west3.4/fc/">fc</a><br>
-   	│   ├── <a href="/home/dell/west3.4/fsoplot/">fsoplot</a><br>
-   	│   │   ├── <a href="/home/dell/west3.4/fsoplot/china/">china</a><br>
-   	│   │   └── <a href="/home/dell/west3.4/fsoplot/database/">database</a><br>
-   	│   ├── <a href="/home/dell/west3.4/ob/">ob</a><br>
-   	│   ├── <a href="/home/dell/west3.4/plot/">plot</a><br>
-   	│   ├── <a href="/home/dell/west3.4/rc/">rc</a><br>
-   	│   └── <a href="/home/dell/west3.4/run/">run</a><br>
-   	├── <a href="/home/dell/west_static/">west_static</a><br>
-   	└── <a href="/home/dell/west_working/">west_working</a><br>
+   	│   ├── ob</a><br>
+   	│   ├── plot</a><br>
+   	│   ├── rc</a><br>
+   	│   └── run</a><br>
+   	├── china_static</a><br>
+   	├── china_working</a><br>
+      ├── scripts </a><br>
+
    	<br><br>
    	</p>
    	<p>
