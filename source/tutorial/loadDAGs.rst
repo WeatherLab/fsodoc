@@ -51,14 +51,14 @@ task 任务
 Operator 执行器
 -----------------------------
 
-airflow定义了很多的 Operator，通常一个操作就是一个特定的 Operator， 比如调用 shell 命令要用 BashOperator，调用 python 函数要用PythonOperator， 发邮件要用 EmailOperator，连SSH要用 SSHOperator。社区还在不断地贡献新的 Operator。
+airflow定义了很多的 Operator，通常一个操作就是一个特定的Operator，比如调用shell命令要用BashOperator，调用python函数要用PythonOperator，发邮件要用EmailOperator，连SSH要用SSHOperator。社区还在不断地贡献新的 Operator。
 
 ds 日期
 -----------------------------
 
-前面的脚本里用到了{{ ds }}变量，每个DAG在执行时都会传入一个具体的时间（datetime对象）， 这个ds就会在 render 命令时被替换成对应的时间。
+前面的脚本里用到了{{ ds }}变量，每个DAG在执行时都会传入一个具体的时间（datetime对象），这个ds就会在 render 命令时被替换成对应的时间。
 
-.. important:: 这里要特别强调一下， 对于周期任务，airflow传入的时间是上一个周期的时间（划重点），比如你的任务是每天执行， 那么今天传入的是昨天的日期，如果是周任务，那传入的是上一周今天的值。
+.. important:: 这里要特别强调一下，对于周期任务，airflow传入的时间是上一个周期的时间（划重点），比如你的任务是每天执行，那么今天传入的是昨天的日期，如果是周任务，那传入的是上一周今天的值。
 
 Macros
 -----------------------------
