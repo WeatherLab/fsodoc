@@ -48,26 +48,19 @@ DAG基本构架
       ulimit -s unlimited  \      
       && cd /home/FSO \    #FSO主目录
       && SINGULARITYENV_CURR_DATE={{ ts_nodash }} \     
-      singularity exec -e -B FSO3.4:/FSO3.4 -B china_working:/gjx_working -B china_static:/gjx_static -B /data1/raw/gfs:/gfs          fso3.simg ./wrf_check_gfs.py"""
- 
+      singularity exec -e -B china_FSO:/FSO3.4 -B china_working:/gjx_working -B china_static:/gjx_static -B /data1/raw/gfs:/gfs          fso3.simg ./wrf_check_gfs.py""" # 绑定主机路径与容器路径,运行wrf_check_gfs.py
+   
+.. note::在singularity操作命令（run，exec，shell等）后加上-B来指定绑定路径，冒号前是主机目录路径，冒号后面是容器目录路径
+
 .. code:: bash
     >t0 = BashOperator(
-     task_id='check-gfs',
-     bash_command=check_gfs_command,
+     task_id='check-gfs', # task_id
+     bash_command=check_gfs_command, #执行定义的任务
      dag=dag)
-     
-.. code:: bash
+ ........    
+ 
+参考网页
+================================ 
 
-   >obsproc_command="""
-    ulimit -s unlimited  \
-    && cd /home/dell/FSO \
-    && SINGULARITYENV_CURR_DATE={{ ts_nodash }} \
-   singularity exec -e -B BJ:/FSO3.4 -B china_working:/gjx_working -B china_static:/gjx_static -B /data1/input/little_r:/little_r     fso3.simg ./wrf_obsproc.py"""    
-   
-.. code:: bash
+<http://airflow.incubator.apache.org/tutorial.html>
 
-   >t01 = BashOperator(
-    task_id='obsproc',
-    bash_command=obsproc_command,
-    dag=dag)
-    ......
