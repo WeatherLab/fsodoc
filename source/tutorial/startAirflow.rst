@@ -7,7 +7,7 @@ Airflow启动
 
 Airflow后台运行程序包括
 
-.. code:: bash
+.. code-block:: bash
 
      airflow webserver  #启动调度器
 
@@ -38,24 +38,24 @@ airflow的命令总的来说很符合直觉，常用的有如下几个：
 
 1.
 
-.. code:: bash
+.. code-block:: bash
 
      airflow test dag_id task_id execution_date
 
 用于测试该dag_id中的task_id这一任务，并给定测试时间 例如：
 
-.. code:: bash
+.. code-block:: bash
 
     airflow test fso-prod-00Z-v2.0 2-3-adj-backward 2018-08-16T02:00:00
 
 2.
 
-.. code:: bash
+.. code-block:: bash
  
     airflow backfill dag_id -s start_date -e end_date 
 
 用于反算和补充某个时刻或某段时间的dag流程,注意的是start_date和end_date之间必须要相差一天,例如：
 
-.. code:: bash
+.. code-block:: bash
 
     airflow backfill fso-prod-00Z-v2.0 -s 2018-08-16 -e 2018-08-17
