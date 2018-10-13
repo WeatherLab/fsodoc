@@ -64,8 +64,9 @@
    	</p>
    </body>
    </html>
-   
-   .. code-block :: bash
+  
+ .. code:: bash
+ 
       cd /home/FSO/china_FSO/be
       > be.d01.dat
       cd /home/FSO/china_FSO/fsoplot
