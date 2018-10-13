@@ -10,7 +10,9 @@ FSO系统计算得到的预报误差对观测敏感性结果位于/home/FSO/chin
 .. code:: bash
 
    vim gts_omb_oma_01
-   >
+  
+
+
    
 metar
 ---------------------
@@ -86,6 +88,8 @@ profiler
     
 
 从其他电脑登录数据库
+
+.. code:: bash
 
 psql -U dell -d fso -h 10.255.1.4 -p 5432 -w
 
