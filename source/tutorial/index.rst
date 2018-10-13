@@ -6,7 +6,9 @@
 
 -  :doc:`FSO所需数据 <getdata>`, 介绍运行FSO需要准备的数据。
 
--  :doc:`加载DAGs和运行Airflow <loadDAGs>`, 介绍如何将操作Airflow。
+-  :doc:`加载DAGs<loadDAGs>`, 介绍DAG的加载与修改。
+
+-  :doc:`启动Airflow<startAirflow>`, 介绍Airflow启动。
 
 -  :doc:`FSO运行流程 <workflow>`, 介绍FSO系统运行流程。
 
@@ -20,6 +22,7 @@
 	
         getdata	
 	loadDAGs
+	startAirflow
 	workflow
 	monitor
 	products
