@@ -38,7 +38,7 @@ FSO简介
 	installation/index
 
 ********
-运行教程
+FSO运行
 ********
 
 .. toctree::
