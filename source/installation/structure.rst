@@ -34,7 +34,7 @@
    </head>
    <body>
    	<h1>FSO目录结构</h1><p>
-   	<a href="/home/FSO">/home/*</a><br>
+   	<a href="/home/FSO">/home/FSO</a><br>
    	├── <a href="/home/dell/FSO3.4/">china_FSO</a><br>
    	│   ├── <a href="/home/dell/FSO3.4/be/">be</a><br>
    	│   ├── <a href="/home/dell/FSO3.4/fc/">fc</a><br>
