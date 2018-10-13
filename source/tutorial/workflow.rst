@@ -49,7 +49,7 @@ fso-prod-v2.0
 
 - check-obs, check-icbc, check-ana
 
- 检查观测ob.ascii、同化背景场wrfinput_d01、真实场wrfinput_d01.ana是否生成。
+检查观测ob.ascii、同化背景场wrfinput_d01、真实场wrfinput_d01.ana是否生成。
 
 - 1-data-assimialtion
  
