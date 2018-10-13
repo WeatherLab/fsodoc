@@ -40,9 +40,10 @@ FSO目录结构
        >wrapper_run_fso_v3.4.ksh
       cd /home/FSO/china_static
        > 
-       cd /home/FSO/scripts
+      cd /home/FSO/scripts
        >fso_2pg.py fso_adj.py fso_2pg.py fso_check_ana.py fso_check_icbc.py fso_check_obs.py
-        fso_da.py fso_err.py fso_forcing.py fso_impact.py fso_nl.py fso_plot.py 
+        fso_da.py fso_err.py fso_forcing.py fso_impact.py fso_nl.py fso_plot.py china_common.py
+        wrf_check_gfs.py wrf_obsproc.py wrf_prod.py wrf_real_ana.py wrf_real_icbc.py wrf_wps.py
         
         
    
