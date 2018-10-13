@@ -35,16 +35,16 @@
    <body>
    	<h1>FSO目录结构</h1><p>
    	/home/FSO </a><br>
-   	├── china_FSO</a><主目录>
+   	├── china_FSO</a><br>
    	│   ├── be</a><br>
    	│   ├── fc</a><br>
    	│   ├── fsoplot</a><br>
    	│   │   ├── china</a><br>
-   	│   │   └── database</a><br>
+   	│   │   ├── database</a><br>
    	│   ├── ob</a><br>
    	│   ├── plot</a><br>
    	│   ├── rc</a><br>
-   	│   └── run</a><br>
+   	│   ├── run</a><br>
    	├── china_static</a><br>
    	├── china_working</a><br>
       ├── scripts </a><br>
