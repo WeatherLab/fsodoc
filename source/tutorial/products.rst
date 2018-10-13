@@ -119,8 +119,8 @@ id  time(时间） stnid(类型标识） lon(经度） 纬度（lat)
    :align: center
    
 
-###tb\_*data
-----------------------------
+tb\_*data
+___________________
 
 \* 代表观测类型,如tb\_surfacedata。tb\_surfacedata存放gts\_omb\_oma_01中各点具体数据，tb\_\*data与tb\_\*的id一致。每条数据依次存放：
 
