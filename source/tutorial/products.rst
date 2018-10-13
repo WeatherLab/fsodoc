@@ -95,7 +95,7 @@ profiler
 
 .. code:: bash
 
-   psql -U dell -d fso -h 10.255.1.4 -p 5432 -w
+   psql -U dell -d fso -h 10.36.4.24 -p 5432 -w
 
 后台连接
 
@@ -103,7 +103,7 @@ profiler
 
     #!/usr/bin/python
     import psycopg2
-    conn = psycopg2.connect(database="fso",user="dell",password="fso2018",host="127.0.0.1",port="5432")
+    conn = psycopg2.connect(database="fso",user="dell",password="fso2018",host="10.36.4.24",port="5432")
 
 数据表说明
 ------------------------
