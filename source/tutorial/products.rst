@@ -2,7 +2,7 @@
 FSO结果后处理
 ################
 
-gts_omb_oma_01结构说明
+gts_omb_oma_01
 ====================
 
 FSO系统计算得到的预报误差对观测敏感性结果位于/home/FSO/china_FSO/run/ccyymmddhh/obsimpact/gts_omb_oma_01文件中。以下图为例对当前gts_omb_oma_01数据结构作简要说明。
