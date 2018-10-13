@@ -27,7 +27,7 @@ GFS存放路径：/data1/raw/gfs/gfs.yyyymmddhh
   
 观测数据需存储为WRFDA可识别的little_r格式ob.ascii或prebufr格式ob.bufr。
 
-观测数据存放路径：/data1/little_r/yyyymmddhh
+观测数据存放路径：/data1/input/little_r/yyyymmddhh
 
 .. code:: bash
 
