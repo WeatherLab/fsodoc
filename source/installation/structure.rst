@@ -1,7 +1,9 @@
 #############
 运行目录
 #############
+
 FSO目录结构
+------------------
 
 /home/FSO
 
@@ -27,7 +29,8 @@ FSO目录结构
 
 ├── scripts
 
-
+脚本放置
+------------------
   
 .. code:: bash
  
@@ -45,5 +48,5 @@ FSO目录结构
         fso_da.py fso_err.py fso_forcing.py fso_impact.py fso_nl.py fso_plot.py china_common.py
         wrf_check_gfs.py wrf_obsproc.py wrf_prod.py wrf_real_ana.py wrf_real_icbc.py wrf_wps.py
         
-        
+ 
    
