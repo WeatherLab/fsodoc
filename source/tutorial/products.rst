@@ -11,6 +11,8 @@ FSO系统计算得到的预报误差对观测敏感性结果位于/home/FSO/chin
 
    vim gts_omb_oma_01
   
+.. figure:: ./images/gts_omb_oma.png
+   :align: center
 
 
    
@@ -86,6 +88,8 @@ profiler
 
     >drop table tb_sound;  #删除数据表，注意“;”不能少
     
+.. figure:: ./images/tb.png
+   :align: center    
 
 从其他电脑登录数据库
 
@@ -104,17 +108,24 @@ psql -U dell -d fso -h 10.255.1.4 -p 5432 -w
 数据表说明
 ------------------------
 
-..tb\_*::
+tb\_*
+------------------------
 
-\* 代表观测类型，如tb\_surface。tb\_* 每条数据依次存放
+\* 代表观测类型，如tb\_surface。tb_surface中每条数据依次存放:
 
 id  time(时间） stnid(类型标识） lon(经度） 纬度（lat)
 
+.. figure:: ./images/tb_surface.png
+   :align: center
 
+tb\_*data
+----------------------------
 
-..tb\_*data::
+.. figure:: ./images/tb_surfacedata.png
+   :align: center
+   
+\* 代表观测类型,如tb\_surfacedata。tb\_surfacedata存放gts\_omb\_oma_01中各点具体数据，tb\_\*data与tb\_\*的id一致。每条数据依次存放：
 
-\* 代表观测类型,如tb\_surfacedata。tb\_*data存放gts\_omb\_oma_01中各点具体数据，tb\_\*data与tb\_\*的id一致。每条数据依次存放：
 
 id  var(观测变量)   lev(高度层)   pres(气压)   obs(观测值） inv(新息增量)  qc(质控码) error(观测误差) inv(贡献率)
 
