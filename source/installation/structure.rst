@@ -32,7 +32,7 @@ FSO目录结构
 脚本放置
 ------------------
   
-.. code:: bash
+.. code-block:: bash
  
       cd /home/FSO/china_FSO/be
       > be.d01.dat
