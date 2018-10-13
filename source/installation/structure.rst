@@ -38,6 +38,7 @@ FSO目录结构
       > be.d01.dat
       
 .. code-block:: bash
+
       cd /home/FSO/china_FSO/fsoplot
       > data2pg.py 
         drawfso.py 
@@ -54,9 +55,12 @@ FSO目录结构
         varmap.ncl
         
 .. code-block:: bash 
+
       cd /home/FSO/china_FSO/run
-      >wrapper_run_fso_v3.4.ksh
+      >wrapper_run_fso_v3.4.ksh\
+      
 .. code-block:: bash
+
       cd /home/FSO/china_static
       > namelist.input 
         namelist.wps
@@ -67,10 +71,10 @@ FSO目录结构
         QNWFA_QNIFA_Monthly_GFS
         obserr.txt
 .. code-block:: bash
+
       cd /home/FSO/scripts
-      >fso_2pg.py 
+      > fso_2pg.py 
        fso_adj.py 
-       fso_2pg.py 
        fso_check_ana.py 
        fso_check_icbc.py 
        fso_check_obs.py
