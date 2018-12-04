@@ -28,7 +28,7 @@ FSO系统网页监控
 
    任务监控界面
 
-.. figure:: ../images/tasklog.PNG
+.. figure:: ../images/tasklog.png
    :align: center
 
    任务运行日志
