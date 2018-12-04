@@ -39,6 +39,8 @@ GFS存放路径：/data1/raw/gfs/gfs.yyyymmddhh
    
    > ob.ascii
    
+ 目前已有的观测资料包括：
+ 
    
    
 
