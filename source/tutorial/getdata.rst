@@ -38,9 +38,10 @@ GFS存放路径：/data1/raw/gfs/gfs.yyyymmddhh
    cd 2018080112
    
    > ob.ascii
-   
- 目前已有的观测资料包括：
- .. figure:: ../images/obs.png
+  
+ 
+目前已有的观测资料包括：
+.. figure:: ../images/obs.png
    :align: center
  
    
