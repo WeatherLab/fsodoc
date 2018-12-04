@@ -5,7 +5,7 @@
 FSO目录结构
 ------------------
 
-/home/FSO
+/home/zwtd/FSO
 
 ├── china_FSO   #FSO主目录
 
@@ -34,12 +34,12 @@ FSO目录结构
   
 .. code-block:: bash
  
-      cd /home/FSO/china_FSO/be
+      cd /home/zwtd/FSO/china_FSO/be
       > be.d01.dat
       
 .. code-block:: bash
 
-      cd /home/FSO/china_FSO/fsoplot
+      cd /home/zwtd/FSO/china_FSO/fsoplot
       > data2pg.py 
         drawfso.py 
         drawlev.py 
@@ -56,12 +56,12 @@ FSO目录结构
         
 .. code-block:: bash 
 
-      cd /home/FSO/china_FSO/run
+      cd /home/zwtd/FSO/china_FSO/run
       >wrapper_run_fso_v3.4.ksh\
       
 .. code-block:: bash
 
-      cd /home/FSO/china_static
+      cd /home/zwtd/FSO/china_static
       > namelist.input 
         namelist.wps
         namelist.obsproc
@@ -72,7 +72,7 @@ FSO目录结构
         obserr.txt
 .. code-block:: bash
 
-      cd /home/FSO/scripts
+      cd /home/zwtd/FSO/scripts
       > fso_2pg.py 
        fso_adj.py 
        fso_check_ana.py 
