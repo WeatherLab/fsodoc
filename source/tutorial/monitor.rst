@@ -11,19 +11,19 @@ FSO系统网页监控
 
 在上一页面中通过点击DAG列中的某一作业名称，可以进入该作业的详细信息查看页面。默认显示Tree View，左侧是展开的子任务，右侧每列小方块是不同时间运行的状态，可以看到最近运行的任务，深绿色表示作业正常结束，浅绿色表示正在运行，红色表示出错，黄色表示遇到问题准备重试，灰色表示在队列中。
 
-.. figure:: ../images/treeview.PNG
+.. figure:: ../images/treeview.png
    :align: center
 
    作业流程的树状结构图
 
 点击上图中的Graph View视图，可以显示作业中各个任务间的依赖关系图，可以清晰地看出任务流程，其中任务框的颜色同前表明任务的运行状态。通过点击某一任务框，显示进一步的操作选项对话框，如点击View Log按钮可以查看该任务的运行日志。当出现错误时可以查看错误原因，主要的错误是数据未就位。
 
-.. figure:: ../images/graphview.PNG
+.. figure:: ../images/graphview.png
    :align: center
 
    作业流程依赖关系图
 
-.. figure:: ../images/taskdetails.PNG
+.. figure:: ../images/taskdetails.png
    :align: center
 
    任务监控界面
