@@ -26,15 +26,15 @@ wrf-prod-v2.0
 
 - wrf_obsproc
 
-检测观测资料是否已到位；进行观测资料前处理，得到WRFDA可以读取的观测文件ob.ascii,存放在china_FSO/ob/路径下。
+检测观测资料是否已到位；进行观测资料前处理，得到WRFDA可以读取的观测文件ob.ascii,存放在/china_FSO/ob/路径下。
 
 - wps-prod
 
-运行wps
+运行wps，解码数据，提供地形等。
 
 - real-ana-prod
 
-由该时刻GFS分析场(gfs.*.f000)得到wrfinput_d01.ana,用作计算预报误差的真实场，存放在china_FSO/rc/路径下。
+由该时刻GFS分析场(gfs.*.f000)得到wrfinput_d01.ana,用作计算预报误差的真实场，存放在/china_FSO/rc/路径下。
 
 - real-icbc-prod
 
@@ -53,7 +53,7 @@ fso-prod-v2.0
 
 - 1-data-assimialtion
  
-三维变分同化，得到分析场wrfvar_output,保存为china_FSO/fc/wrfinput_d01。
+三维变分同化，得到分析场wrfvar_output,保存为/china_FSO/fc/wrfinput_d01。
 
 - 2-1-nl-forecast
 
