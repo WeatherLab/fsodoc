@@ -21,7 +21,7 @@ DAG加载
 DAG基本构架
 ================================
 
-以wrf-prod-v2.0.py为例：
+以wrf-prod-v2.0.py为例，Dag基本框架为：
 
 .. code-block:: bash
     
