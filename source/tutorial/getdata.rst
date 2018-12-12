@@ -30,6 +30,7 @@ GFS存放路径：/data1/raw/gfs/gfs.yyyymmddhh
    :align: center
    
 1.观测资料获取
+-------------------------------
 
 观测资料都采用crontab定时获取。
 
@@ -37,7 +38,7 @@ GFS存放路径：/data1/raw/gfs/gfs.yyyymmddhh
 
 .. code-block:: bash
 
-     >*/15 * * * * bash -c "python3.6 get-metar.py --root-dir /home/data/raw/cimiss --time $(date -u +\%Y\%m\%d\%H\%M --date '-30 minute')" 1> /dev/null
+     > */15 * * * * bash -c "python3.6 get-metar.py --root-dir /home/data/raw/cimiss --time $(date -u +\%Y\%m\%d\%H\%M --date '-30 minute')" 1> /dev/null
      
 资料以xml文件存储，每１５分钟一个文件：
      
@@ -50,7 +51,7 @@ GFS存放路径：/data1/raw/gfs/gfs.yyyymmddhh
 
 .. code-block:: bash
 
-     >20 8,20 * * * bash -c "python3.6 get-sounding.py --root-dir /home/data/raw/cimiss --time $(date -u +\%Y\%m\%d\%H\%M --date '-20 minute')" 1> /dev/null
+     > 20 8,20 * * * bash -c "python3.6 get-sounding.py --root-dir /home/data/raw/cimiss --time $(date -u +\%Y\%m\%d\%H\%M --date '-20 minute')" 1> /dev/null
      
 探空资料以xml文件存储，每１２小时一个文件:
      
@@ -60,7 +61,7 @@ GFS存放路径：/data1/raw/gfs/gfs.yyyymmddhh
  1.3 风廓线雷达资料
 .. code-block:: bash
 
-     >*/15 * * * * bash -c "source python3.6 get-profiler.py --root-dir /home/data/raw/profiler --date $(date -u +\%Y\%m\%d\%H\%M --date '-30 minute')" 1> /dev/null
+     > */15 * * * * bash -c "source python3.6 get-profiler.py --root-dir /home/data/raw/profiler --date $(date -u +\%Y\%m\%d\%H\%M --date '-30 minute')" 1> /dev/null
      
 风廓线资料以txt文件存储，每15分钟一个文件：
  
@@ -68,12 +69,13 @@ GFS存放路径：/data1/raw/gfs/gfs.yyyymmddhh
    :align: center
      
 2.资料转LITTLE_R格式
+-------------------------------
 
 观测数据需存储为WRFDA可识别的little_r格式ob.ascii或prebufr格式ob.bufr。
 
 .. code-block:: bash
 
-    >0 12,00 * * * bash -c "python3.6 /home/data/raw/little_r/convert_cimiss_2_littler.py"
+    > 0 12,00 * * * bash -c "python3.6 /home/data/raw/little_r/convert_cimiss_2_littler.py"
     
 观测数据存放路径：/data1/input/little_r/yyyymmddhh
 
