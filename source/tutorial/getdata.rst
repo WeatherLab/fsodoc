@@ -67,7 +67,8 @@ GFS存放路径：/data1/raw/gfs/gfs.yyyymmddhh
    > 201810281200.xml  201810290000.xml 201810291200.xml
      201810300000.xml  201810301200.xml 201810310000.xml
      ......
-   
+ 
+ 
 1.3 风廓线雷达资料
  
 .. code-block:: bash
