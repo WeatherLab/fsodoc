@@ -40,10 +40,15 @@ GFS存放路径：/data1/raw/gfs/gfs.yyyymmddhh
 
      > */15 * * * * bash -c "python3.6 get-metar.py --root-dir /home/data/raw/cimiss --time $(date -u +\%Y\%m\%d\%H\%M --date '-30 minute')" 1> /dev/null
      
-资料以xml文件存储，每１５分钟一个文件：
+资料以xml文件存储，每15分钟一个文件：
      
- .. figure:: ../images/metar-get.png
-   :align: center
+.. code-block:: bash
+
+   > cd SURF_CHN_MAIN_MIN
+   
+   > 201810282030.xml  201810282045.xml 201810282100.xml
+     201810282115.xml  201810282130.xml 201810282145.xml
+     ......
    
 
 
@@ -54,19 +59,30 @@ GFS存放路径：/data1/raw/gfs/gfs.yyyymmddhh
      > 20 8,20 * * * bash -c "python3.6 get-sounding.py --root-dir /home/data/raw/cimiss --time $(date -u +\%Y\%m\%d\%H\%M --date '-20 minute')" 1> /dev/null
      
 探空资料以xml文件存储，每12小时一个文件:
+
+.. code-block:: bash
      
- .. figure:: ../images/sound-get.png
-   :align: center
+   > cd UPAR_CHN_MUL_FTM
+   
+   > 201810281200.xml  201810290000.xml 201810291200.xml
+     201810300000.xml  201810301200.xml 201810310000.xml
+     ......
    
  1.3 风廓线雷达资料
+ 
 .. code-block:: bash
 
      > */15 * * * * bash -c "source python3.6 get-profiler.py --root-dir /home/data/raw/profiler --date $(date -u +\%Y\%m\%d\%H\%M --date '-30 minute')" 1> /dev/null
      
-风廓线资料以txt文件存储，每15分钟一个文件：
+风廓线资料以txt文件存储，使用的半小时平均风廓线数据，每30分钟一个文件：
+
+.. code-block:: bash
  
- .. figure:: ../images/profiler-get.png
-   :align: center
+   > cd profiler/20181028
+   
+   > Z_RADA_59981_WPRD_MOC_NWQC_HOBS_LC_QI_20181028110000.TXT
+     Z_RADA_59981_WPRD_MOC_NWQC_HOBS_LC_QI_20181028113000.TXT
+     ......
      
 2.资料转LITTLE_R格式
 -------------------------------
