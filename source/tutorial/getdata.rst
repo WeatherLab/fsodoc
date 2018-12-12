@@ -53,9 +53,9 @@ GFS存放路径：/data1/raw/gfs/gfs.yyyymmddhh
 
      > 20 8,20 * * * bash -c "python3.6 get-sounding.py --root-dir /home/data/raw/cimiss --time $(date -u +\%Y\%m\%d\%H\%M --date '-20 minute')" 1> /dev/null
      
-探空资料以xml文件存储，每１２小时一个文件:
+探空资料以xml文件存储，每12小时一个文件:
      
-.. figure:: ../images/sound-get.png
+ .. figure:: ../images/sound-get.png
    :align: center
    
  1.3 风廓线雷达资料
