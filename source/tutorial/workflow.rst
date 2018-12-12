@@ -22,11 +22,11 @@ wrf-prod-v2.0
 
 - wrf_check-gfs
 
-检测运行时刻GFS资料是否到位(gfs.\*.f012,gfs.\*.f012,...,gfs.\*.f060)
+检测运行时刻GFS资料是否到位(gfs.\*.f012,gfs.\*.f024,...,gfs.\*.f060)
 
 - wrf_obsproc
 
-检测观测资料是否已到位；进行观测资料前处理，得到ob.ascii,存放在china_FSO/ob/路径下。
+检测观测资料是否已到位；进行观测资料前处理，得到WRFDA可以读取的观测文件ob.ascii,存放在china_FSO/ob/路径下。
 
 - wps-prod
 
@@ -38,7 +38,7 @@ wrf-prod-v2.0
 
 - real-icbc-prod
 
-将GFS-36小时预报场(gfs.*.f036)用作同化系统的背景场wrfinput_d01,存放于china_FSO/rc/。
+将GFS-36小时预报场(gfs.*.f036)用作同化系统的背景场wrfinput_d01,存放于/china_FSO/rc/。
 
 - wrf-prod
 
