@@ -78,7 +78,7 @@ profiler
 
 .. code-block:: bash
 
-    >psql -U dell -d fso
+    >psql -U fso -d fso
 
     >\dt    #列举所有数据表
 
@@ -95,7 +95,7 @@ profiler
 
 .. code-block:: bash
 
-   psql -U dell -d fso -h 10.36.4.24 -p 5432 -w
+   psql -U fso -d fso -h 10.36.4.44 -p 5432 -w
 
 后台连接
 
@@ -103,7 +103,7 @@ profiler
 
     #!/usr/bin/python
     import psycopg2
-    conn = psycopg2.connect(database="fso",user="dell",password="fso2018",host="10.36.4.24",port="5432")
+    conn = psycopg2.connect(database="fso",user="fso",password="fSO@2018",host="10.36.4.44",port="5432")
 
 数据表说明
 ------------------------
