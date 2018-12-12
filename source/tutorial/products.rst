@@ -69,7 +69,7 @@ profiler
 数据库
 =======================
 
-为了便于FSO运行结果的统计与绘图，采用pythonPostgreSQL数据库的方式对数据进行存储与管理.可参考 /home/FSO/fso_2pg.py和/home/FSO/china_FSO/fsoplot/data2pg.ncl脚本。
+为了便于FSO运行结果的统计与绘图，采用pythonPostgreSQL数据库的方式对数据进行存储与管理.可参考 /home/zwtd/FSO/fso_2pg.py和/home/zwtd/FSO/china_FSO/fsoplot/data2pg.ncl脚本。
 
 数据库连接
 ------------------------
