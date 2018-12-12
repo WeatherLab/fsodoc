@@ -4,9 +4,9 @@ FSO运行流程
 
 FSO由两个DAG共同完成：wrf-prod-v2.0与fso-prod-v2.0。
 
-wrf-prod-v2.0：为fso-prod-v1.0准备初始场、真实场及观测数据，由wrf-prdo-v2.0.py脚本控制。
+wrf-prod-v2.0：为fso-prod-v2.0准备初始场、真实场及观测数据，由wrf-prod-v2.0.py脚本控制。
 
-fso-prod-v2.0：运行FSO、产品输出及绘图，由fso-prod-v2.0.py脚本控制。
+fso-prod-v2.0：执行FSO、结果输出及绘图，由fso-prod-v2.0.py脚本控制。
 
 二者关系
 ======================
