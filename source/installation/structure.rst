@@ -1,76 +1,96 @@
 #############
-准备运行环境
+运行目录
 #############
 
-.. raw:: html
+FSO目录结构
+------------------
 
-   <!DOCTYPE html>
-   <html>
-   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="Author" content="Made by 'tree'">
-    <meta name="GENERATOR" content="$Version: $ tree v1.7.0 (c) 1996 - 2014 by Steve Baker, Thomas Moore, Francesc Rocher, Florian Sesser, Kyosuke Tokoro $">
-    <title>FSO目录结构</title>
-    <style type="text/css">
-     <!-- 
-     BODY { font-family : ariel, monospace, sans-serif; }
-     P { font-weight: normal; font-family : ariel, monospace, sans-serif; color: black; background-color: transparent;}
-     B { font-weight: normal; color: black; background-color: transparent;}
-     A:visited { font-weight : normal; text-decoration : none; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
-     A:link    { font-weight : normal; text-decoration : none; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
-     A:hover   { color : #000000; font-weight : normal; text-decoration : underline; background-color : yellow; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
-     A:active  { color : #000000; font-weight: normal; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
-     .VERSION { font-size: small; font-family : arial, sans-serif; }
-     .NORM  { color: black;  background-color: transparent;}
-     .FIFO  { color: purple; background-color: transparent;}
-     .CHAR  { color: yellow; background-color: transparent;}
-     .DIR   { color: blue;   background-color: transparent;}
-     .BLOCK { color: yellow; background-color: transparent;}
-     .LINK  { color: aqua;   background-color: transparent;}
-     .SOCK  { color: fuchsia;background-color: transparent;}
-     .EXEC  { color: green;  background-color: transparent;}
-     -->
-    </style>
-   </head>
-   <body>
-   	<h1>FSO目录结构</h1><p>
-   	<a href="/home/dell">/home/dell</a><br>
-   	├── <a href="/home/dell/FSO3.4/">FSO3.4</a><br>
-   	│   ├── <a href="/home/dell/FSO3.4/be/">be</a><br>
-   	│   ├── <a href="/home/dell/FSO3.4/fc/">fc</a><br>
-   	│   ├── <a href="/home/dell/FSO3.4/fsoplot/">fsoplot</a><br>
-   	│   │   ├── <a href="/home/dell/FSO3.4/fsoplot/china/">china</a><br>
-   	│   │   └── <a href="/home/dell/FSO3.4/fsoplot/database/">database</a><br>
-   	│   ├── <a href="/home/dell/FSO3.4/ob/">ob</a><br>
-   	│   ├── <a href="/home/dell/FSO3.4/plot/">plot</a><br>
-   	│   ├── <a href="/home/dell/FSO3.4/rc/">rc</a><br>
-   	│   └── <a href="/home/dell/FSO3.4/run/">run</a><br>
-   	├── <a href="/home/dell/gjx_static/">gjx_static</a><br>
-   	├── <a href="/home/dell/gjx_working/">gjx_working</a><br>
-   	├── <a href="/home/dell/west3.4/">west3.4</a><br>
-   	│   ├── <a href="/home/dell/west3.4/be/">be</a><br>
-   	│   ├── <a href="/home/dell/west3.4/fc/">fc</a><br>
-   	│   ├── <a href="/home/dell/west3.4/fsoplot/">fsoplot</a><br>
-   	│   │   ├── <a href="/home/dell/west3.4/fsoplot/china/">china</a><br>
-   	│   │   └── <a href="/home/dell/west3.4/fsoplot/database/">database</a><br>
-   	│   ├── <a href="/home/dell/west3.4/ob/">ob</a><br>
-   	│   ├── <a href="/home/dell/west3.4/plot/">plot</a><br>
-   	│   ├── <a href="/home/dell/west3.4/rc/">rc</a><br>
-   	│   └── <a href="/home/dell/west3.4/run/">run</a><br>
-   	├── <a href="/home/dell/west_static/">west_static</a><br>
-   	└── <a href="/home/dell/west_working/">west_working</a><br>
-   	<br><br>
-   	</p>
-   	<p>
+/home/zwtd/FSO
+
+├── china_FSO   #FSO主目录
+
+│   ├── be   
+
+│   ├── fc    
+
+│   ├── fsoplot  
+
+│   ├── ob  
+
+│   ├── plot  
+
+│   ├── rc  
+
+│   ├── run  
+
+├── china_static
+
+├── china_working 
+
+├── scripts
+
+脚本放置
+------------------
+  
+.. code-block:: bash
+ 
+      cd /home/zwtd/FSO/china_FSO/be
+      > be.d01.dat
+      
+.. code-block:: bash
+
+      cd /home/zwtd/FSO/china_FSO/fsoplot
+      > data2pg.py 
+        drawfso.py 
+        drawlev.py 
+        drawmap.py 
+        drawvar.py 
+        drawvarlev.py   
+        sql.py 
+        timepath.py 
+        chn.ncl 
+        fso.ncl 
+        map.ncl 
+        var.ncl 
+        varmap.ncl
+        
+.. code-block:: bash 
+
+      cd /home/zwtd/FSO/china_FSO/run
+      >wrapper_run_fso_v3.4.ksh\
+      
+.. code-block:: bash
+
+      cd /home/zwtd/FSO/china_static
+      > namelist.input 
+        namelist.wps
+        namelist.obsproc
+        geo_em.d01.nc
+        Vtable.GFS
+        Vtable.GFS_0p5
+        QNWFA_QNIFA_Monthly_GFS
+        obserr.txt
+.. code-block:: bash
+
+      cd /home/zwtd/FSO/scripts
+      > fso_2pg.py 
+       fso_adj.py 
+       fso_check_ana.py 
+       fso_check_icbc.py 
+       fso_check_obs.py
+       fso_da.py 
+       fso_err.py 
+       fso_forcing.py 
+       fso_impact.py 
+       fso_nl.py 
+       fso_plot.py
+       china_common.py
+       wrf_check_gfs.py 
+       wrf_obsproc.py 
+       wrf_prod.py 
+       wrf_real_ana.py 
+       wrf_real_icbc.py 
+       wrf_wps.py
+        
+ 
    
-   	<br><br>
-   	</p>
-   	<hr>
-   	<p class="VERSION">
-   		 tree v1.7.0 © 1996 - 2014 by Steve Baker and Thomas Moore <br>
-   		 HTML output hacked and copyleft © 1998 by Francesc Rocher <br>
-   		 JSON output hacked and copyleft © 2014 by Florian Sesser <br>
-   		 Charsets / OS/2 support © 2001 by Kyosuke Tokoro
-   	</p>
-   </body>
-   </html>

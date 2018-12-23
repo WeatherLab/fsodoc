@@ -19,7 +19,7 @@ FSO 用户指南
 	welcome/index
 
 *********************
-介绍
+FSO简介
 *********************
 .. toctree::
         :titlesonly:
@@ -27,7 +27,7 @@ FSO 用户指南
         intro/index
 
 ************
-安装
+依赖软件
 ************
 
 .. toctree::
@@ -38,7 +38,7 @@ FSO 用户指南
 	installation/index
 
 ********
-教程
+FSO运行
 ********
 
 .. toctree::
