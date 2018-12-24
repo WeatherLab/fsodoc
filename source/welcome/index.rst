@@ -6,7 +6,7 @@
    :maxdepth: 2
 
    foreword
-   backgroud
+   background
    requirements
    credits
 
