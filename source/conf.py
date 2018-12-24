@@ -42,6 +42,7 @@ master_doc = 'index'
 # General information about the project.
 project = u'FSO'
 copyright = u'2016-2018 北京朗润知天科技有限公司'
+author = u'Longrun Weatherwise Technology LLC'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -96,7 +97,7 @@ highlight_language = 'ci'
 # a list of builtin themes.
 #
 #html_theme = 'sphinx_rtd_theme'
-html_theme = 'classic'
+html_theme = 'default'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
