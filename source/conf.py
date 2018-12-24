@@ -120,11 +120,7 @@ html_title = u'FSO ' + release + u' 用户手册|软件手册'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = 'images/longrun.jpeg'
-html_theme_options = {
-    'logo_only': True,
-    'display_version': False,
-}
+html_logo = 'images/longrun.png'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
