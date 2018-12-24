@@ -40,7 +40,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'FSO'
+project = u'预报误差对观测的敏感性（FSO）'
 copyright = u'2016-2018 北京朗润知天科技有限公司'
 author = u'Longrun Weatherwise Technology LLC'
 
