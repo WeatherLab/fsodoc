@@ -1,5 +1,5 @@
 ########
-教程
+用户手册
 ########
 
 该教程包括以下几个部分:
@@ -20,7 +20,7 @@
 	:hidden:
 	:titlesonly:
 	
-        getdata	
+    getdata	
 	loadDAGs
 	startAirflow
 	workflow
