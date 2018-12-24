@@ -5,6 +5,6 @@
 .. toctree::
    :maxdepth: 2
 
-    airflow
-    singularity
-    structure
+   airflow
+   singularity
+   structure
