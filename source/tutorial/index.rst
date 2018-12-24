@@ -5,9 +5,9 @@
 .. toctree::
    :maxdepth: 2
 
-    getdata	
-	loadDAGs
-	startAirflow
-	workflow
-	monitor
-	products
+   getdata	
+   loadDAGs
+   startAirflow
+   workflow
+   monitor
+   products
