@@ -6,7 +6,7 @@ FSO 用户指南
 
 .. contents::
    :local:
-   :depth: 2
+   :depth: 3
 
 *******
 欢迎
