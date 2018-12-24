@@ -5,7 +5,7 @@
 .. toctree::
    :maxdepth: 2
 
-	foreword
-	requirements
-	credits
+   foreword
+   requirements
+   credits
 
