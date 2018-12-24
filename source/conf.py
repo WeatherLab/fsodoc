@@ -125,7 +125,7 @@ html_title = u'FSO ' + release + u' 用户手册|软件手册'
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-html_favicon = 'images/ci-icon.ico'
+html_favicon = 'images/longrun.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
