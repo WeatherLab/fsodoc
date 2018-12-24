@@ -12,3 +12,10 @@ FSO 用户指南
 	installation/index
 	tutorial/index
     helpers/index
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
