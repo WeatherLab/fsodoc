@@ -7,6 +7,9 @@
 
    foreword
    background
-   requirements
+   current
+   problems
+   project-content
+   project-goal
    credits
 

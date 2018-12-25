@@ -113,7 +113,7 @@ html_theme_path = ["./_themes"]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = u'FSO ' + release + u' 用户手册|软件手册'
+html_title = u' 预报误差对观测的敏感性（FSO）'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None

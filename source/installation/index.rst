@@ -5,6 +5,7 @@
 .. toctree::
    :maxdepth: 2
 
+   ../welcome/requirements
    airflow
    singularity
    structure

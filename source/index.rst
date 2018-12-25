@@ -1,8 +1,6 @@
 FSO 用户指南
 ============
 
-- :doc:`许可协议 <license>`
-
 .. toctree::
    :maxdepth: 3
    :caption: Contents:
@@ -12,6 +10,7 @@ FSO 用户指南
    installation/index
    tutorial/index
    helpers/index
+   license
 
 Indices and tables
 ==================
