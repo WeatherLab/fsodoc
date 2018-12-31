@@ -13,11 +13,11 @@ GFS存放路径：/data1/raw/gfs/gfs.yyyymmddhh
  
 .. code-block:: bash
 
-    cd GFS_PATH
+   > cd GFS_PATH
    
    > gfs.2018080112  gfs.2018080200  gfs.2018080212 gfs.2018080300
 
-    cd gfs.2018080112
+   > cd gfs.2018080112
    
    > gfs.t00Z.pgrb2.0p25.f000   gfs.t00Z.pgrb2.0p25.f012  gfs.t00Z.pgrb2.0p25.f024  
      gfs.t00Z.pgrb2.0p25.f036   gfs.t00Z.pgrb2.0p25.f048  gfs.t00Z.pgrb2.0p25.f060
@@ -92,25 +92,16 @@ GFS存放路径：/data1/raw/gfs/gfs.yyyymmddhh
 
 .. code-block:: bash
 
-    > 0 12,00 * * * bash -c "python3.6 /home/data/raw/little_r/convert_cimiss_2_littler.py"
+     > 0 12,00 * * * bash -c "python3.6 /home/data/raw/little_r/convert_cimiss_2_littler.py"
     
 观测数据存放路径：/data1/input/little_r/yyyymmddhh
 
 .. code-block:: bash
 
-   cd OBDATA_PATH
-   
-   > 2018080112 2018082000 2018080212 2018080300
-   
-   cd 2018080112
-   
-   > ob.ascii
-  
-
- 
-   
-   
-
+     > cd OBDATA_PATH
+     > 2018080112 2018082000 2018080212 2018080300
+     > cd 2018080112
+     > ob.ascii
 
 
 
